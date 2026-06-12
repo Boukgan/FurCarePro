@@ -1,0 +1,16 @@
+﻿CREATE TABLE tblUsers
+(
+    UserID INT IDENTITY(1,1) PRIMARY KEY,
+
+    FullName VARCHAR(100) NOT NULL,
+
+    Email VARCHAR(100) UNIQUE NOT NULL,
+
+    Password VARCHAR(100) NOT NULL,
+
+    Phone VARCHAR(20),
+
+    Role VARCHAR(20),
+
+    Status VARCHAR(20)
+);

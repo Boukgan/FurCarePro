@@ -1,0 +1,2 @@
+﻿ALTER TABLE tblUsers
+ADD RegisterDate DATETIME DEFAULT GETDATE();
