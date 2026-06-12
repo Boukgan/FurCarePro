@@ -30,21 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomerDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend16 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend17 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend18 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,9 +104,11 @@
             this.cmbService = new System.Windows.Forms.ComboBox();
             this.lblService = new System.Windows.Forms.Label();
             this.tabPayments = new System.Windows.Forms.TabPage();
-            this.tabFeedback = new System.Windows.Forms.TabPage();
-            this.tabProfile = new System.Windows.Forms.TabPage();
             this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
+            this.cmbPaymentStatus = new System.Windows.Forms.ComboBox();
+            this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.cmbPaymentAppointment = new System.Windows.Forms.ComboBox();
             this.txtPaymentSearch = new System.Windows.Forms.TextBox();
             this.lblPaymentSearch = new System.Windows.Forms.Label();
             this.dgvPayments = new System.Windows.Forms.DataGridView();
@@ -133,25 +120,10 @@
             this.lblPaymentInfo = new System.Windows.Forms.Label();
             this.lblPaymentAppointment = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
-            this.cmbPaymentAppointment = new System.Windows.Forms.ComboBox();
-            this.txtAmount = new System.Windows.Forms.TextBox();
-            this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
-            this.cmbPaymentStatus = new System.Windows.Forms.ComboBox();
-            this.tabStaff = new System.Windows.Forms.TabPage();
-            this.grpStaffManagement = new System.Windows.Forms.GroupBox();
-            this.cmbGroomingStatus = new System.Windows.Forms.ComboBox();
-            this.cmbStaff = new System.Windows.Forms.ComboBox();
-            this.dgvGroomingRecords = new System.Windows.Forms.DataGridView();
-            this.btnComplete = new System.Windows.Forms.Button();
-            this.btnAssign = new System.Windows.Forms.Button();
-            this.lblGroomingStatus = new System.Windows.Forms.Label();
-            this.lblStaffManagement = new System.Windows.Forms.Label();
-            this.lblStaff = new System.Windows.Forms.Label();
-            this.lblStaffAppointment = new System.Windows.Forms.Label();
-            this.cmbStaffAppointment = new System.Windows.Forms.ComboBox();
-            this.lblNotes = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.tabFeedback = new System.Windows.Forms.TabPage();
             this.grpCustomerFeedback = new System.Windows.Forms.GroupBox();
+            this.txtComments = new System.Windows.Forms.TextBox();
+            this.numRating = new System.Windows.Forms.NumericUpDown();
             this.cmbFeedbackAppointment = new System.Windows.Forms.ComboBox();
             this.txtFeedbackSearch = new System.Windows.Forms.TextBox();
             this.lblFeedbackSearch = new System.Windows.Forms.Label();
@@ -163,51 +135,7 @@
             this.lblCustomerFeedback = new System.Windows.Forms.Label();
             this.lblFeedbackAppointment = new System.Windows.Forms.Label();
             this.lblRating = new System.Windows.Forms.Label();
-            this.numRating = new System.Windows.Forms.NumericUpDown();
-            this.txtComments = new System.Windows.Forms.TextBox();
-            this.tabReports = new System.Windows.Forms.TabPage();
-            this.chartRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartPopularService = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartCustomerGrowth = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartAppointmentStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartStaffPerformance = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabChart = new System.Windows.Forms.TabControl();
-            this.tabRevenue = new System.Windows.Forms.TabPage();
-            this.tabPopularService = new System.Windows.Forms.TabPage();
-            this.tabCustomerGrowth = new System.Windows.Forms.TabPage();
-            this.tabAppointmentStatus = new System.Windows.Forms.TabPage();
-            this.tabStaffPerformance = new System.Windows.Forms.TabPage();
-            this.lblUpcomingAppointments = new System.Windows.Forms.Label();
-            this.lblTodayAppointments = new System.Windows.Forms.Label();
-            this.grpAnalytics = new System.Windows.Forms.GroupBox();
-            this.lblTodayApp = new System.Windows.Forms.Label();
-            this.lblUpcomingApp = new System.Windows.Forms.Label();
-            this.lblCompletedGroom = new System.Windows.Forms.Label();
-            this.lblPendingGrooming = new System.Windows.Forms.Label();
-            this.lblCompletedGrooming = new System.Windows.Forms.Label();
-            this.lblPendingGroom = new System.Windows.Forms.Label();
-            this.lblLowRatings = new System.Windows.Forms.Label();
-            this.lblHighRatings = new System.Windows.Forms.Label();
-            this.lblHighRate = new System.Windows.Forms.Label();
-            this.lblLowRate = new System.Windows.Forms.Label();
-            this.lblRevenue = new System.Windows.Forms.Label();
-            this.lblPaidTransactions = new System.Windows.Forms.Label();
-            this.lblPaidTransact = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblTotalRevenues = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblAverageRate = new System.Windows.Forms.Label();
-            this.lblAverageRating = new System.Windows.Forms.Label();
-            this.lblPopularService = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.tabProfile = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -224,28 +152,12 @@
             this.grpAppointmentBooking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
             this.tabPayments.SuspendLayout();
-            this.tabFeedback.SuspendLayout();
             this.grpPaymentInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
-            this.tabStaff.SuspendLayout();
-            this.grpStaffManagement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGroomingRecords)).BeginInit();
+            this.tabFeedback.SuspendLayout();
             this.grpCustomerFeedback.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFeedback)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).BeginInit();
-            this.tabReports.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPopularService)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCustomerGrowth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAppointmentStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartStaffPerformance)).BeginInit();
-            this.tabChart.SuspendLayout();
-            this.tabRevenue.SuspendLayout();
-            this.tabPopularService.SuspendLayout();
-            this.tabCustomerGrowth.SuspendLayout();
-            this.tabAppointmentStatus.SuspendLayout();
-            this.tabStaffPerformance.SuspendLayout();
-            this.grpAnalytics.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFeedback)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -337,7 +249,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // toolStrip1
@@ -512,8 +424,6 @@
             this.tabMain.Controls.Add(this.tabPayments);
             this.tabMain.Controls.Add(this.tabFeedback);
             this.tabMain.Controls.Add(this.tabProfile);
-            this.tabMain.Controls.Add(this.tabStaff);
-            this.tabMain.Controls.Add(this.tabReports);
             this.tabMain.Location = new System.Drawing.Point(71, 27);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -1012,27 +922,6 @@
             this.tabPayments.Text = "Payments";
             this.tabPayments.UseVisualStyleBackColor = true;
             // 
-            // tabFeedback
-            // 
-            this.tabFeedback.Controls.Add(this.grpCustomerFeedback);
-            this.tabFeedback.Location = new System.Drawing.Point(4, 22);
-            this.tabFeedback.Name = "tabFeedback";
-            this.tabFeedback.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFeedback.Size = new System.Drawing.Size(1023, 634);
-            this.tabFeedback.TabIndex = 4;
-            this.tabFeedback.Text = "Feedback";
-            this.tabFeedback.UseVisualStyleBackColor = true;
-            // 
-            // tabProfile
-            // 
-            this.tabProfile.Location = new System.Drawing.Point(4, 22);
-            this.tabProfile.Name = "tabProfile";
-            this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfile.Size = new System.Drawing.Size(1023, 634);
-            this.tabProfile.TabIndex = 5;
-            this.tabProfile.Text = "Profile";
-            this.tabProfile.UseVisualStyleBackColor = true;
-            // 
             // grpPaymentInfo
             // 
             this.grpPaymentInfo.Controls.Add(this.cmbPaymentStatus);
@@ -1056,6 +945,38 @@
             this.grpPaymentInfo.TabIndex = 11;
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment Info";
+            // 
+            // cmbPaymentStatus
+            // 
+            this.cmbPaymentStatus.FormattingEnabled = true;
+            this.cmbPaymentStatus.Location = new System.Drawing.Point(49, 254);
+            this.cmbPaymentStatus.Name = "cmbPaymentStatus";
+            this.cmbPaymentStatus.Size = new System.Drawing.Size(201, 21);
+            this.cmbPaymentStatus.TabIndex = 28;
+            // 
+            // cmbPaymentMethod
+            // 
+            this.cmbPaymentMethod.FormattingEnabled = true;
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(49, 194);
+            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
+            this.cmbPaymentMethod.Size = new System.Drawing.Size(201, 21);
+            this.cmbPaymentMethod.TabIndex = 27;
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(49, 133);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(402, 20);
+            this.txtAmount.TabIndex = 26;
+            // 
+            // cmbPaymentAppointment
+            // 
+            this.cmbPaymentAppointment.FormattingEnabled = true;
+            this.cmbPaymentAppointment.Location = new System.Drawing.Point(49, 79);
+            this.cmbPaymentAppointment.Name = "cmbPaymentAppointment";
+            this.cmbPaymentAppointment.Size = new System.Drawing.Size(201, 21);
+            this.cmbPaymentAppointment.TabIndex = 25;
+            this.cmbPaymentAppointment.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentAppointment_SelectedIndexChanged);
             // 
             // txtPaymentSearch
             // 
@@ -1161,179 +1082,16 @@
             this.lblAmount.TabIndex = 7;
             this.lblAmount.Text = "Amount";
             // 
-            // cmbPaymentAppointment
+            // tabFeedback
             // 
-            this.cmbPaymentAppointment.FormattingEnabled = true;
-            this.cmbPaymentAppointment.Location = new System.Drawing.Point(49, 79);
-            this.cmbPaymentAppointment.Name = "cmbPaymentAppointment";
-            this.cmbPaymentAppointment.Size = new System.Drawing.Size(201, 21);
-            this.cmbPaymentAppointment.TabIndex = 25;
-            this.cmbPaymentAppointment.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentAppointment_SelectedIndexChanged);
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Location = new System.Drawing.Point(49, 133);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(402, 20);
-            this.txtAmount.TabIndex = 26;
-            // 
-            // cmbPaymentMethod
-            // 
-            this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(49, 194);
-            this.cmbPaymentMethod.Name = "cmbPaymentMethod";
-            this.cmbPaymentMethod.Size = new System.Drawing.Size(201, 21);
-            this.cmbPaymentMethod.TabIndex = 27;
-            // 
-            // cmbPaymentStatus
-            // 
-            this.cmbPaymentStatus.FormattingEnabled = true;
-            this.cmbPaymentStatus.Location = new System.Drawing.Point(49, 254);
-            this.cmbPaymentStatus.Name = "cmbPaymentStatus";
-            this.cmbPaymentStatus.Size = new System.Drawing.Size(201, 21);
-            this.cmbPaymentStatus.TabIndex = 28;
-            // 
-            // tabStaff
-            // 
-            this.tabStaff.Controls.Add(this.grpStaffManagement);
-            this.tabStaff.Location = new System.Drawing.Point(4, 22);
-            this.tabStaff.Name = "tabStaff";
-            this.tabStaff.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStaff.Size = new System.Drawing.Size(1023, 634);
-            this.tabStaff.TabIndex = 6;
-            this.tabStaff.Text = "Staff";
-            this.tabStaff.UseVisualStyleBackColor = true;
-            // 
-            // grpStaffManagement
-            // 
-            this.grpStaffManagement.Controls.Add(this.txtNotes);
-            this.grpStaffManagement.Controls.Add(this.lblNotes);
-            this.grpStaffManagement.Controls.Add(this.cmbStaffAppointment);
-            this.grpStaffManagement.Controls.Add(this.cmbGroomingStatus);
-            this.grpStaffManagement.Controls.Add(this.cmbStaff);
-            this.grpStaffManagement.Controls.Add(this.dgvGroomingRecords);
-            this.grpStaffManagement.Controls.Add(this.btnComplete);
-            this.grpStaffManagement.Controls.Add(this.btnAssign);
-            this.grpStaffManagement.Controls.Add(this.lblGroomingStatus);
-            this.grpStaffManagement.Controls.Add(this.lblStaffManagement);
-            this.grpStaffManagement.Controls.Add(this.lblStaff);
-            this.grpStaffManagement.Controls.Add(this.lblStaffAppointment);
-            this.grpStaffManagement.Location = new System.Drawing.Point(19, 20);
-            this.grpStaffManagement.Name = "grpStaffManagement";
-            this.grpStaffManagement.Size = new System.Drawing.Size(985, 608);
-            this.grpStaffManagement.TabIndex = 12;
-            this.grpStaffManagement.TabStop = false;
-            this.grpStaffManagement.Text = "Payment Info";
-            // 
-            // cmbGroomingStatus
-            // 
-            this.cmbGroomingStatus.FormattingEnabled = true;
-            this.cmbGroomingStatus.Location = new System.Drawing.Point(49, 214);
-            this.cmbGroomingStatus.Name = "cmbGroomingStatus";
-            this.cmbGroomingStatus.Size = new System.Drawing.Size(201, 21);
-            this.cmbGroomingStatus.TabIndex = 27;
-            // 
-            // cmbStaff
-            // 
-            this.cmbStaff.FormattingEnabled = true;
-            this.cmbStaff.Location = new System.Drawing.Point(49, 79);
-            this.cmbStaff.Name = "cmbStaff";
-            this.cmbStaff.Size = new System.Drawing.Size(201, 21);
-            this.cmbStaff.TabIndex = 25;
-            // 
-            // dgvGroomingRecords
-            // 
-            this.dgvGroomingRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGroomingRecords.Location = new System.Drawing.Point(49, 364);
-            this.dgvGroomingRecords.Name = "dgvGroomingRecords";
-            this.dgvGroomingRecords.Size = new System.Drawing.Size(881, 221);
-            this.dgvGroomingRecords.TabIndex = 22;
-            this.dgvGroomingRecords.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGroomingRecords_CellContentClick);
-            // 
-            // btnComplete
-            // 
-            this.btnComplete.Location = new System.Drawing.Point(150, 323);
-            this.btnComplete.Name = "btnComplete";
-            this.btnComplete.Size = new System.Drawing.Size(75, 23);
-            this.btnComplete.TabIndex = 19;
-            this.btnComplete.Text = "Complete";
-            this.btnComplete.UseVisualStyleBackColor = true;
-            this.btnComplete.Click += new System.EventHandler(this.btnComplete_Click);
-            // 
-            // btnAssign
-            // 
-            this.btnAssign.Location = new System.Drawing.Point(49, 323);
-            this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(75, 23);
-            this.btnAssign.TabIndex = 18;
-            this.btnAssign.Text = "Assign";
-            this.btnAssign.UseVisualStyleBackColor = true;
-            this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
-            // 
-            // lblGroomingStatus
-            // 
-            this.lblGroomingStatus.AutoSize = true;
-            this.lblGroomingStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroomingStatus.Location = new System.Drawing.Point(45, 191);
-            this.lblGroomingStatus.Name = "lblGroomingStatus";
-            this.lblGroomingStatus.Size = new System.Drawing.Size(130, 20);
-            this.lblGroomingStatus.TabIndex = 10;
-            this.lblGroomingStatus.Text = "Grooming Status";
-            // 
-            // lblStaffManagement
-            // 
-            this.lblStaffManagement.AutoSize = true;
-            this.lblStaffManagement.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffManagement.Location = new System.Drawing.Point(49, 16);
-            this.lblStaffManagement.Name = "lblStaffManagement";
-            this.lblStaffManagement.Size = new System.Drawing.Size(304, 32);
-            this.lblStaffManagement.TabIndex = 9;
-            this.lblStaffManagement.Text = "PAYMENT INFORMATION";
-            // 
-            // lblStaff
-            // 
-            this.lblStaff.AutoSize = true;
-            this.lblStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaff.Location = new System.Drawing.Point(45, 56);
-            this.lblStaff.Name = "lblStaff";
-            this.lblStaff.Size = new System.Drawing.Size(44, 20);
-            this.lblStaff.TabIndex = 5;
-            this.lblStaff.Text = "Staff";
-            // 
-            // lblStaffAppointment
-            // 
-            this.lblStaffAppointment.AutoSize = true;
-            this.lblStaffAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffAppointment.Location = new System.Drawing.Point(45, 125);
-            this.lblStaffAppointment.Name = "lblStaffAppointment";
-            this.lblStaffAppointment.Size = new System.Drawing.Size(100, 20);
-            this.lblStaffAppointment.TabIndex = 7;
-            this.lblStaffAppointment.Text = "Appointment";
-            // 
-            // cmbStaffAppointment
-            // 
-            this.cmbStaffAppointment.FormattingEnabled = true;
-            this.cmbStaffAppointment.Location = new System.Drawing.Point(49, 148);
-            this.cmbStaffAppointment.Name = "cmbStaffAppointment";
-            this.cmbStaffAppointment.Size = new System.Drawing.Size(201, 21);
-            this.cmbStaffAppointment.TabIndex = 29;
-            // 
-            // lblNotes
-            // 
-            this.lblNotes.AutoSize = true;
-            this.lblNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotes.Location = new System.Drawing.Point(45, 257);
-            this.lblNotes.Name = "lblNotes";
-            this.lblNotes.Size = new System.Drawing.Size(51, 20);
-            this.lblNotes.TabIndex = 30;
-            this.lblNotes.Text = "Notes";
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.Location = new System.Drawing.Point(49, 281);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(304, 20);
-            this.txtNotes.TabIndex = 31;
+            this.tabFeedback.Controls.Add(this.grpCustomerFeedback);
+            this.tabFeedback.Location = new System.Drawing.Point(4, 22);
+            this.tabFeedback.Name = "tabFeedback";
+            this.tabFeedback.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFeedback.Size = new System.Drawing.Size(1023, 634);
+            this.tabFeedback.TabIndex = 4;
+            this.tabFeedback.Text = "Feedback";
+            this.tabFeedback.UseVisualStyleBackColor = true;
             // 
             // grpCustomerFeedback
             // 
@@ -1356,6 +1114,36 @@
             this.grpCustomerFeedback.TabIndex = 12;
             this.grpCustomerFeedback.TabStop = false;
             this.grpCustomerFeedback.Text = "Customer Feedback";
+            // 
+            // txtComments
+            // 
+            this.txtComments.Location = new System.Drawing.Point(49, 194);
+            this.txtComments.Multiline = true;
+            this.txtComments.Name = "txtComments";
+            this.txtComments.Size = new System.Drawing.Size(402, 87);
+            this.txtComments.TabIndex = 30;
+            // 
+            // numRating
+            // 
+            this.numRating.Location = new System.Drawing.Point(49, 133);
+            this.numRating.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numRating.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numRating.Name = "numRating";
+            this.numRating.Size = new System.Drawing.Size(120, 20);
+            this.numRating.TabIndex = 29;
+            this.numRating.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             // 
             // cmbFeedbackAppointment
             // 
@@ -1459,535 +1247,15 @@
             this.lblRating.TabIndex = 7;
             this.lblRating.Text = "Rating";
             // 
-            // numRating
-            // 
-            this.numRating.Location = new System.Drawing.Point(49, 133);
-            this.numRating.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numRating.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numRating.Name = "numRating";
-            this.numRating.Size = new System.Drawing.Size(120, 20);
-            this.numRating.TabIndex = 29;
-            this.numRating.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // txtComments
-            // 
-            this.txtComments.Location = new System.Drawing.Point(49, 194);
-            this.txtComments.Multiline = true;
-            this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(402, 87);
-            this.txtComments.TabIndex = 30;
-            // 
-            // tabReports
-            // 
-            this.tabReports.Controls.Add(this.grpAnalytics);
-            this.tabReports.Controls.Add(this.tabChart);
-            this.tabReports.Location = new System.Drawing.Point(4, 22);
-            this.tabReports.Name = "tabReports";
-            this.tabReports.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReports.Size = new System.Drawing.Size(1023, 634);
-            this.tabReports.TabIndex = 7;
-            this.tabReports.Text = "Reports";
-            this.tabReports.UseVisualStyleBackColor = true;
-            // 
-            // chartRevenue
-            // 
-            chartArea16.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea16);
-            legend16.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend16);
-            this.chartRevenue.Location = new System.Drawing.Point(319, 26);
-            this.chartRevenue.Name = "chartRevenue";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Series1";
-            this.chartRevenue.Series.Add(series16);
-            this.chartRevenue.Size = new System.Drawing.Size(320, 210);
-            this.chartRevenue.TabIndex = 1;
-            this.chartRevenue.Text = "chart2";
-            // 
-            // chartPopularService
-            // 
-            chartArea17.Name = "ChartArea1";
-            this.chartPopularService.ChartAreas.Add(chartArea17);
-            legend17.Name = "Legend1";
-            this.chartPopularService.Legends.Add(legend17);
-            this.chartPopularService.Location = new System.Drawing.Point(319, 26);
-            this.chartPopularService.Name = "chartPopularService";
-            series17.ChartArea = "ChartArea1";
-            series17.Legend = "Legend1";
-            series17.Name = "Series1";
-            this.chartPopularService.Series.Add(series17);
-            this.chartPopularService.Size = new System.Drawing.Size(320, 210);
-            this.chartPopularService.TabIndex = 2;
-            this.chartPopularService.Text = "chart2";
-            // 
-            // chartCustomerGrowth
-            // 
-            chartArea18.Name = "ChartArea1";
-            this.chartCustomerGrowth.ChartAreas.Add(chartArea18);
-            legend18.Name = "Legend1";
-            this.chartCustomerGrowth.Legends.Add(legend18);
-            this.chartCustomerGrowth.Location = new System.Drawing.Point(319, 26);
-            this.chartCustomerGrowth.Name = "chartCustomerGrowth";
-            series18.ChartArea = "ChartArea1";
-            series18.Legend = "Legend1";
-            series18.Name = "Series1";
-            this.chartCustomerGrowth.Series.Add(series18);
-            this.chartCustomerGrowth.Size = new System.Drawing.Size(320, 210);
-            this.chartCustomerGrowth.TabIndex = 3;
-            this.chartCustomerGrowth.Text = "chart2";
-            // 
-            // chartAppointmentStatus
-            // 
-            chartArea19.Name = "ChartArea1";
-            this.chartAppointmentStatus.ChartAreas.Add(chartArea19);
-            legend19.Name = "Legend1";
-            this.chartAppointmentStatus.Legends.Add(legend19);
-            this.chartAppointmentStatus.Location = new System.Drawing.Point(319, 26);
-            this.chartAppointmentStatus.Name = "chartAppointmentStatus";
-            series19.ChartArea = "ChartArea1";
-            series19.Legend = "Legend1";
-            series19.Name = "Series1";
-            this.chartAppointmentStatus.Series.Add(series19);
-            this.chartAppointmentStatus.Size = new System.Drawing.Size(320, 210);
-            this.chartAppointmentStatus.TabIndex = 4;
-            this.chartAppointmentStatus.Text = "chart2";
-            // 
-            // chartStaffPerformance
-            // 
-            chartArea20.Name = "ChartArea1";
-            this.chartStaffPerformance.ChartAreas.Add(chartArea20);
-            legend20.Name = "Legend1";
-            this.chartStaffPerformance.Legends.Add(legend20);
-            this.chartStaffPerformance.Location = new System.Drawing.Point(319, 26);
-            this.chartStaffPerformance.Name = "chartStaffPerformance";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Series1";
-            this.chartStaffPerformance.Series.Add(series20);
-            this.chartStaffPerformance.Size = new System.Drawing.Size(320, 210);
-            this.chartStaffPerformance.TabIndex = 5;
-            this.chartStaffPerformance.Text = "chart2";
-            // 
-            // tabChart
-            // 
-            this.tabChart.Controls.Add(this.tabRevenue);
-            this.tabChart.Controls.Add(this.tabPopularService);
-            this.tabChart.Controls.Add(this.tabCustomerGrowth);
-            this.tabChart.Controls.Add(this.tabAppointmentStatus);
-            this.tabChart.Controls.Add(this.tabStaffPerformance);
-            this.tabChart.Location = new System.Drawing.Point(6, 336);
-            this.tabChart.Name = "tabChart";
-            this.tabChart.SelectedIndex = 0;
-            this.tabChart.Size = new System.Drawing.Size(1011, 292);
-            this.tabChart.TabIndex = 6;
-            // 
-            // tabRevenue
-            // 
-            this.tabRevenue.Controls.Add(this.chartRevenue);
-            this.tabRevenue.Location = new System.Drawing.Point(4, 22);
-            this.tabRevenue.Name = "tabRevenue";
-            this.tabRevenue.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRevenue.Size = new System.Drawing.Size(964, 250);
-            this.tabRevenue.TabIndex = 0;
-            this.tabRevenue.Text = "Revenue Chart";
-            this.tabRevenue.UseVisualStyleBackColor = true;
-            // 
-            // tabPopularService
-            // 
-            this.tabPopularService.Controls.Add(this.chartPopularService);
-            this.tabPopularService.Location = new System.Drawing.Point(4, 22);
-            this.tabPopularService.Name = "tabPopularService";
-            this.tabPopularService.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPopularService.Size = new System.Drawing.Size(964, 250);
-            this.tabPopularService.TabIndex = 1;
-            this.tabPopularService.Text = "Popular Service Chart";
-            this.tabPopularService.UseVisualStyleBackColor = true;
-            // 
-            // tabCustomerGrowth
-            // 
-            this.tabCustomerGrowth.Controls.Add(this.chartCustomerGrowth);
-            this.tabCustomerGrowth.Location = new System.Drawing.Point(4, 22);
-            this.tabCustomerGrowth.Name = "tabCustomerGrowth";
-            this.tabCustomerGrowth.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCustomerGrowth.Size = new System.Drawing.Size(1003, 266);
-            this.tabCustomerGrowth.TabIndex = 2;
-            this.tabCustomerGrowth.Text = "Customer Growth Chart";
-            this.tabCustomerGrowth.UseVisualStyleBackColor = true;
-            // 
-            // tabAppointmentStatus
-            // 
-            this.tabAppointmentStatus.Controls.Add(this.chartAppointmentStatus);
-            this.tabAppointmentStatus.Location = new System.Drawing.Point(4, 22);
-            this.tabAppointmentStatus.Name = "tabAppointmentStatus";
-            this.tabAppointmentStatus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAppointmentStatus.Size = new System.Drawing.Size(964, 250);
-            this.tabAppointmentStatus.TabIndex = 3;
-            this.tabAppointmentStatus.Text = "Appointment Status Chart";
-            this.tabAppointmentStatus.UseVisualStyleBackColor = true;
-            // 
-            // tabStaffPerformance
-            // 
-            this.tabStaffPerformance.Controls.Add(this.chartStaffPerformance);
-            this.tabStaffPerformance.Location = new System.Drawing.Point(4, 22);
-            this.tabStaffPerformance.Name = "tabStaffPerformance";
-            this.tabStaffPerformance.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStaffPerformance.Size = new System.Drawing.Size(1003, 266);
-            this.tabStaffPerformance.TabIndex = 4;
-            this.tabStaffPerformance.Text = "Staff Performance Chart";
-            this.tabStaffPerformance.UseVisualStyleBackColor = true;
-            // 
-            // lblUpcomingAppointments
-            // 
-            this.lblUpcomingAppointments.AutoSize = true;
-            this.lblUpcomingAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpcomingAppointments.Location = new System.Drawing.Point(227, 48);
-            this.lblUpcomingAppointments.Name = "lblUpcomingAppointments";
-            this.lblUpcomingAppointments.Size = new System.Drawing.Size(14, 20);
-            this.lblUpcomingAppointments.TabIndex = 37;
-            this.lblUpcomingAppointments.Text = "-";
-            // 
-            // lblTodayAppointments
-            // 
-            this.lblTodayAppointments.AutoSize = true;
-            this.lblTodayAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayAppointments.Location = new System.Drawing.Point(227, 16);
-            this.lblTodayAppointments.Name = "lblTodayAppointments";
-            this.lblTodayAppointments.Size = new System.Drawing.Size(14, 20);
-            this.lblTodayAppointments.TabIndex = 36;
-            this.lblTodayAppointments.Text = "-";
-            // 
-            // grpAnalytics
-            // 
-            this.grpAnalytics.Controls.Add(this.label12);
-            this.grpAnalytics.Controls.Add(this.label11);
-            this.grpAnalytics.Controls.Add(this.label10);
-            this.grpAnalytics.Controls.Add(this.lblPopularService);
-            this.grpAnalytics.Controls.Add(this.lblAverageRating);
-            this.grpAnalytics.Controls.Add(this.lblAverageRate);
-            this.grpAnalytics.Controls.Add(this.label9);
-            this.grpAnalytics.Controls.Add(this.lblTotalRevenues);
-            this.grpAnalytics.Controls.Add(this.label8);
-            this.grpAnalytics.Controls.Add(this.label7);
-            this.grpAnalytics.Controls.Add(this.label6);
-            this.grpAnalytics.Controls.Add(this.label5);
-            this.grpAnalytics.Controls.Add(this.label4);
-            this.grpAnalytics.Controls.Add(this.label3);
-            this.grpAnalytics.Controls.Add(this.label1);
-            this.grpAnalytics.Controls.Add(this.lblPaidTransact);
-            this.grpAnalytics.Controls.Add(this.lblRevenue);
-            this.grpAnalytics.Controls.Add(this.lblPaidTransactions);
-            this.grpAnalytics.Controls.Add(this.lblLowRate);
-            this.grpAnalytics.Controls.Add(this.lblHighRate);
-            this.grpAnalytics.Controls.Add(this.lblLowRatings);
-            this.grpAnalytics.Controls.Add(this.lblHighRatings);
-            this.grpAnalytics.Controls.Add(this.lblPendingGroom);
-            this.grpAnalytics.Controls.Add(this.lblPendingGrooming);
-            this.grpAnalytics.Controls.Add(this.lblCompletedGrooming);
-            this.grpAnalytics.Controls.Add(this.lblCompletedGroom);
-            this.grpAnalytics.Controls.Add(this.lblUpcomingApp);
-            this.grpAnalytics.Controls.Add(this.lblTodayApp);
-            this.grpAnalytics.Controls.Add(this.lblTodayAppointments);
-            this.grpAnalytics.Controls.Add(this.lblUpcomingAppointments);
-            this.grpAnalytics.Location = new System.Drawing.Point(10, 6);
-            this.grpAnalytics.Name = "grpAnalytics";
-            this.grpAnalytics.Size = new System.Drawing.Size(1000, 324);
-            this.grpAnalytics.TabIndex = 38;
-            this.grpAnalytics.TabStop = false;
-            this.grpAnalytics.Text = "Analytics";
-            // 
-            // lblTodayApp
-            // 
-            this.lblTodayApp.AutoSize = true;
-            this.lblTodayApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayApp.Location = new System.Drawing.Point(17, 16);
-            this.lblTodayApp.Name = "lblTodayApp";
-            this.lblTodayApp.Size = new System.Drawing.Size(166, 20);
-            this.lblTodayApp.TabIndex = 38;
-            this.lblTodayApp.Text = "Today\'s Appointments";
-            // 
-            // lblUpcomingApp
-            // 
-            this.lblUpcomingApp.AutoSize = true;
-            this.lblUpcomingApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpcomingApp.Location = new System.Drawing.Point(17, 48);
-            this.lblUpcomingApp.Name = "lblUpcomingApp";
-            this.lblUpcomingApp.Size = new System.Drawing.Size(188, 20);
-            this.lblUpcomingApp.TabIndex = 39;
-            this.lblUpcomingApp.Text = "Upcoming Appointments ";
-            // 
-            // lblCompletedGroom
-            // 
-            this.lblCompletedGroom.AutoSize = true;
-            this.lblCompletedGroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompletedGroom.Location = new System.Drawing.Point(17, 77);
-            this.lblCompletedGroom.Name = "lblCompletedGroom";
-            this.lblCompletedGroom.Size = new System.Drawing.Size(160, 20);
-            this.lblCompletedGroom.TabIndex = 40;
-            this.lblCompletedGroom.Text = "Completed Grooming";
-            // 
-            // lblPendingGrooming
-            // 
-            this.lblPendingGrooming.AutoSize = true;
-            this.lblPendingGrooming.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingGrooming.Location = new System.Drawing.Point(227, 107);
-            this.lblPendingGrooming.Name = "lblPendingGrooming";
-            this.lblPendingGrooming.Size = new System.Drawing.Size(14, 20);
-            this.lblPendingGrooming.TabIndex = 42;
-            this.lblPendingGrooming.Text = "-";
-            // 
-            // lblCompletedGrooming
-            // 
-            this.lblCompletedGrooming.AutoSize = true;
-            this.lblCompletedGrooming.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompletedGrooming.Location = new System.Drawing.Point(227, 77);
-            this.lblCompletedGrooming.Name = "lblCompletedGrooming";
-            this.lblCompletedGrooming.Size = new System.Drawing.Size(14, 20);
-            this.lblCompletedGrooming.TabIndex = 41;
-            this.lblCompletedGrooming.Text = "-";
-            // 
-            // lblPendingGroom
-            // 
-            this.lblPendingGroom.AutoSize = true;
-            this.lblPendingGroom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingGroom.Location = new System.Drawing.Point(17, 107);
-            this.lblPendingGroom.Name = "lblPendingGroom";
-            this.lblPendingGroom.Size = new System.Drawing.Size(141, 20);
-            this.lblPendingGroom.TabIndex = 43;
-            this.lblPendingGroom.Text = "Pending Grooming";
-            // 
-            // lblLowRatings
-            // 
-            this.lblLowRatings.AutoSize = true;
-            this.lblLowRatings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLowRatings.Location = new System.Drawing.Point(227, 167);
-            this.lblLowRatings.Name = "lblLowRatings";
-            this.lblLowRatings.Size = new System.Drawing.Size(14, 20);
-            this.lblLowRatings.TabIndex = 45;
-            this.lblLowRatings.Text = "-";
-            // 
-            // lblHighRatings
-            // 
-            this.lblHighRatings.AutoSize = true;
-            this.lblHighRatings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHighRatings.Location = new System.Drawing.Point(227, 137);
-            this.lblHighRatings.Name = "lblHighRatings";
-            this.lblHighRatings.Size = new System.Drawing.Size(14, 20);
-            this.lblHighRatings.TabIndex = 44;
-            this.lblHighRatings.Text = "-";
-            this.lblHighRatings.Click += new System.EventHandler(this.lblHighRatings_Click);
-            // 
-            // lblHighRate
-            // 
-            this.lblHighRate.AutoSize = true;
-            this.lblHighRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHighRate.Location = new System.Drawing.Point(17, 137);
-            this.lblHighRate.Name = "lblHighRate";
-            this.lblHighRate.Size = new System.Drawing.Size(101, 20);
-            this.lblHighRate.TabIndex = 46;
-            this.lblHighRate.Text = "High Ratings";
-            // 
-            // lblLowRate
-            // 
-            this.lblLowRate.AutoSize = true;
-            this.lblLowRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLowRate.Location = new System.Drawing.Point(17, 167);
-            this.lblLowRate.Name = "lblLowRate";
-            this.lblLowRate.Size = new System.Drawing.Size(97, 20);
-            this.lblLowRate.TabIndex = 47;
-            this.lblLowRate.Text = "Low Ratings";
-            // 
-            // lblRevenue
-            // 
-            this.lblRevenue.AutoSize = true;
-            this.lblRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRevenue.Location = new System.Drawing.Point(227, 227);
-            this.lblRevenue.Name = "lblRevenue";
-            this.lblRevenue.Size = new System.Drawing.Size(14, 20);
-            this.lblRevenue.TabIndex = 49;
-            this.lblRevenue.Text = "-";
-            // 
-            // lblPaidTransactions
-            // 
-            this.lblPaidTransactions.AutoSize = true;
-            this.lblPaidTransactions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaidTransactions.Location = new System.Drawing.Point(227, 197);
-            this.lblPaidTransactions.Name = "lblPaidTransactions";
-            this.lblPaidTransactions.Size = new System.Drawing.Size(14, 20);
-            this.lblPaidTransactions.TabIndex = 48;
-            this.lblPaidTransactions.Text = "-";
-            // 
-            // lblPaidTransact
-            // 
-            this.lblPaidTransact.AutoSize = true;
-            this.lblPaidTransact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaidTransact.Location = new System.Drawing.Point(17, 197);
-            this.lblPaidTransact.Name = "lblPaidTransact";
-            this.lblPaidTransact.Size = new System.Drawing.Size(135, 20);
-            this.lblPaidTransact.TabIndex = 50;
-            this.lblPaidTransact.Text = "Paid Transactions";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 20);
-            this.label1.TabIndex = 51;
-            this.label1.Text = ":";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(208, 48);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
-            this.label3.TabIndex = 52;
-            this.label3.Text = ":";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(208, 77);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 20);
-            this.label4.TabIndex = 53;
-            this.label4.Text = ":";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(208, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 20);
-            this.label5.TabIndex = 54;
-            this.label5.Text = ":";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(208, 137);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 20);
-            this.label6.TabIndex = 55;
-            this.label6.Text = ":";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(208, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 20);
-            this.label7.TabIndex = 56;
-            this.label7.Text = ":";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(208, 197);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 20);
-            this.label8.TabIndex = 57;
-            this.label8.Text = ":";
-            // 
-            // lblTotalRevenues
-            // 
-            this.lblTotalRevenues.AutoSize = true;
-            this.lblTotalRevenues.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRevenues.Location = new System.Drawing.Point(17, 228);
-            this.lblTotalRevenues.Name = "lblTotalRevenues";
-            this.lblTotalRevenues.Size = new System.Drawing.Size(112, 20);
-            this.lblTotalRevenues.TabIndex = 58;
-            this.lblTotalRevenues.Text = "Total Revenue";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(208, 228);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 20);
-            this.label9.TabIndex = 59;
-            this.label9.Text = ":";
-            // 
-            // lblAverageRate
-            // 
-            this.lblAverageRate.AutoSize = true;
-            this.lblAverageRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAverageRate.Location = new System.Drawing.Point(17, 259);
-            this.lblAverageRate.Name = "lblAverageRate";
-            this.lblAverageRate.Size = new System.Drawing.Size(119, 20);
-            this.lblAverageRate.TabIndex = 60;
-            this.lblAverageRate.Text = "Average Rating";
-            // 
-            // lblAverageRating
-            // 
-            this.lblAverageRating.AutoSize = true;
-            this.lblAverageRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAverageRating.Location = new System.Drawing.Point(227, 259);
-            this.lblAverageRating.Name = "lblAverageRating";
-            this.lblAverageRating.Size = new System.Drawing.Size(14, 20);
-            this.lblAverageRating.TabIndex = 61;
-            this.lblAverageRating.Text = "-";
-            // 
-            // lblPopularService
-            // 
-            this.lblPopularService.AutoSize = true;
-            this.lblPopularService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPopularService.Location = new System.Drawing.Point(227, 288);
-            this.lblPopularService.Name = "lblPopularService";
-            this.lblPopularService.Size = new System.Drawing.Size(14, 20);
-            this.lblPopularService.TabIndex = 62;
-            this.lblPopularService.Text = "-";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 288);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 20);
-            this.label10.TabIndex = 63;
-            this.label10.Text = "Most Popular Service";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(208, 259);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 20);
-            this.label11.TabIndex = 64;
-            this.label11.Text = ":";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(208, 288);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 20);
-            this.label12.TabIndex = 65;
-            this.label12.Text = ":";
+            // tabProfile
+            // 
+            this.tabProfile.Location = new System.Drawing.Point(4, 22);
+            this.tabProfile.Name = "tabProfile";
+            this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
+            this.tabProfile.Size = new System.Drawing.Size(1023, 634);
+            this.tabProfile.TabIndex = 5;
+            this.tabProfile.Text = "Profile";
+            this.tabProfile.UseVisualStyleBackColor = true;
             // 
             // FrmCustomerDashboard
             // 
@@ -2026,32 +1294,14 @@
             this.grpAppointmentBooking.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
             this.tabPayments.ResumeLayout(false);
-            this.tabFeedback.ResumeLayout(false);
             this.grpPaymentInfo.ResumeLayout(false);
             this.grpPaymentInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).EndInit();
-            this.tabStaff.ResumeLayout(false);
-            this.grpStaffManagement.ResumeLayout(false);
-            this.grpStaffManagement.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGroomingRecords)).EndInit();
+            this.tabFeedback.ResumeLayout(false);
             this.grpCustomerFeedback.ResumeLayout(false);
             this.grpCustomerFeedback.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFeedback)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).EndInit();
-            this.tabReports.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartRevenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartPopularService)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartCustomerGrowth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartAppointmentStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartStaffPerformance)).EndInit();
-            this.tabChart.ResumeLayout(false);
-            this.tabRevenue.ResumeLayout(false);
-            this.tabPopularService.ResumeLayout(false);
-            this.tabCustomerGrowth.ResumeLayout(false);
-            this.tabAppointmentStatus.ResumeLayout(false);
-            this.tabStaffPerformance.ResumeLayout(false);
-            this.grpAnalytics.ResumeLayout(false);
-            this.grpAnalytics.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFeedback)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2151,20 +1401,6 @@
         private System.Windows.Forms.Label lblPaymentAppointment;
         private System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.ComboBox cmbPaymentStatus;
-        private System.Windows.Forms.TabPage tabStaff;
-        private System.Windows.Forms.GroupBox grpStaffManagement;
-        private System.Windows.Forms.Label lblNotes;
-        private System.Windows.Forms.ComboBox cmbStaffAppointment;
-        private System.Windows.Forms.ComboBox cmbGroomingStatus;
-        private System.Windows.Forms.ComboBox cmbStaff;
-        private System.Windows.Forms.DataGridView dgvGroomingRecords;
-        private System.Windows.Forms.Button btnComplete;
-        private System.Windows.Forms.Button btnAssign;
-        private System.Windows.Forms.Label lblGroomingStatus;
-        private System.Windows.Forms.Label lblStaffManagement;
-        private System.Windows.Forms.Label lblStaff;
-        private System.Windows.Forms.Label lblStaffAppointment;
-        private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.GroupBox grpCustomerFeedback;
         private System.Windows.Forms.TextBox txtComments;
         private System.Windows.Forms.NumericUpDown numRating;
@@ -2179,48 +1415,5 @@
         private System.Windows.Forms.Label lblCustomerFeedback;
         private System.Windows.Forms.Label lblFeedbackAppointment;
         private System.Windows.Forms.Label lblRating;
-        private System.Windows.Forms.TabPage tabReports;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartRevenue;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartStaffPerformance;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartAppointmentStatus;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartCustomerGrowth;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartPopularService;
-        private System.Windows.Forms.TabControl tabChart;
-        private System.Windows.Forms.TabPage tabRevenue;
-        private System.Windows.Forms.TabPage tabPopularService;
-        private System.Windows.Forms.TabPage tabCustomerGrowth;
-        private System.Windows.Forms.TabPage tabAppointmentStatus;
-        private System.Windows.Forms.TabPage tabStaffPerformance;
-        private System.Windows.Forms.GroupBox grpAnalytics;
-        private System.Windows.Forms.Label lblCompletedGroom;
-        private System.Windows.Forms.Label lblUpcomingApp;
-        private System.Windows.Forms.Label lblTodayApp;
-        private System.Windows.Forms.Label lblTodayAppointments;
-        private System.Windows.Forms.Label lblUpcomingAppointments;
-        private System.Windows.Forms.Label lblPendingGrooming;
-        private System.Windows.Forms.Label lblCompletedGrooming;
-        private System.Windows.Forms.Label lblLowRate;
-        private System.Windows.Forms.Label lblHighRate;
-        private System.Windows.Forms.Label lblLowRatings;
-        private System.Windows.Forms.Label lblHighRatings;
-        private System.Windows.Forms.Label lblPendingGroom;
-        private System.Windows.Forms.Label lblRevenue;
-        private System.Windows.Forms.Label lblPaidTransactions;
-        private System.Windows.Forms.Label lblAverageRate;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblTotalRevenues;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPaidTransact;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblPopularService;
-        private System.Windows.Forms.Label lblAverageRating;
     }
 }

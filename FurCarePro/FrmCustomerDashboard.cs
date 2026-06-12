@@ -23,465 +23,66 @@ namespace FurCarePro
         {
             InitializeComponent();
         }
-        private void LoadAnalytics()
-        {
-            ShowTodayAppointments();
-
-            ShowUpcomingAppointments();
-
-            ShowCompletedGrooming();
-
-            ShowPendingGrooming();
-
-            ShowHighRatings();
-
-            ShowLowRatings();
-
-            ShowPaidTransactions();
-
-            ShowTotalRevenue();
-
-            ShowAverageRating();
-
-            ShowMostPopularService();
-        }
-
-        #region LINQ Reports
-        private void ShowTodayAppointments()
-        {
-            DataTable dt =
-        dgvAppointments.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblTodayAppointments.Text = "0";
-                return;
-            }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToDateTime(
-                          r["AppointmentDate"]).Date
-                      ==
-                      DateTime.Today);
-
-            lblTodayAppointments.Text =
-                count.ToString();
-        }
-        // LINQ methods here
-
-        private void ShowUpcomingAppointments()
-        {
-            DataTable dt =
-        dgvAppointments.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblUpcomingAppointments.Text = "0";
-                return;
-            }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToDateTime(
-                          r["AppointmentDate"])
-                      >
-                      DateTime.Now);
-
-            lblUpcomingAppointments.Text =
-                count.ToString();
         
-        }
 
-        private void ShowCompletedGrooming()
+
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            DataTable dt =
-        dgvGroomingRecords.DataSource as DataTable;
 
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblCompletedGrooming.Text = "0";
-                return;
-            }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      r["GroomingStatus"]
-                      .ToString()
-                      ==
-                      "Completed");
-
-            lblCompletedGrooming.Text =
-                count.ToString();
-        
         }
-        private void ShowPendingGrooming()
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            DataTable dt =
-        dgvGroomingRecords.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblPendingGrooming.Text = "0";
-                return;
-            }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      r["GroomingStatus"]
-                      .ToString()
-                      ==
-                      "Pending");
-
-            lblPendingGrooming.Text =
-                count.ToString();
+            lblDateTime.Text =
+        DateTime.Now.ToString(
+            "dd/MM/yyyy HH:mm:ss");
         }
-        private void ShowHighRatings()
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
-            DataTable dt =
-        dgvFeedback.DataSource as DataTable;
 
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblHighRatings.Text = "0";
-                return;
-            }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToInt32(
-                          r["Rating"]) >= 4);
-
-            lblHighRatings.Text =
-                count.ToString();
         }
-        private void ShowLowRatings()
+
+        private void FrmCustomerDashboard_Load(object sender, EventArgs e)
         {
-            DataTable dt =
-        dgvFeedback.DataSource as DataTable;
+            lblUser.Text = "Customer";
 
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblLowRatings.Text = "0";
-                return;
-            }
+            timerClock.Start();
 
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToInt32(
-                          r["Rating"]) <= 2);
+            cmbStatus.Items.Add("Pending");
+            cmbStatus.Items.Add("Confirmed");
+            cmbStatus.Items.Add("Completed");
 
-            lblLowRatings.Text =
-                count.ToString();
-        }
-        private void ShowPaidTransactions()
-        {
-            DataTable dt =
-       dgvPayments.DataSource as DataTable;
+            cmbStatus.SelectedIndex = 0;
 
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblPaidTransactions.Text = "0";
-                return;
-            }
+            cmbPaymentMethod.Items.Add("Cash");
+            cmbPaymentMethod.Items.Add("Credit Card");
+            cmbPaymentMethod.Items.Add("Online Banking");
 
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      r["PaymentStatus"]
-                      .ToString()
-                      ==
-                      "Paid");
+            cmbPaymentMethod.SelectedIndex = 0;
 
-            lblPaidTransactions.Text =
-                count.ToString();
-        }
-        private void ShowTotalRevenue()
-        {
-            DataTable dt =
-        dgvPayments.DataSource as DataTable;
+            cmbPaymentStatus.Items.Add("Paid");
+            cmbPaymentStatus.Items.Add("Pending");
 
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblRevenue.Text = "RM 0.00";
-                return;
-            }
+            cmbPaymentStatus.SelectedIndex = 0;
 
-            decimal total =
-                dt.AsEnumerable()
-                  .Sum(r =>
-                      Convert.ToDecimal(
-                          r["Amount"]));
+            LoadPetGrid();
 
-            lblRevenue.Text =
-                "RM " + total.ToString("N2");
-        }
-        private void ShowAverageRating()
-        {
-            DataTable dt =
-        dgvFeedback.DataSource as DataTable;
+            LoadPetComboBox();
 
-            if (dt == null || dt.Rows.Count == 0)
-            {
-                lblAverageRating.Text = "0";
-                return;
-            }
+            LoadServices();
 
-            double average =
-                dt.AsEnumerable()
-                  .Average(r =>
-                      Convert.ToDouble(
-                          r["Rating"]));
+            LoadAppointments();
 
-            lblAverageRating.Text =
-                average.ToString("0.00");
-        }
-        private void ShowMostPopularService()
-        {
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
+            LoadAppointmentCombo();
 
-                    SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT ServiceID FROM tblAppointments",
-                        conn);
+            LoadPayments();
 
-                    DataTable dt =
-                        new DataTable();
+            LoadFeedback();
 
-                    da.Fill(dt);
-
-                    if (dt.Rows.Count == 0)
-                    {
-                        lblPopularService.Text = "N/A";
-                        return;
-                    }
-
-                    var popular =
-                        dt.AsEnumerable()
-                          .GroupBy(r =>
-                              Convert.ToInt32(
-                                  r["ServiceID"]))
-                          .OrderByDescending(
-                              g => g.Count())
-                          .FirstOrDefault();
-
-                    if (popular == null)
-                    {
-                        lblPopularService.Text = "N/A";
-                        return;
-                    }
-
-                    int serviceID =
-                        popular.Key;
-
-                    if (ServiceDictionary
-                        .ServiceNames
-                        .ContainsKey(serviceID))
-                    {
-                        lblPopularService.Text =
-                            ServiceDictionary
-                            .ServiceNames[serviceID];
-                    }
-                }
-            }
-            catch
-            {
-                lblPopularService.Text = "N/A";
-            }
-        }
-        #endregion
-
-
-
-        private void LoadGroomingRecords()
-        {
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    string sql =
-                    @"SELECT
-                gr.RecordID,
-                gr.AppointmentID,
-                s.StaffName,
-                gr.GroomingNotes,
-                gr.GroomingStatus,
-                gr.CompletionDate
-              FROM tblGroomingRecords gr
-              INNER JOIN tblStaff s
-              ON gr.StaffID = s.StaffID";
-
-                    SqlDataAdapter da =
-                        new SqlDataAdapter(sql, conn);
-
-                    DataTable dt =
-                        new DataTable();
-
-                    da.Fill(dt);
-
-                    dgvGroomingRecords.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
-        private void LoadStaffAppointmentCombo()
-        {
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT AppointmentID FROM tblAppointments",
-                        conn);
-
-                    DataTable dt =
-                        new DataTable();
-
-                    da.Fill(dt);
-
-                    cmbStaffAppointment.DataSource = dt;
-
-                    cmbStaffAppointment.DisplayMember =
-                        "AppointmentID";
-
-                    cmbStaffAppointment.ValueMember =
-                        "AppointmentID";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void LoadPetComboBox()
-        {
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT PetID, PetName FROM tblPets",
-                        conn);
-
-                    DataTable dt =
-                        new DataTable();
-
-                    da.Fill(dt);
-
-                    cmbPet.DataSource = dt;
-
-                    cmbPet.DisplayMember = "PetName";
-
-                    cmbPet.ValueMember = "PetID";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void LoadPetGrid()
-        {
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT * FROM tblPets",
-                        conn);
-
-                    DataTable dt =
-                        new DataTable();
-
-                    da.Fill(dt);
-
-                    dgvPets.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void LoadAppointments()
-        {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT * FROM tblAppointments",
-                    conn);
-
-                DataTable dt =
-                    new DataTable();
-
-                da.Fill(dt);
-
-                dgvAppointments.DataSource = dt;
-            }
-            ShowTodayAppointments();
-        }
-
-        private void LoadServices()
-        {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT * FROM tblServices",
-                    conn);
-
-                DataTable dt =
-                    new DataTable();
-
-                da.Fill(dt);
-
-                cmbService.DataSource = dt;
-
-                cmbService.DisplayMember =
-                    "ServiceName";
-
-                cmbService.ValueMember =
-                    "ServiceID";
-            }
-        }
         private bool IsAppointmentAvailable()
         {
             using (SqlConnection conn =
@@ -507,91 +108,9 @@ namespace FurCarePro
                 return count == 0;
             }
         }
-        private void LoadAppointmentCombo()
-        {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
-            {
-                conn.Open();
 
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT AppointmentID FROM tblAppointments",
-                    conn);
 
-                DataTable dt =
-                    new DataTable();
 
-                da.Fill(dt);
-
-                cmbPaymentAppointment.DataSource = dt;
-
-                cmbPaymentAppointment.DisplayMember =
-                    "AppointmentID";
-
-                cmbPaymentAppointment.ValueMember =
-                    "AppointmentID";
-            }
-        }
-
-        private void LoadPayments()
-        {
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    string sql =
-                    @"SELECT *
-              FROM tblPayments";
-
-                    SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        sql,
-                        conn);
-
-                    DataTable dt =
-                        new DataTable();
-
-                    da.Fill(dt);
-
-                    dgvPayments.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void LoadStaff()
-        {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT * FROM tblStaff",
-                    conn);
-
-                DataTable dt =
-                    new DataTable();
-
-                da.Fill(dt);
-
-                cmbStaff.DataSource = dt;
-
-                cmbStaff.DisplayMember =
-                    "StaffName";
-
-                cmbStaff.ValueMember =
-                    "StaffID";
-            }
-        }
 
         private void LoadServiceDictionary()
         {
@@ -676,15 +195,8 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void LoadCustomerGrowthChart()
+        private void LoadPayments()
         {
-            chartCustomerGrowth.Series.Clear();
-
-            Series series =
-                chartCustomerGrowth.Series.Add(
-                    "Customers");
-
             try
             {
                 using (SqlConnection conn =
@@ -693,25 +205,20 @@ namespace FurCarePro
                     conn.Open();
 
                     string sql =
-                    @"SELECT
-                MONTH(RegisterDate) AS MonthNo,
-                COUNT(*) AS TotalCustomers
-              FROM tblUsers
-              GROUP BY MONTH(RegisterDate)
-              ORDER BY MonthNo";
+                    @"SELECT *
+              FROM tblPayments";
 
-                    SqlCommand cmd =
-                        new SqlCommand(sql, conn);
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(
+                        sql,
+                        conn);
 
-                    SqlDataReader dr =
-                        cmd.ExecuteReader();
+                    DataTable dt =
+                        new DataTable();
 
-                    while (dr.Read())
-                    {
-                        series.Points.AddXY(
-                            dr["MonthNo"],
-                            dr["TotalCustomers"]);
-                    }
+                    da.Fill(dt);
+
+                    dgvPayments.DataSource = dt;
                 }
             }
             catch (Exception ex)
@@ -719,232 +226,136 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void LoadAppointmentStatusChart()
+        private void LoadAppointmentCombo()
         {
-            chartAppointmentStatus.Series.Clear();
-
-            Series series =
-                chartAppointmentStatus.Series.Add(
-                    "Appointments");
-
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    string sql =
-                    @"SELECT
-                Status,
-                COUNT(*) AS Total
-              FROM tblAppointments
-              GROUP BY Status";
-
-                    SqlCommand cmd =
-                        new SqlCommand(sql, conn);
-
-                    SqlDataReader dr =
-                        cmd.ExecuteReader();
-
-                    while (dr.Read())
-                    {
-                        series.Points.AddXY(
-                            dr["Status"],
-                            dr["Total"]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void LoadStaffPerformanceChart()
-        {
-            chartStaffPerformance.Series.Clear();
-
-            Series series =
-                chartStaffPerformance.Series.Add(
-                    "Performance");
-
-            try
-            {
-                using (SqlConnection conn =
-                    DatabaseHelper.GetConnection())
-                {
-                    conn.Open();
-
-                    string sql =
-                    @"SELECT
-                s.StaffName,
-                COUNT(*) AS TotalJobs
-              FROM tblGroomingRecords gr
-              INNER JOIN tblStaff s
-              ON gr.StaffID = s.StaffID
-              WHERE gr.GroomingStatus = 'Completed'
-              GROUP BY s.StaffName";
-
-                    SqlCommand cmd =
-                        new SqlCommand(sql, conn);
-
-                    SqlDataReader dr =
-                        cmd.ExecuteReader();
-
-                    while (dr.Read())
-                    {
-                        series.Points.AddXY(
-                            dr["StaffName"],
-                            dr["TotalJobs"]);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void LoadRevenueChart()
-        {
-            chartRevenue.Series.Clear();
-
-            Series series =
-                chartRevenue.Series.Add(
-                    "Revenue");
-
             using (SqlConnection conn =
                 DatabaseHelper.GetConnection())
             {
                 conn.Open();
 
-                string sql =
-                @"SELECT
-            MONTH(PaymentDate) AS MonthNo,
-            SUM(Amount) AS Revenue
-          FROM tblPayments
-          GROUP BY MONTH(PaymentDate)";
+                SqlDataAdapter da =
+                    new SqlDataAdapter(
+                    "SELECT AppointmentID FROM tblAppointments",
+                    conn);
 
-                SqlCommand cmd =
-                    new SqlCommand(sql, conn);
+                DataTable dt =
+                    new DataTable();
 
-                SqlDataReader dr =
-                    cmd.ExecuteReader();
+                da.Fill(dt);
 
-                while (dr.Read())
-                {
-                    series.Points.AddXY(
-                        dr["MonthNo"],
-                        dr["Revenue"]);
-                }
+                cmbPaymentAppointment.DataSource = dt;
+
+                cmbPaymentAppointment.DisplayMember =
+                    "AppointmentID";
+
+                cmbPaymentAppointment.ValueMember =
+                    "AppointmentID";
             }
         }
-
-        private void LoadPopularServiceChart()
+        private void LoadAppointments()
         {
-            chartPopularService.Series.Clear();
-
-            Series series =
-                chartPopularService.Series.Add(
-                    "Services");
-
             using (SqlConnection conn =
                 DatabaseHelper.GetConnection())
             {
                 conn.Open();
 
-                string sql =
-                @"SELECT
-            s.ServiceName,
-            COUNT(*) AS Total
-          FROM tblAppointments a
-          INNER JOIN tblServices s
-          ON a.ServiceID=s.ServiceID
-          GROUP BY s.ServiceName";
+                SqlDataAdapter da =
+                    new SqlDataAdapter(
+                    "SELECT * FROM tblAppointments",
+                    conn);
 
-                SqlCommand cmd =
-                    new SqlCommand(sql, conn);
+                DataTable dt =
+                    new DataTable();
 
-                SqlDataReader dr =
-                    cmd.ExecuteReader();
+                da.Fill(dt);
 
-                while (dr.Read())
-                {
-                    series.Points.AddXY(
-                        dr["ServiceName"],
-                        dr["Total"]);
-                }
+                dgvAppointments.DataSource = dt;
+            }
+            
+        }
+        private void LoadServices()
+        {
+            using (SqlConnection conn =
+                DatabaseHelper.GetConnection())
+            {
+                conn.Open();
+
+                SqlDataAdapter da =
+                    new SqlDataAdapter(
+                    "SELECT * FROM tblServices",
+                    conn);
+
+                DataTable dt =
+                    new DataTable();
+
+                da.Fill(dt);
+
+                cmbService.DataSource = dt;
+
+                cmbService.DisplayMember =
+                    "ServiceName";
+
+                cmbService.ValueMember =
+                    "ServiceID";
             }
         }
-
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void LoadPetComboBox()
         {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
 
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(
+                        "SELECT PetID, PetName FROM tblPets",
+                        conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    cmbPet.DataSource = dt;
+
+                    cmbPet.DisplayMember = "PetName";
+
+                    cmbPet.ValueMember = "PetID";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void LoadPetGrid()
         {
-            lblDateTime.Text =
-        DateTime.Now.ToString(
-            "dd/MM/yyyy HH:mm:ss");
-        }
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(
+                        "SELECT * FROM tblPets",
+                        conn);
 
-        }
+                    DataTable dt =
+                        new DataTable();
 
-        private void FrmCustomerDashboard_Load(object sender, EventArgs e)
-        {
-            lblUser.Text = "Customer";
+                    da.Fill(dt);
 
-            timerClock.Start();
-
-            cmbStatus.Items.Add("Pending");
-            cmbStatus.Items.Add("Confirmed");
-            cmbStatus.Items.Add("Completed");
-
-            cmbStatus.SelectedIndex = 0;
-
-            cmbPaymentMethod.Items.Add("Cash");
-            cmbPaymentMethod.Items.Add("Credit Card");
-            cmbPaymentMethod.Items.Add("Online Banking");
-
-            cmbPaymentMethod.SelectedIndex = 0;
-
-            cmbPaymentStatus.Items.Add("Paid");
-            cmbPaymentStatus.Items.Add("Pending");
-
-            cmbPaymentStatus.SelectedIndex = 0;
-
-            cmbGroomingStatus.Items.Add("Pending");
-            cmbGroomingStatus.Items.Add("In Progress");
-            cmbGroomingStatus.Items.Add("Completed");
-
-            LoadPetGrid();
-            LoadPetComboBox();
-
-            LoadServices();
-            LoadAppointments();
-
-            LoadAppointmentCombo();
-            LoadPayments();
-            LoadStaff();
-
-            LoadStaffAppointmentCombo();
-            LoadGroomingRecords();
-            LoadFeedback();
-
-            LoadRevenueChart();
-            LoadPopularServiceChart();
-            LoadCustomerGrowthChart();
-            LoadAppointmentStatusChart();
-            LoadStaffPerformanceChart();
-
-            LoadAnalytics();
-
+                    dgvPets.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -1528,112 +939,17 @@ namespace FurCarePro
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn =
-        DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                string sql =
-                @"INSERT INTO tblGroomingRecords
-        (
-            AppointmentID,
-            StaffID,
-            GroomingNotes,
-            GroomingStatus,
-            CompletionDate
-        )
-        VALUES
-        (
-            @AppointmentID,
-            @StaffID,
-            @Notes,
-            @Status,
-            NULL
-        )";
-
-                SqlCommand cmd =
-                    new SqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue(
-                    "@AppointmentID",
-                    cmbStaffAppointment.SelectedValue);
-
-                cmd.Parameters.AddWithValue(
-                    "@StaffID",
-                    cmbStaff.SelectedValue);
-
-                cmd.Parameters.AddWithValue(
-                    "@Notes",
-                    txtNotes.Text);
-
-                cmd.Parameters.AddWithValue(
-                    "@Status",
-                    cmbGroomingStatus.Text);
-
-                cmd.ExecuteNonQuery();
-            }
-
-            LoadGroomingRecords();
+            
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
         {
-            int recordID =
-        Convert.ToInt32(
-            dgvGroomingRecords
-            .CurrentRow
-            .Cells["RecordID"]
-            .Value);
-
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                string sql =
-                @"UPDATE tblGroomingRecords
-          SET GroomingStatus='Completed',
-              CompletionDate=GETDATE()
-          WHERE RecordID=@ID";
-
-                SqlCommand cmd =
-                    new SqlCommand(sql, conn);
-
-                cmd.Parameters.AddWithValue(
-                    "@ID",
-                    recordID);
-
-                cmd.ExecuteNonQuery();
-            }
-
-            LoadGroomingRecords();
+            
         }
 
         private void dgvGroomingRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                cmbStaff.Text =
-                    dgvGroomingRecords
-                    .CurrentRow
-                    .Cells["StaffName"]
-                    .Value
-                    .ToString();
-
-                txtNotes.Text =
-                    dgvGroomingRecords
-                    .CurrentRow
-                    .Cells["GroomingNotes"]
-                    .Value
-                    .ToString();
-
-                cmbGroomingStatus.Text =
-                    dgvGroomingRecords
-                    .CurrentRow
-                    .Cells["GroomingStatus"]
-                    .Value
-                    .ToString();
-            }
+            
         }
 
         private void btnSubmitFeedback_Click(object sender, EventArgs e)
@@ -1700,6 +1016,11 @@ namespace FurCarePro
         }
 
         private void lblHighRatings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartRevenue_Click(object sender, EventArgs e)
         {
 
         }
