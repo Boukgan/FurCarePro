@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,6 +65,9 @@
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.grpCustomerDetails = new System.Windows.Forms.GroupBox();
+            this.txtSearchCustomer = new System.Windows.Forms.TextBox();
+            this.btnSearchCustomer = new System.Windows.Forms.Button();
+            this.lblTotalCustomers = new System.Windows.Forms.Label();
             this.cmbCustomerStatus = new System.Windows.Forms.ComboBox();
             this.txtCustomerPhone = new System.Windows.Forms.TextBox();
             this.txtCustomerName = new System.Windows.Forms.TextBox();
@@ -82,48 +85,36 @@
             this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
             this.tabPets = new System.Windows.Forms.TabPage();
-            this.grpPetInfo = new System.Windows.Forms.GroupBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.dgvPets = new System.Windows.Forms.DataGridView();
+            this.grpPetDetails = new System.Windows.Forms.GroupBox();
+            this.txtSearchPet = new System.Windows.Forms.TextBox();
+            this.lblSearchPet = new System.Windows.Forms.Label();
+            this.dgvAdminPets = new System.Windows.Forms.DataGridView();
             this.btnClearPet = new System.Windows.Forms.Button();
             this.btnDeletePet = new System.Windows.Forms.Button();
             this.btnUpdatePet = new System.Windows.Forms.Button();
-            this.btnAddPet = new System.Windows.Forms.Button();
-            this.numWeight = new System.Windows.Forms.NumericUpDown();
-            this.lblWeight = new System.Windows.Forms.Label();
-            this.rbFemale = new System.Windows.Forms.RadioButton();
-            this.rbMale = new System.Windows.Forms.RadioButton();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.txtBreed = new System.Windows.Forms.TextBox();
-            this.lblBreed = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.txtPetName = new System.Windows.Forms.TextBox();
-            this.lblPetName = new System.Windows.Forms.Label();
-            this.cmbSpecies = new System.Windows.Forms.ComboBox();
-            this.lblSpecies = new System.Windows.Forms.Label();
+            this.lblAdminBreed = new System.Windows.Forms.Label();
+            this.lblAdminSpecies = new System.Windows.Forms.Label();
+            this.txtAdminPetName = new System.Windows.Forms.TextBox();
+            this.lblAdminPetName = new System.Windows.Forms.Label();
+            this.lblTitlePetDetails = new System.Windows.Forms.Label();
+            this.txtAdminPetID = new System.Windows.Forms.TextBox();
+            this.lblPetID = new System.Windows.Forms.Label();
+            this.cmbAdminOwner = new System.Windows.Forms.ComboBox();
+            this.lblOwnerPet = new System.Windows.Forms.Label();
             this.tabAppointments = new System.Windows.Forms.TabPage();
-            this.grpAppointmentBooking = new System.Windows.Forms.GroupBox();
-            this.dgvAppointments = new System.Windows.Forms.DataGridView();
-            this.txtAppointmentSearch = new System.Windows.Forms.TextBox();
-            this.lblSearchAppointment = new System.Windows.Forms.Label();
-            this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.dtpAppointment = new System.Windows.Forms.DateTimePicker();
-            this.txtDuration = new System.Windows.Forms.TextBox();
-            this.cmbPet = new System.Windows.Forms.ComboBox();
-            this.btnQueueCount = new System.Windows.Forms.Button();
+            this.grpAppointmentDetails = new System.Windows.Forms.GroupBox();
+            this.dgvAdminAppointments = new System.Windows.Forms.DataGridView();
+            this.cmbAdminAppointmentStatus = new System.Windows.Forms.ComboBox();
+            this.lblAdminAppointmentStatus = new System.Windows.Forms.Label();
+            this.dtpAdminAppointment = new System.Windows.Forms.DateTimePicker();
             this.btnDeleteAppointment = new System.Windows.Forms.Button();
             this.btnUpdateAppointment = new System.Windows.Forms.Button();
-            this.btnBookAppointment = new System.Windows.Forms.Button();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblDuration = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblPetInformation = new System.Windows.Forms.Label();
-            this.lblPet = new System.Windows.Forms.Label();
-            this.cmbService = new System.Windows.Forms.ComboBox();
-            this.lblService = new System.Windows.Forms.Label();
+            this.btnClearAppointment = new System.Windows.Forms.Button();
+            this.lblAdminAppointment = new System.Windows.Forms.Label();
+            this.lblServiceName = new System.Windows.Forms.Label();
+            this.lblAppointmentDetails = new System.Windows.Forms.Label();
+            this.lblAdminAppointmentID = new System.Windows.Forms.Label();
+            this.lblPetName = new System.Windows.Forms.Label();
             this.tabPayments = new System.Windows.Forms.TabPage();
             this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
             this.cmbPaymentStatus = new System.Windows.Forms.ComboBox();
@@ -215,9 +206,58 @@
             this.tabStaffPerformance = new System.Windows.Forms.TabPage();
             this.chartStaffPerformance = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabServices = new System.Windows.Forms.TabPage();
-            this.lblTotalCustomers = new System.Windows.Forms.Label();
-            this.btnSearchCustomer = new System.Windows.Forms.Button();
-            this.txtSearchCustomer = new System.Windows.Forms.TextBox();
+            this.cmbAdminSpecies = new System.Windows.Forms.ComboBox();
+            this.txtAdminBreed = new System.Windows.Forms.TextBox();
+            this.lblAdminWeight = new System.Windows.Forms.Label();
+            this.btnSearchPet = new System.Windows.Forms.Button();
+            this.lblTotalPets = new System.Windows.Forms.Label();
+            this.txtAdminWeight = new System.Windows.Forms.TextBox();
+            this.cmbAdminGender = new System.Windows.Forms.ComboBox();
+            this.lblAdminGender = new System.Windows.Forms.Label();
+            this.lblDogs = new System.Windows.Forms.Label();
+            this.lblCats = new System.Windows.Forms.Label();
+            this.lblBirds = new System.Windows.Forms.Label();
+            this.lblMostCommonSpecies = new System.Windows.Forms.Label();
+            this.lblTotalDogs = new System.Windows.Forms.Label();
+            this.lblTotalCats = new System.Windows.Forms.Label();
+            this.lblTotalBirds = new System.Windows.Forms.Label();
+            this.lblMostCommonSpeciess = new System.Windows.Forms.Label();
+            this.txtAdminAppointmentID = new System.Windows.Forms.TextBox();
+            this.txtPetName = new System.Windows.Forms.TextBox();
+            this.txtServiceName = new System.Windows.Forms.TextBox();
+            this.btnSearchAppointment = new System.Windows.Forms.Button();
+            this.txtSearchAppointment = new System.Windows.Forms.TextBox();
+            this.lblSearchPetName = new System.Windows.Forms.Label();
+            this.lblTotalAppointments = new System.Windows.Forms.Label();
+            this.lblPendingAppointments = new System.Windows.Forms.Label();
+            this.lblCompletedAppointments = new System.Windows.Forms.Label();
+            this.lblQueueCount = new System.Windows.Forms.Label();
+            this.btnAddToQueue = new System.Windows.Forms.Button();
+            this.btnProcessQueue = new System.Windows.Forms.Button();
+            this.grpServiceDetails = new System.Windows.Forms.GroupBox();
+            this.lblLastAction = new System.Windows.Forms.Label();
+            this.lblTotalServices = new System.Windows.Forms.Label();
+            this.btnSearchService = new System.Windows.Forms.Button();
+            this.txtSearchService = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtServicePrice = new System.Windows.Forms.TextBox();
+            this.txtServiceManagementName = new System.Windows.Forms.TextBox();
+            this.dgvServices = new System.Windows.Forms.DataGridView();
+            this.btnDeleteService = new System.Windows.Forms.Button();
+            this.btnUpdateService = new System.Windows.Forms.Button();
+            this.btnClearService = new System.Windows.Forms.Button();
+            this.lblServiceDescription = new System.Windows.Forms.Label();
+            this.lblServicePrice = new System.Windows.Forms.Label();
+            this.lblServiceDetails = new System.Windows.Forms.Label();
+            this.lblServiceID = new System.Windows.Forms.Label();
+            this.lblServiceManagementName = new System.Windows.Forms.Label();
+            this.txtServiceID = new System.Windows.Forms.TextBox();
+            this.rtxtServiceDescription = new System.Windows.Forms.RichTextBox();
+            this.btnAddService = new System.Windows.Forms.Button();
+            this.txtServiceDuration = new System.Windows.Forms.TextBox();
+            this.lblServiceDuration = new System.Windows.Forms.Label();
+            this.lblUniqueBreeds = new System.Windows.Forms.Label();
+            this.btnShowBreeds = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -228,12 +268,11 @@
             this.grpCustomerDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.tabPets.SuspendLayout();
-            this.grpPetInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPets)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numWeight)).BeginInit();
+            this.grpPetDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPets)).BeginInit();
             this.tabAppointments.SuspendLayout();
-            this.grpAppointmentBooking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).BeginInit();
+            this.grpAppointmentDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminAppointments)).BeginInit();
             this.tabPayments.SuspendLayout();
             this.grpPaymentInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayments)).BeginInit();
@@ -257,6 +296,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartAppointmentStatus)).BeginInit();
             this.tabStaffPerformance.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStaffPerformance)).BeginInit();
+            this.tabServices.SuspendLayout();
+            this.grpServiceDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -479,6 +521,34 @@
             this.grpCustomerDetails.TabStop = false;
             this.grpCustomerDetails.Text = "Customer Details";
             // 
+            // txtSearchCustomer
+            // 
+            this.txtSearchCustomer.Location = new System.Drawing.Point(273, 398);
+            this.txtSearchCustomer.Name = "txtSearchCustomer";
+            this.txtSearchCustomer.Size = new System.Drawing.Size(402, 20);
+            this.txtSearchCustomer.TabIndex = 30;
+            this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
+            // 
+            // btnSearchCustomer
+            // 
+            this.btnSearchCustomer.Location = new System.Drawing.Point(192, 398);
+            this.btnSearchCustomer.Name = "btnSearchCustomer";
+            this.btnSearchCustomer.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchCustomer.TabIndex = 29;
+            this.btnSearchCustomer.Text = "Search";
+            this.btnSearchCustomer.UseVisualStyleBackColor = true;
+            this.btnSearchCustomer.Click += new System.EventHandler(this.btnSearchCustomer_Click);
+            // 
+            // lblTotalCustomers
+            // 
+            this.lblTotalCustomers.AutoSize = true;
+            this.lblTotalCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCustomers.Location = new System.Drawing.Point(705, 398);
+            this.lblTotalCustomers.Name = "lblTotalCustomers";
+            this.lblTotalCustomers.Size = new System.Drawing.Size(142, 20);
+            this.lblTotalCustomers.TabIndex = 28;
+            this.lblTotalCustomers.Text = "Total Customers: 0";
+            // 
             // cmbCustomerStatus
             // 
             this.cmbCustomerStatus.FormattingEnabled = true;
@@ -632,453 +702,365 @@
             // 
             // tabPets
             // 
-            this.tabPets.Controls.Add(this.grpPetInfo);
+            this.tabPets.Controls.Add(this.grpPetDetails);
             this.tabPets.Location = new System.Drawing.Point(4, 22);
             this.tabPets.Name = "tabPets";
             this.tabPets.Padding = new System.Windows.Forms.Padding(3);
             this.tabPets.Size = new System.Drawing.Size(1023, 634);
             this.tabPets.TabIndex = 1;
-            this.tabPets.Text = "Pets";
+            this.tabPets.Text = "Pet Management";
             this.tabPets.UseVisualStyleBackColor = true;
+            this.tabPets.Click += new System.EventHandler(this.tabPets_Click);
             // 
-            // grpPetInfo
+            // grpPetDetails
             // 
-            this.grpPetInfo.Controls.Add(this.txtSearch);
-            this.grpPetInfo.Controls.Add(this.lblSearch);
-            this.grpPetInfo.Controls.Add(this.dgvPets);
-            this.grpPetInfo.Controls.Add(this.btnClearPet);
-            this.grpPetInfo.Controls.Add(this.btnDeletePet);
-            this.grpPetInfo.Controls.Add(this.btnUpdatePet);
-            this.grpPetInfo.Controls.Add(this.btnAddPet);
-            this.grpPetInfo.Controls.Add(this.numWeight);
-            this.grpPetInfo.Controls.Add(this.lblWeight);
-            this.grpPetInfo.Controls.Add(this.rbFemale);
-            this.grpPetInfo.Controls.Add(this.rbMale);
-            this.grpPetInfo.Controls.Add(this.lblGender);
-            this.grpPetInfo.Controls.Add(this.txtBreed);
-            this.grpPetInfo.Controls.Add(this.lblBreed);
-            this.grpPetInfo.Controls.Add(this.lblTitle);
-            this.grpPetInfo.Controls.Add(this.txtPetName);
-            this.grpPetInfo.Controls.Add(this.lblPetName);
-            this.grpPetInfo.Controls.Add(this.cmbSpecies);
-            this.grpPetInfo.Controls.Add(this.lblSpecies);
-            this.grpPetInfo.Location = new System.Drawing.Point(19, 20);
-            this.grpPetInfo.Name = "grpPetInfo";
-            this.grpPetInfo.Size = new System.Drawing.Size(985, 608);
-            this.grpPetInfo.TabIndex = 10;
-            this.grpPetInfo.TabStop = false;
-            this.grpPetInfo.Text = "Pet Info";
+            this.grpPetDetails.Controls.Add(this.btnShowBreeds);
+            this.grpPetDetails.Controls.Add(this.lblUniqueBreeds);
+            this.grpPetDetails.Controls.Add(this.lblMostCommonSpeciess);
+            this.grpPetDetails.Controls.Add(this.lblTotalBirds);
+            this.grpPetDetails.Controls.Add(this.lblTotalCats);
+            this.grpPetDetails.Controls.Add(this.lblTotalDogs);
+            this.grpPetDetails.Controls.Add(this.lblMostCommonSpecies);
+            this.grpPetDetails.Controls.Add(this.lblBirds);
+            this.grpPetDetails.Controls.Add(this.lblCats);
+            this.grpPetDetails.Controls.Add(this.lblDogs);
+            this.grpPetDetails.Controls.Add(this.lblAdminGender);
+            this.grpPetDetails.Controls.Add(this.cmbAdminGender);
+            this.grpPetDetails.Controls.Add(this.lblTotalPets);
+            this.grpPetDetails.Controls.Add(this.btnSearchPet);
+            this.grpPetDetails.Controls.Add(this.txtAdminWeight);
+            this.grpPetDetails.Controls.Add(this.lblAdminWeight);
+            this.grpPetDetails.Controls.Add(this.txtAdminBreed);
+            this.grpPetDetails.Controls.Add(this.cmbAdminSpecies);
+            this.grpPetDetails.Controls.Add(this.txtSearchPet);
+            this.grpPetDetails.Controls.Add(this.lblSearchPet);
+            this.grpPetDetails.Controls.Add(this.dgvAdminPets);
+            this.grpPetDetails.Controls.Add(this.btnClearPet);
+            this.grpPetDetails.Controls.Add(this.btnDeletePet);
+            this.grpPetDetails.Controls.Add(this.btnUpdatePet);
+            this.grpPetDetails.Controls.Add(this.lblAdminBreed);
+            this.grpPetDetails.Controls.Add(this.lblAdminSpecies);
+            this.grpPetDetails.Controls.Add(this.txtAdminPetName);
+            this.grpPetDetails.Controls.Add(this.lblAdminPetName);
+            this.grpPetDetails.Controls.Add(this.lblTitlePetDetails);
+            this.grpPetDetails.Controls.Add(this.txtAdminPetID);
+            this.grpPetDetails.Controls.Add(this.lblPetID);
+            this.grpPetDetails.Controls.Add(this.cmbAdminOwner);
+            this.grpPetDetails.Controls.Add(this.lblOwnerPet);
+            this.grpPetDetails.Location = new System.Drawing.Point(19, 20);
+            this.grpPetDetails.Name = "grpPetDetails";
+            this.grpPetDetails.Size = new System.Drawing.Size(985, 608);
+            this.grpPetDetails.TabIndex = 10;
+            this.grpPetDetails.TabStop = false;
+            this.grpPetDetails.Text = "Pet Details";
+            this.grpPetDetails.Enter += new System.EventHandler(this.grpPetDetails_Enter);
             // 
-            // txtSearch
+            // txtSearchPet
             // 
-            this.txtSearch.Location = new System.Drawing.Point(115, 401);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(414, 20);
-            this.txtSearch.TabIndex = 24;
+            this.txtSearchPet.Location = new System.Drawing.Point(629, 58);
+            this.txtSearchPet.Name = "txtSearchPet";
+            this.txtSearchPet.Size = new System.Drawing.Size(340, 20);
+            this.txtSearchPet.TabIndex = 24;
+            this.txtSearchPet.TextChanged += new System.EventHandler(this.txtSearchPet_TextChanged);
             // 
-            // lblSearch
+            // lblSearchPet
             // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(45, 401);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(64, 20);
-            this.lblSearch.TabIndex = 23;
-            this.lblSearch.Text = "Search:";
+            this.lblSearchPet.AutoSize = true;
+            this.lblSearchPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchPet.Location = new System.Drawing.Point(478, 58);
+            this.lblSearchPet.Name = "lblSearchPet";
+            this.lblSearchPet.Size = new System.Drawing.Size(64, 20);
+            this.lblSearchPet.TabIndex = 23;
+            this.lblSearchPet.Text = "Search:";
             // 
-            // dgvPets
+            // dgvAdminPets
             // 
-            this.dgvPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPets.Location = new System.Drawing.Point(49, 442);
-            this.dgvPets.Name = "dgvPets";
-            this.dgvPets.Size = new System.Drawing.Size(881, 143);
-            this.dgvPets.TabIndex = 22;
+            this.dgvAdminPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdminPets.Location = new System.Drawing.Point(482, 95);
+            this.dgvAdminPets.MultiSelect = false;
+            this.dgvAdminPets.Name = "dgvAdminPets";
+            this.dgvAdminPets.ReadOnly = true;
+            this.dgvAdminPets.Size = new System.Drawing.Size(486, 214);
+            this.dgvAdminPets.TabIndex = 22;
+            this.dgvAdminPets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminPets_CellContentClick);
             // 
             // btnClearPet
             // 
-            this.btnClearPet.Location = new System.Drawing.Point(370, 353);
+            this.btnClearPet.Location = new System.Drawing.Point(268, 480);
             this.btnClearPet.Name = "btnClearPet";
             this.btnClearPet.Size = new System.Drawing.Size(75, 23);
             this.btnClearPet.TabIndex = 21;
             this.btnClearPet.Text = "Clear";
             this.btnClearPet.UseVisualStyleBackColor = true;
+            this.btnClearPet.Click += new System.EventHandler(this.btnClearPet_Click);
             // 
             // btnDeletePet
             // 
-            this.btnDeletePet.Location = new System.Drawing.Point(257, 353);
+            this.btnDeletePet.Location = new System.Drawing.Point(155, 480);
             this.btnDeletePet.Name = "btnDeletePet";
             this.btnDeletePet.Size = new System.Drawing.Size(75, 23);
             this.btnDeletePet.TabIndex = 20;
             this.btnDeletePet.Text = "Delete";
             this.btnDeletePet.UseVisualStyleBackColor = true;
+            this.btnDeletePet.Click += new System.EventHandler(this.btnDeletePet_Click);
             // 
             // btnUpdatePet
             // 
-            this.btnUpdatePet.Location = new System.Drawing.Point(150, 353);
+            this.btnUpdatePet.Location = new System.Drawing.Point(48, 480);
             this.btnUpdatePet.Name = "btnUpdatePet";
             this.btnUpdatePet.Size = new System.Drawing.Size(75, 23);
             this.btnUpdatePet.TabIndex = 19;
             this.btnUpdatePet.Text = "Update";
             this.btnUpdatePet.UseVisualStyleBackColor = true;
+            this.btnUpdatePet.Click += new System.EventHandler(this.btnUpdatePet_Click);
             // 
-            // btnAddPet
+            // lblAdminBreed
             // 
-            this.btnAddPet.Location = new System.Drawing.Point(49, 353);
-            this.btnAddPet.Name = "btnAddPet";
-            this.btnAddPet.Size = new System.Drawing.Size(75, 23);
-            this.btnAddPet.TabIndex = 18;
-            this.btnAddPet.Text = "Add";
-            this.btnAddPet.UseVisualStyleBackColor = true;
+            this.lblAdminBreed.AutoSize = true;
+            this.lblAdminBreed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminBreed.Location = new System.Drawing.Point(45, 280);
+            this.lblAdminBreed.Name = "lblAdminBreed";
+            this.lblAdminBreed.Size = new System.Drawing.Size(52, 20);
+            this.lblAdminBreed.TabIndex = 16;
+            this.lblAdminBreed.Text = "Breed";
             // 
-            // numWeight
+            // lblAdminSpecies
             // 
-            this.numWeight.Location = new System.Drawing.Point(49, 308);
-            this.numWeight.Maximum = new decimal(new int[] {
-            150,
-            0,
-            0,
-            0});
-            this.numWeight.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numWeight.Name = "numWeight";
-            this.numWeight.Size = new System.Drawing.Size(120, 20);
-            this.numWeight.TabIndex = 17;
-            this.numWeight.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.lblAdminSpecies.AutoSize = true;
+            this.lblAdminSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminSpecies.Location = new System.Drawing.Point(45, 226);
+            this.lblAdminSpecies.Name = "lblAdminSpecies";
+            this.lblAdminSpecies.Size = new System.Drawing.Size(66, 20);
+            this.lblAdminSpecies.TabIndex = 12;
+            this.lblAdminSpecies.Text = "Species";
             // 
-            // lblWeight
+            // txtAdminPetName
             // 
-            this.lblWeight.AutoSize = true;
-            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Location = new System.Drawing.Point(45, 285);
-            this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(59, 20);
-            this.lblWeight.TabIndex = 16;
-            this.lblWeight.Text = "Weight";
+            this.txtAdminPetName.Location = new System.Drawing.Point(49, 194);
+            this.txtAdminPetName.Name = "txtAdminPetName";
+            this.txtAdminPetName.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminPetName.TabIndex = 11;
             // 
-            // rbFemale
+            // lblAdminPetName
             // 
-            this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(156, 256);
-            this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(59, 17);
-            this.rbFemale.TabIndex = 15;
-            this.rbFemale.TabStop = true;
-            this.rbFemale.Text = "Female";
-            this.rbFemale.UseVisualStyleBackColor = true;
+            this.lblAdminPetName.AutoSize = true;
+            this.lblAdminPetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminPetName.Location = new System.Drawing.Point(45, 171);
+            this.lblAdminPetName.Name = "lblAdminPetName";
+            this.lblAdminPetName.Size = new System.Drawing.Size(79, 20);
+            this.lblAdminPetName.TabIndex = 10;
+            this.lblAdminPetName.Text = "Pet Name";
             // 
-            // rbMale
+            // lblTitlePetDetails
             // 
-            this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(49, 256);
-            this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(48, 17);
-            this.rbMale.TabIndex = 14;
-            this.rbMale.TabStop = true;
-            this.rbMale.Text = "Male";
-            this.rbMale.UseVisualStyleBackColor = true;
+            this.lblTitlePetDetails.AutoSize = true;
+            this.lblTitlePetDetails.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitlePetDetails.Location = new System.Drawing.Point(49, 16);
+            this.lblTitlePetDetails.Name = "lblTitlePetDetails";
+            this.lblTitlePetDetails.Size = new System.Drawing.Size(156, 32);
+            this.lblTitlePetDetails.TabIndex = 9;
+            this.lblTitlePetDetails.Text = "PET DETAILS";
             // 
-            // lblGender
+            // txtAdminPetID
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(45, 231);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(63, 20);
-            this.lblGender.TabIndex = 12;
-            this.lblGender.Text = "Gender";
+            this.txtAdminPetID.Location = new System.Drawing.Point(52, 79);
+            this.txtAdminPetID.Name = "txtAdminPetID";
+            this.txtAdminPetID.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminPetID.TabIndex = 6;
             // 
-            // txtBreed
+            // lblPetID
             // 
-            this.txtBreed.Location = new System.Drawing.Point(49, 194);
-            this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(402, 20);
-            this.txtBreed.TabIndex = 11;
+            this.lblPetID.AutoSize = true;
+            this.lblPetID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPetID.Location = new System.Drawing.Point(48, 56);
+            this.lblPetID.Name = "lblPetID";
+            this.lblPetID.Size = new System.Drawing.Size(54, 20);
+            this.lblPetID.TabIndex = 5;
+            this.lblPetID.Text = "Pet ID";
             // 
-            // lblBreed
+            // cmbAdminOwner
             // 
-            this.lblBreed.AutoSize = true;
-            this.lblBreed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreed.Location = new System.Drawing.Point(45, 171);
-            this.lblBreed.Name = "lblBreed";
-            this.lblBreed.Size = new System.Drawing.Size(52, 20);
-            this.lblBreed.TabIndex = 10;
-            this.lblBreed.Text = "Breed";
+            this.cmbAdminOwner.FormattingEnabled = true;
+            this.cmbAdminOwner.Location = new System.Drawing.Point(49, 133);
+            this.cmbAdminOwner.Name = "cmbAdminOwner";
+            this.cmbAdminOwner.Size = new System.Drawing.Size(121, 21);
+            this.cmbAdminOwner.TabIndex = 8;
             // 
-            // lblTitle
+            // lblOwnerPet
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(49, 16);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(233, 32);
-            this.lblTitle.TabIndex = 9;
-            this.lblTitle.Text = "PET INFORMATION";
-            // 
-            // txtPetName
-            // 
-            this.txtPetName.Location = new System.Drawing.Point(52, 79);
-            this.txtPetName.Name = "txtPetName";
-            this.txtPetName.Size = new System.Drawing.Size(402, 20);
-            this.txtPetName.TabIndex = 6;
-            // 
-            // lblPetName
-            // 
-            this.lblPetName.AutoSize = true;
-            this.lblPetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetName.Location = new System.Drawing.Point(48, 56);
-            this.lblPetName.Name = "lblPetName";
-            this.lblPetName.Size = new System.Drawing.Size(79, 20);
-            this.lblPetName.TabIndex = 5;
-            this.lblPetName.Text = "Pet Name";
-            // 
-            // cmbSpecies
-            // 
-            this.cmbSpecies.FormattingEnabled = true;
-            this.cmbSpecies.Location = new System.Drawing.Point(49, 133);
-            this.cmbSpecies.Name = "cmbSpecies";
-            this.cmbSpecies.Size = new System.Drawing.Size(121, 21);
-            this.cmbSpecies.TabIndex = 8;
-            // 
-            // lblSpecies
-            // 
-            this.lblSpecies.AutoSize = true;
-            this.lblSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecies.Location = new System.Drawing.Point(45, 110);
-            this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(66, 20);
-            this.lblSpecies.TabIndex = 7;
-            this.lblSpecies.Text = "Species";
+            this.lblOwnerPet.AutoSize = true;
+            this.lblOwnerPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOwnerPet.Location = new System.Drawing.Point(45, 110);
+            this.lblOwnerPet.Name = "lblOwnerPet";
+            this.lblOwnerPet.Size = new System.Drawing.Size(55, 20);
+            this.lblOwnerPet.TabIndex = 7;
+            this.lblOwnerPet.Text = "Owner";
             // 
             // tabAppointments
             // 
-            this.tabAppointments.Controls.Add(this.grpAppointmentBooking);
+            this.tabAppointments.Controls.Add(this.grpAppointmentDetails);
             this.tabAppointments.Location = new System.Drawing.Point(4, 22);
             this.tabAppointments.Name = "tabAppointments";
             this.tabAppointments.Padding = new System.Windows.Forms.Padding(3);
             this.tabAppointments.Size = new System.Drawing.Size(1023, 634);
             this.tabAppointments.TabIndex = 2;
-            this.tabAppointments.Text = "Appointments";
+            this.tabAppointments.Text = "Appointment Management";
             this.tabAppointments.UseVisualStyleBackColor = true;
             // 
-            // grpAppointmentBooking
+            // grpAppointmentDetails
             // 
-            this.grpAppointmentBooking.Controls.Add(this.dgvAppointments);
-            this.grpAppointmentBooking.Controls.Add(this.txtAppointmentSearch);
-            this.grpAppointmentBooking.Controls.Add(this.lblSearchAppointment);
-            this.grpAppointmentBooking.Controls.Add(this.cmbStatus);
-            this.grpAppointmentBooking.Controls.Add(this.lblStatus);
-            this.grpAppointmentBooking.Controls.Add(this.dtpAppointment);
-            this.grpAppointmentBooking.Controls.Add(this.txtDuration);
-            this.grpAppointmentBooking.Controls.Add(this.cmbPet);
-            this.grpAppointmentBooking.Controls.Add(this.btnQueueCount);
-            this.grpAppointmentBooking.Controls.Add(this.btnDeleteAppointment);
-            this.grpAppointmentBooking.Controls.Add(this.btnUpdateAppointment);
-            this.grpAppointmentBooking.Controls.Add(this.btnBookAppointment);
-            this.grpAppointmentBooking.Controls.Add(this.lblDate);
-            this.grpAppointmentBooking.Controls.Add(this.lblDuration);
-            this.grpAppointmentBooking.Controls.Add(this.txtPrice);
-            this.grpAppointmentBooking.Controls.Add(this.lblPrice);
-            this.grpAppointmentBooking.Controls.Add(this.lblPetInformation);
-            this.grpAppointmentBooking.Controls.Add(this.lblPet);
-            this.grpAppointmentBooking.Controls.Add(this.cmbService);
-            this.grpAppointmentBooking.Controls.Add(this.lblService);
-            this.grpAppointmentBooking.Location = new System.Drawing.Point(19, 20);
-            this.grpAppointmentBooking.Name = "grpAppointmentBooking";
-            this.grpAppointmentBooking.Size = new System.Drawing.Size(985, 608);
-            this.grpAppointmentBooking.TabIndex = 11;
-            this.grpAppointmentBooking.TabStop = false;
-            this.grpAppointmentBooking.Text = "Appointment Booking";
+            this.grpAppointmentDetails.Controls.Add(this.btnProcessQueue);
+            this.grpAppointmentDetails.Controls.Add(this.btnAddToQueue);
+            this.grpAppointmentDetails.Controls.Add(this.lblQueueCount);
+            this.grpAppointmentDetails.Controls.Add(this.lblCompletedAppointments);
+            this.grpAppointmentDetails.Controls.Add(this.lblPendingAppointments);
+            this.grpAppointmentDetails.Controls.Add(this.lblTotalAppointments);
+            this.grpAppointmentDetails.Controls.Add(this.btnSearchAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.txtSearchAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.lblSearchPetName);
+            this.grpAppointmentDetails.Controls.Add(this.txtServiceName);
+            this.grpAppointmentDetails.Controls.Add(this.txtPetName);
+            this.grpAppointmentDetails.Controls.Add(this.txtAdminAppointmentID);
+            this.grpAppointmentDetails.Controls.Add(this.dgvAdminAppointments);
+            this.grpAppointmentDetails.Controls.Add(this.cmbAdminAppointmentStatus);
+            this.grpAppointmentDetails.Controls.Add(this.lblAdminAppointmentStatus);
+            this.grpAppointmentDetails.Controls.Add(this.dtpAdminAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.btnDeleteAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.btnUpdateAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.btnClearAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.lblAdminAppointment);
+            this.grpAppointmentDetails.Controls.Add(this.lblServiceName);
+            this.grpAppointmentDetails.Controls.Add(this.lblAppointmentDetails);
+            this.grpAppointmentDetails.Controls.Add(this.lblAdminAppointmentID);
+            this.grpAppointmentDetails.Controls.Add(this.lblPetName);
+            this.grpAppointmentDetails.Location = new System.Drawing.Point(19, 20);
+            this.grpAppointmentDetails.Name = "grpAppointmentDetails";
+            this.grpAppointmentDetails.Size = new System.Drawing.Size(985, 608);
+            this.grpAppointmentDetails.TabIndex = 11;
+            this.grpAppointmentDetails.TabStop = false;
+            this.grpAppointmentDetails.Text = "Appointment Details";
             // 
-            // dgvAppointments
+            // dgvAdminAppointments
             // 
-            this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Location = new System.Drawing.Point(50, 443);
-            this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.Size = new System.Drawing.Size(876, 159);
-            this.dgvAppointments.TabIndex = 33;
+            this.dgvAdminAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdminAppointments.Location = new System.Drawing.Point(50, 415);
+            this.dgvAdminAppointments.MultiSelect = false;
+            this.dgvAdminAppointments.Name = "dgvAdminAppointments";
+            this.dgvAdminAppointments.ReadOnly = true;
+            this.dgvAdminAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAdminAppointments.Size = new System.Drawing.Size(876, 187);
+            this.dgvAdminAppointments.TabIndex = 33;
+            this.dgvAdminAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminAppointments_CellContentClick);
             // 
-            // txtAppointmentSearch
+            // cmbAdminAppointmentStatus
             // 
-            this.txtAppointmentSearch.Location = new System.Drawing.Point(207, 417);
-            this.txtAppointmentSearch.Name = "txtAppointmentSearch";
-            this.txtAppointmentSearch.Size = new System.Drawing.Size(402, 20);
-            this.txtAppointmentSearch.TabIndex = 32;
+            this.cmbAdminAppointmentStatus.FormattingEnabled = true;
+            this.cmbAdminAppointmentStatus.Items.AddRange(new object[] {
+            "Pending",
+            "Confirmed",
+            "Completed",
+            "Cancelled"});
+            this.cmbAdminAppointmentStatus.Location = new System.Drawing.Point(49, 289);
+            this.cmbAdminAppointmentStatus.Name = "cmbAdminAppointmentStatus";
+            this.cmbAdminAppointmentStatus.Size = new System.Drawing.Size(176, 21);
+            this.cmbAdminAppointmentStatus.TabIndex = 30;
             // 
-            // lblSearchAppointment
+            // lblAdminAppointmentStatus
             // 
-            this.lblSearchAppointment.AutoSize = true;
-            this.lblSearchAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchAppointment.Location = new System.Drawing.Point(45, 417);
-            this.lblSearchAppointment.Name = "lblSearchAppointment";
-            this.lblSearchAppointment.Size = new System.Drawing.Size(159, 20);
-            this.lblSearchAppointment.TabIndex = 31;
-            this.lblSearchAppointment.Text = "Search Appointment:";
+            this.lblAdminAppointmentStatus.AutoSize = true;
+            this.lblAdminAppointmentStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminAppointmentStatus.Location = new System.Drawing.Point(45, 266);
+            this.lblAdminAppointmentStatus.Name = "lblAdminAppointmentStatus";
+            this.lblAdminAppointmentStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblAdminAppointmentStatus.TabIndex = 28;
+            this.lblAdminAppointmentStatus.Text = "Status";
             // 
-            // cmbStatus
+            // dtpAdminAppointment
             // 
-            this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(50, 343);
-            this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(176, 21);
-            this.cmbStatus.TabIndex = 30;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(46, 320);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(56, 20);
-            this.lblStatus.TabIndex = 28;
-            this.lblStatus.Text = "Status";
-            // 
-            // dtpAppointment
-            // 
-            this.dtpAppointment.Location = new System.Drawing.Point(49, 287);
-            this.dtpAppointment.Name = "dtpAppointment";
-            this.dtpAppointment.Size = new System.Drawing.Size(200, 20);
-            this.dtpAppointment.TabIndex = 27;
-            // 
-            // txtDuration
-            // 
-            this.txtDuration.Location = new System.Drawing.Point(49, 231);
-            this.txtDuration.Name = "txtDuration";
-            this.txtDuration.ReadOnly = true;
-            this.txtDuration.Size = new System.Drawing.Size(402, 20);
-            this.txtDuration.TabIndex = 26;
-            // 
-            // cmbPet
-            // 
-            this.cmbPet.FormattingEnabled = true;
-            this.cmbPet.Items.AddRange(new object[] {
-            "Dog",
-            "Cat",
-            "Rabbit",
-            "Bird",
-            "Hamster"});
-            this.cmbPet.Location = new System.Drawing.Point(49, 77);
-            this.cmbPet.Name = "cmbPet";
-            this.cmbPet.Size = new System.Drawing.Size(176, 21);
-            this.cmbPet.TabIndex = 25;
-            // 
-            // btnQueueCount
-            // 
-            this.btnQueueCount.Location = new System.Drawing.Point(376, 379);
-            this.btnQueueCount.Name = "btnQueueCount";
-            this.btnQueueCount.Size = new System.Drawing.Size(93, 23);
-            this.btnQueueCount.TabIndex = 21;
-            this.btnQueueCount.Text = "Queue Count";
-            this.btnQueueCount.UseVisualStyleBackColor = true;
+            this.dtpAdminAppointment.Location = new System.Drawing.Point(49, 232);
+            this.dtpAdminAppointment.Name = "dtpAdminAppointment";
+            this.dtpAdminAppointment.Size = new System.Drawing.Size(200, 20);
+            this.dtpAdminAppointment.TabIndex = 27;
             // 
             // btnDeleteAppointment
             // 
-            this.btnDeleteAppointment.Location = new System.Drawing.Point(258, 379);
+            this.btnDeleteAppointment.Location = new System.Drawing.Point(154, 331);
             this.btnDeleteAppointment.Name = "btnDeleteAppointment";
             this.btnDeleteAppointment.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteAppointment.TabIndex = 20;
             this.btnDeleteAppointment.Text = "Delete";
             this.btnDeleteAppointment.UseVisualStyleBackColor = true;
+            this.btnDeleteAppointment.Click += new System.EventHandler(this.btnDeleteAppointment_Click);
             // 
             // btnUpdateAppointment
             // 
-            this.btnUpdateAppointment.Location = new System.Drawing.Point(151, 379);
+            this.btnUpdateAppointment.Location = new System.Drawing.Point(47, 331);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
             this.btnUpdateAppointment.Size = new System.Drawing.Size(75, 23);
             this.btnUpdateAppointment.TabIndex = 19;
             this.btnUpdateAppointment.Text = "Update";
             this.btnUpdateAppointment.UseVisualStyleBackColor = true;
+            this.btnUpdateAppointment.Click += new System.EventHandler(this.btnUpdateAppointment_Click);
             // 
-            // btnBookAppointment
+            // btnClearAppointment
             // 
-            this.btnBookAppointment.Location = new System.Drawing.Point(50, 379);
-            this.btnBookAppointment.Name = "btnBookAppointment";
-            this.btnBookAppointment.Size = new System.Drawing.Size(75, 23);
-            this.btnBookAppointment.TabIndex = 18;
-            this.btnBookAppointment.Text = "Book";
-            this.btnBookAppointment.UseVisualStyleBackColor = true;
+            this.btnClearAppointment.Location = new System.Drawing.Point(263, 331);
+            this.btnClearAppointment.Name = "btnClearAppointment";
+            this.btnClearAppointment.Size = new System.Drawing.Size(75, 23);
+            this.btnClearAppointment.TabIndex = 18;
+            this.btnClearAppointment.Text = "Clear";
+            this.btnClearAppointment.UseVisualStyleBackColor = true;
+            this.btnClearAppointment.Click += new System.EventHandler(this.btnClearAppointment_Click);
             // 
-            // lblDate
+            // lblAdminAppointment
             // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(45, 264);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(44, 20);
-            this.lblDate.TabIndex = 16;
-            this.lblDate.Text = "Date";
+            this.lblAdminAppointment.AutoSize = true;
+            this.lblAdminAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminAppointment.Location = new System.Drawing.Point(45, 209);
+            this.lblAdminAppointment.Name = "lblAdminAppointment";
+            this.lblAdminAppointment.Size = new System.Drawing.Size(139, 20);
+            this.lblAdminAppointment.TabIndex = 16;
+            this.lblAdminAppointment.Text = "Appointment Date";
             // 
-            // lblDuration
+            // lblServiceName
             // 
-            this.lblDuration.AutoSize = true;
-            this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuration.Location = new System.Drawing.Point(45, 208);
-            this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(70, 20);
-            this.lblDuration.TabIndex = 12;
-            this.lblDuration.Text = "Duration";
+            this.lblServiceName.AutoSize = true;
+            this.lblServiceName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceName.Location = new System.Drawing.Point(45, 154);
+            this.lblServiceName.Name = "lblServiceName";
+            this.lblServiceName.Size = new System.Drawing.Size(107, 20);
+            this.lblServiceName.TabIndex = 10;
+            this.lblServiceName.Text = "Service Name";
             // 
-            // txtPrice
+            // lblAppointmentDetails
             // 
-            this.txtPrice.Location = new System.Drawing.Point(49, 177);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(402, 20);
-            this.txtPrice.TabIndex = 11;
+            this.lblAppointmentDetails.AutoSize = true;
+            this.lblAppointmentDetails.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointmentDetails.Location = new System.Drawing.Point(49, 16);
+            this.lblAppointmentDetails.Name = "lblAppointmentDetails";
+            this.lblAppointmentDetails.Size = new System.Drawing.Size(307, 32);
+            this.lblAppointmentDetails.TabIndex = 9;
+            this.lblAppointmentDetails.Text = "APPOINTMENT BOOKING";
             // 
-            // lblPrice
+            // lblAdminAppointmentID
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(45, 154);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(44, 20);
-            this.lblPrice.TabIndex = 10;
-            this.lblPrice.Text = "Price";
+            this.lblAdminAppointmentID.AutoSize = true;
+            this.lblAdminAppointmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminAppointmentID.Location = new System.Drawing.Point(45, 54);
+            this.lblAdminAppointmentID.Name = "lblAdminAppointmentID";
+            this.lblAdminAppointmentID.Size = new System.Drawing.Size(121, 20);
+            this.lblAdminAppointmentID.TabIndex = 5;
+            this.lblAdminAppointmentID.Text = "Appointment ID";
             // 
-            // lblPetInformation
+            // lblPetName
             // 
-            this.lblPetInformation.AutoSize = true;
-            this.lblPetInformation.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetInformation.Location = new System.Drawing.Point(49, 16);
-            this.lblPetInformation.Name = "lblPetInformation";
-            this.lblPetInformation.Size = new System.Drawing.Size(307, 32);
-            this.lblPetInformation.TabIndex = 9;
-            this.lblPetInformation.Text = "APPOINTMENT BOOKING";
-            // 
-            // lblPet
-            // 
-            this.lblPet.AutoSize = true;
-            this.lblPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPet.Location = new System.Drawing.Point(45, 54);
-            this.lblPet.Name = "lblPet";
-            this.lblPet.Size = new System.Drawing.Size(33, 20);
-            this.lblPet.TabIndex = 5;
-            this.lblPet.Text = "Pet";
-            // 
-            // cmbService
-            // 
-            this.cmbService.FormattingEnabled = true;
-            this.cmbService.Location = new System.Drawing.Point(49, 127);
-            this.cmbService.Name = "cmbService";
-            this.cmbService.Size = new System.Drawing.Size(176, 21);
-            this.cmbService.TabIndex = 8;
-            // 
-            // lblService
-            // 
-            this.lblService.AutoSize = true;
-            this.lblService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblService.Location = new System.Drawing.Point(45, 104);
-            this.lblService.Name = "lblService";
-            this.lblService.Size = new System.Drawing.Size(61, 20);
-            this.lblService.TabIndex = 7;
-            this.lblService.Text = "Service";
+            this.lblPetName.AutoSize = true;
+            this.lblPetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPetName.Location = new System.Drawing.Point(45, 104);
+            this.lblPetName.Name = "lblPetName";
+            this.lblPetName.Size = new System.Drawing.Size(79, 20);
+            this.lblPetName.TabIndex = 7;
+            this.lblPetName.Text = "Pet Name";
             // 
             // tabPayments
             // 
@@ -1940,16 +1922,16 @@
             // 
             // chartRevenue
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend1);
             this.chartRevenue.Location = new System.Drawing.Point(319, 26);
             this.chartRevenue.Name = "chartRevenue";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartRevenue.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartRevenue.Series.Add(series1);
             this.chartRevenue.Size = new System.Drawing.Size(320, 210);
             this.chartRevenue.TabIndex = 1;
             this.chartRevenue.Text = "chart2";
@@ -1967,16 +1949,16 @@
             // 
             // chartPopularService
             // 
-            chartArea7.Name = "ChartArea1";
-            this.chartPopularService.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartPopularService.Legends.Add(legend7);
+            chartArea2.Name = "ChartArea1";
+            this.chartPopularService.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPopularService.Legends.Add(legend2);
             this.chartPopularService.Location = new System.Drawing.Point(319, 26);
             this.chartPopularService.Name = "chartPopularService";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chartPopularService.Series.Add(series7);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartPopularService.Series.Add(series2);
             this.chartPopularService.Size = new System.Drawing.Size(320, 210);
             this.chartPopularService.TabIndex = 2;
             this.chartPopularService.Text = "chart2";
@@ -1994,16 +1976,16 @@
             // 
             // chartCustomerGrowth
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chartCustomerGrowth.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chartCustomerGrowth.Legends.Add(legend8);
+            chartArea3.Name = "ChartArea1";
+            this.chartCustomerGrowth.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartCustomerGrowth.Legends.Add(legend3);
             this.chartCustomerGrowth.Location = new System.Drawing.Point(319, 26);
             this.chartCustomerGrowth.Name = "chartCustomerGrowth";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartCustomerGrowth.Series.Add(series8);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartCustomerGrowth.Series.Add(series3);
             this.chartCustomerGrowth.Size = new System.Drawing.Size(320, 210);
             this.chartCustomerGrowth.TabIndex = 3;
             this.chartCustomerGrowth.Text = "chart2";
@@ -2021,16 +2003,16 @@
             // 
             // chartAppointmentStatus
             // 
-            chartArea9.Name = "ChartArea1";
-            this.chartAppointmentStatus.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.chartAppointmentStatus.Legends.Add(legend9);
+            chartArea4.Name = "ChartArea1";
+            this.chartAppointmentStatus.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartAppointmentStatus.Legends.Add(legend4);
             this.chartAppointmentStatus.Location = new System.Drawing.Point(319, 26);
             this.chartAppointmentStatus.Name = "chartAppointmentStatus";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chartAppointmentStatus.Series.Add(series9);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartAppointmentStatus.Series.Add(series4);
             this.chartAppointmentStatus.Size = new System.Drawing.Size(320, 210);
             this.chartAppointmentStatus.TabIndex = 4;
             this.chartAppointmentStatus.Text = "chart2";
@@ -2048,57 +2030,546 @@
             // 
             // chartStaffPerformance
             // 
-            chartArea10.Name = "ChartArea1";
-            this.chartStaffPerformance.ChartAreas.Add(chartArea10);
-            legend10.Name = "Legend1";
-            this.chartStaffPerformance.Legends.Add(legend10);
+            chartArea5.Name = "ChartArea1";
+            this.chartStaffPerformance.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartStaffPerformance.Legends.Add(legend5);
             this.chartStaffPerformance.Location = new System.Drawing.Point(319, 26);
             this.chartStaffPerformance.Name = "chartStaffPerformance";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.chartStaffPerformance.Series.Add(series10);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartStaffPerformance.Series.Add(series5);
             this.chartStaffPerformance.Size = new System.Drawing.Size(320, 210);
             this.chartStaffPerformance.TabIndex = 5;
             this.chartStaffPerformance.Text = "chart2";
             // 
             // tabServices
             // 
+            this.tabServices.Controls.Add(this.grpServiceDetails);
             this.tabServices.Location = new System.Drawing.Point(4, 22);
             this.tabServices.Name = "tabServices";
             this.tabServices.Padding = new System.Windows.Forms.Padding(3);
             this.tabServices.Size = new System.Drawing.Size(1023, 634);
             this.tabServices.TabIndex = 8;
-            this.tabServices.Text = "Services";
+            this.tabServices.Text = "Service Management";
             this.tabServices.UseVisualStyleBackColor = true;
             // 
-            // lblTotalCustomers
+            // cmbAdminSpecies
             // 
-            this.lblTotalCustomers.AutoSize = true;
-            this.lblTotalCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalCustomers.Location = new System.Drawing.Point(705, 398);
-            this.lblTotalCustomers.Name = "lblTotalCustomers";
-            this.lblTotalCustomers.Size = new System.Drawing.Size(142, 20);
-            this.lblTotalCustomers.TabIndex = 28;
-            this.lblTotalCustomers.Text = "Total Customers: 0";
+            this.cmbAdminSpecies.FormattingEnabled = true;
+            this.cmbAdminSpecies.Items.AddRange(new object[] {
+            "Cat",
+            "Dog",
+            "Rabbit",
+            "Bird",
+            "Other"});
+            this.cmbAdminSpecies.Location = new System.Drawing.Point(49, 249);
+            this.cmbAdminSpecies.Name = "cmbAdminSpecies";
+            this.cmbAdminSpecies.Size = new System.Drawing.Size(121, 21);
+            this.cmbAdminSpecies.TabIndex = 25;
             // 
-            // btnSearchCustomer
+            // txtAdminBreed
             // 
-            this.btnSearchCustomer.Location = new System.Drawing.Point(192, 398);
-            this.btnSearchCustomer.Name = "btnSearchCustomer";
-            this.btnSearchCustomer.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchCustomer.TabIndex = 29;
-            this.btnSearchCustomer.Text = "Search";
-            this.btnSearchCustomer.UseVisualStyleBackColor = true;
-            this.btnSearchCustomer.Click += new System.EventHandler(this.btnSearchCustomer_Click);
+            this.txtAdminBreed.Location = new System.Drawing.Point(49, 303);
+            this.txtAdminBreed.Name = "txtAdminBreed";
+            this.txtAdminBreed.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminBreed.TabIndex = 26;
             // 
-            // txtSearchCustomer
+            // lblAdminWeight
             // 
-            this.txtSearchCustomer.Location = new System.Drawing.Point(273, 398);
-            this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(402, 20);
-            this.txtSearchCustomer.TabIndex = 30;
-            this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
+            this.lblAdminWeight.AutoSize = true;
+            this.lblAdminWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminWeight.Location = new System.Drawing.Point(45, 402);
+            this.lblAdminWeight.Name = "lblAdminWeight";
+            this.lblAdminWeight.Size = new System.Drawing.Size(59, 20);
+            this.lblAdminWeight.TabIndex = 27;
+            this.lblAdminWeight.Text = "Weight";
+            // 
+            // btnSearchPet
+            // 
+            this.btnSearchPet.Location = new System.Drawing.Point(548, 56);
+            this.btnSearchPet.Name = "btnSearchPet";
+            this.btnSearchPet.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchPet.TabIndex = 29;
+            this.btnSearchPet.Text = "Search";
+            this.btnSearchPet.UseVisualStyleBackColor = true;
+            this.btnSearchPet.Click += new System.EventHandler(this.btnSearchPet_Click);
+            // 
+            // lblTotalPets
+            // 
+            this.lblTotalPets.AutoSize = true;
+            this.lblTotalPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPets.Location = new System.Drawing.Point(790, 324);
+            this.lblTotalPets.Name = "lblTotalPets";
+            this.lblTotalPets.Size = new System.Drawing.Size(97, 20);
+            this.lblTotalPets.TabIndex = 30;
+            this.lblTotalPets.Text = "Total Pets: 0";
+            // 
+            // txtAdminWeight
+            // 
+            this.txtAdminWeight.Location = new System.Drawing.Point(49, 425);
+            this.txtAdminWeight.Name = "txtAdminWeight";
+            this.txtAdminWeight.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminWeight.TabIndex = 28;
+            // 
+            // cmbAdminGender
+            // 
+            this.cmbAdminGender.FormattingEnabled = true;
+            this.cmbAdminGender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cmbAdminGender.Location = new System.Drawing.Point(49, 365);
+            this.cmbAdminGender.Name = "cmbAdminGender";
+            this.cmbAdminGender.Size = new System.Drawing.Size(121, 21);
+            this.cmbAdminGender.TabIndex = 31;
+            // 
+            // lblAdminGender
+            // 
+            this.lblAdminGender.AutoSize = true;
+            this.lblAdminGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminGender.Location = new System.Drawing.Point(45, 342);
+            this.lblAdminGender.Name = "lblAdminGender";
+            this.lblAdminGender.Size = new System.Drawing.Size(63, 20);
+            this.lblAdminGender.TabIndex = 32;
+            this.lblAdminGender.Text = "Gender";
+            // 
+            // lblDogs
+            // 
+            this.lblDogs.AutoSize = true;
+            this.lblDogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDogs.Location = new System.Drawing.Point(574, 324);
+            this.lblDogs.Name = "lblDogs";
+            this.lblDogs.Size = new System.Drawing.Size(64, 20);
+            this.lblDogs.TabIndex = 35;
+            this.lblDogs.Text = "Dogs: 0";
+            // 
+            // lblCats
+            // 
+            this.lblCats.AutoSize = true;
+            this.lblCats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCats.Location = new System.Drawing.Point(574, 344);
+            this.lblCats.Name = "lblCats";
+            this.lblCats.Size = new System.Drawing.Size(59, 20);
+            this.lblCats.TabIndex = 36;
+            this.lblCats.Text = "Cats: 0";
+            // 
+            // lblBirds
+            // 
+            this.lblBirds.AutoSize = true;
+            this.lblBirds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirds.Location = new System.Drawing.Point(574, 364);
+            this.lblBirds.Name = "lblBirds";
+            this.lblBirds.Size = new System.Drawing.Size(62, 20);
+            this.lblBirds.TabIndex = 37;
+            this.lblBirds.Text = "Birds: 0";
+            // 
+            // lblMostCommonSpecies
+            // 
+            this.lblMostCommonSpecies.AutoSize = true;
+            this.lblMostCommonSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostCommonSpecies.Location = new System.Drawing.Point(661, 384);
+            this.lblMostCommonSpecies.Name = "lblMostCommonSpecies";
+            this.lblMostCommonSpecies.Size = new System.Drawing.Size(57, 20);
+            this.lblMostCommonSpecies.TabIndex = 38;
+            this.lblMostCommonSpecies.Text = "Animal";
+            // 
+            // lblTotalDogs
+            // 
+            this.lblTotalDogs.AutoSize = true;
+            this.lblTotalDogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalDogs.Location = new System.Drawing.Point(478, 324);
+            this.lblTotalDogs.Name = "lblTotalDogs";
+            this.lblTotalDogs.Size = new System.Drawing.Size(90, 20);
+            this.lblTotalDogs.TabIndex = 39;
+            this.lblTotalDogs.Text = "Total Dogs:";
+            // 
+            // lblTotalCats
+            // 
+            this.lblTotalCats.AutoSize = true;
+            this.lblTotalCats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalCats.Location = new System.Drawing.Point(478, 344);
+            this.lblTotalCats.Name = "lblTotalCats";
+            this.lblTotalCats.Size = new System.Drawing.Size(85, 20);
+            this.lblTotalCats.TabIndex = 40;
+            this.lblTotalCats.Text = "Total Cats:";
+            // 
+            // lblTotalBirds
+            // 
+            this.lblTotalBirds.AutoSize = true;
+            this.lblTotalBirds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBirds.Location = new System.Drawing.Point(478, 364);
+            this.lblTotalBirds.Name = "lblTotalBirds";
+            this.lblTotalBirds.Size = new System.Drawing.Size(88, 20);
+            this.lblTotalBirds.TabIndex = 41;
+            this.lblTotalBirds.Text = "Total Birds:";
+            // 
+            // lblMostCommonSpeciess
+            // 
+            this.lblMostCommonSpeciess.AutoSize = true;
+            this.lblMostCommonSpeciess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMostCommonSpeciess.Location = new System.Drawing.Point(478, 384);
+            this.lblMostCommonSpeciess.Name = "lblMostCommonSpeciess";
+            this.lblMostCommonSpeciess.Size = new System.Drawing.Size(177, 20);
+            this.lblMostCommonSpeciess.TabIndex = 42;
+            this.lblMostCommonSpeciess.Text = "Most Common Species:";
+            // 
+            // txtAdminAppointmentID
+            // 
+            this.txtAdminAppointmentID.Location = new System.Drawing.Point(49, 77);
+            this.txtAdminAppointmentID.Name = "txtAdminAppointmentID";
+            this.txtAdminAppointmentID.ReadOnly = true;
+            this.txtAdminAppointmentID.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminAppointmentID.TabIndex = 34;
+            // 
+            // txtPetName
+            // 
+            this.txtPetName.Location = new System.Drawing.Point(49, 127);
+            this.txtPetName.Name = "txtPetName";
+            this.txtPetName.ReadOnly = true;
+            this.txtPetName.Size = new System.Drawing.Size(402, 20);
+            this.txtPetName.TabIndex = 35;
+            // 
+            // txtServiceName
+            // 
+            this.txtServiceName.Location = new System.Drawing.Point(49, 177);
+            this.txtServiceName.Name = "txtServiceName";
+            this.txtServiceName.ReadOnly = true;
+            this.txtServiceName.Size = new System.Drawing.Size(402, 20);
+            this.txtServiceName.TabIndex = 36;
+            // 
+            // btnSearchAppointment
+            // 
+            this.btnSearchAppointment.Location = new System.Drawing.Point(194, 375);
+            this.btnSearchAppointment.Name = "btnSearchAppointment";
+            this.btnSearchAppointment.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchAppointment.TabIndex = 39;
+            this.btnSearchAppointment.Text = "Search";
+            this.btnSearchAppointment.UseVisualStyleBackColor = true;
+            this.btnSearchAppointment.Click += new System.EventHandler(this.btnSearchAppointment_Click);
+            // 
+            // txtSearchAppointment
+            // 
+            this.txtSearchAppointment.Location = new System.Drawing.Point(275, 377);
+            this.txtSearchAppointment.Name = "txtSearchAppointment";
+            this.txtSearchAppointment.Size = new System.Drawing.Size(340, 20);
+            this.txtSearchAppointment.TabIndex = 38;
+            this.txtSearchAppointment.TextChanged += new System.EventHandler(this.txtSearchAppointment_TextChanged);
+            // 
+            // lblSearchPetName
+            // 
+            this.lblSearchPetName.AutoSize = true;
+            this.lblSearchPetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchPetName.Location = new System.Drawing.Point(46, 377);
+            this.lblSearchPetName.Name = "lblSearchPetName";
+            this.lblSearchPetName.Size = new System.Drawing.Size(138, 20);
+            this.lblSearchPetName.TabIndex = 37;
+            this.lblSearchPetName.Text = "Search Pet Name:";
+            // 
+            // lblTotalAppointments
+            // 
+            this.lblTotalAppointments.AutoSize = true;
+            this.lblTotalAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAppointments.Location = new System.Drawing.Point(637, 377);
+            this.lblTotalAppointments.Name = "lblTotalAppointments";
+            this.lblTotalAppointments.Size = new System.Drawing.Size(164, 20);
+            this.lblTotalAppointments.TabIndex = 40;
+            this.lblTotalAppointments.Text = "Total Appointments: 0";
+            // 
+            // lblPendingAppointments
+            // 
+            this.lblPendingAppointments.AutoSize = true;
+            this.lblPendingAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPendingAppointments.Location = new System.Drawing.Point(637, 357);
+            this.lblPendingAppointments.Name = "lblPendingAppointments";
+            this.lblPendingAppointments.Size = new System.Drawing.Size(84, 20);
+            this.lblPendingAppointments.TabIndex = 41;
+            this.lblPendingAppointments.Text = "Pending: 0";
+            // 
+            // lblCompletedAppointments
+            // 
+            this.lblCompletedAppointments.AutoSize = true;
+            this.lblCompletedAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompletedAppointments.Location = new System.Drawing.Point(637, 337);
+            this.lblCompletedAppointments.Name = "lblCompletedAppointments";
+            this.lblCompletedAppointments.Size = new System.Drawing.Size(103, 20);
+            this.lblCompletedAppointments.TabIndex = 42;
+            this.lblCompletedAppointments.Text = "Completed: 0";
+            // 
+            // lblQueueCount
+            // 
+            this.lblQueueCount.AutoSize = true;
+            this.lblQueueCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQueueCount.Location = new System.Drawing.Point(637, 290);
+            this.lblQueueCount.Name = "lblQueueCount";
+            this.lblQueueCount.Size = new System.Drawing.Size(121, 20);
+            this.lblQueueCount.TabIndex = 43;
+            this.lblQueueCount.Text = "Queue Count: 0";
+            // 
+            // btnAddToQueue
+            // 
+            this.btnAddToQueue.Location = new System.Drawing.Point(764, 287);
+            this.btnAddToQueue.Name = "btnAddToQueue";
+            this.btnAddToQueue.Size = new System.Drawing.Size(85, 23);
+            this.btnAddToQueue.TabIndex = 44;
+            this.btnAddToQueue.Text = "Add To Queue";
+            this.btnAddToQueue.UseVisualStyleBackColor = true;
+            this.btnAddToQueue.Click += new System.EventHandler(this.btnAddToQueue_Click);
+            // 
+            // btnProcessQueue
+            // 
+            this.btnProcessQueue.Location = new System.Drawing.Point(864, 287);
+            this.btnProcessQueue.Name = "btnProcessQueue";
+            this.btnProcessQueue.Size = new System.Drawing.Size(88, 23);
+            this.btnProcessQueue.TabIndex = 45;
+            this.btnProcessQueue.Text = "Process Queue";
+            this.btnProcessQueue.UseVisualStyleBackColor = true;
+            this.btnProcessQueue.Click += new System.EventHandler(this.btnProcessQueue_Click);
+            // 
+            // grpServiceDetails
+            // 
+            this.grpServiceDetails.Controls.Add(this.txtServiceDuration);
+            this.grpServiceDetails.Controls.Add(this.lblServiceDuration);
+            this.grpServiceDetails.Controls.Add(this.btnAddService);
+            this.grpServiceDetails.Controls.Add(this.rtxtServiceDescription);
+            this.grpServiceDetails.Controls.Add(this.txtServiceID);
+            this.grpServiceDetails.Controls.Add(this.lblLastAction);
+            this.grpServiceDetails.Controls.Add(this.lblTotalServices);
+            this.grpServiceDetails.Controls.Add(this.btnSearchService);
+            this.grpServiceDetails.Controls.Add(this.txtSearchService);
+            this.grpServiceDetails.Controls.Add(this.label16);
+            this.grpServiceDetails.Controls.Add(this.txtServicePrice);
+            this.grpServiceDetails.Controls.Add(this.txtServiceManagementName);
+            this.grpServiceDetails.Controls.Add(this.dgvServices);
+            this.grpServiceDetails.Controls.Add(this.btnDeleteService);
+            this.grpServiceDetails.Controls.Add(this.btnUpdateService);
+            this.grpServiceDetails.Controls.Add(this.btnClearService);
+            this.grpServiceDetails.Controls.Add(this.lblServiceDescription);
+            this.grpServiceDetails.Controls.Add(this.lblServicePrice);
+            this.grpServiceDetails.Controls.Add(this.lblServiceDetails);
+            this.grpServiceDetails.Controls.Add(this.lblServiceID);
+            this.grpServiceDetails.Controls.Add(this.lblServiceManagementName);
+            this.grpServiceDetails.Location = new System.Drawing.Point(19, 20);
+            this.grpServiceDetails.Name = "grpServiceDetails";
+            this.grpServiceDetails.Size = new System.Drawing.Size(985, 608);
+            this.grpServiceDetails.TabIndex = 12;
+            this.grpServiceDetails.TabStop = false;
+            this.grpServiceDetails.Text = "Service Details";
+            // 
+            // lblLastAction
+            // 
+            this.lblLastAction.AutoSize = true;
+            this.lblLastAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastAction.Location = new System.Drawing.Point(637, 386);
+            this.lblLastAction.Name = "lblLastAction";
+            this.lblLastAction.Size = new System.Drawing.Size(135, 20);
+            this.lblLastAction.TabIndex = 41;
+            this.lblLastAction.Text = "Last Action: None";
+            // 
+            // lblTotalServices
+            // 
+            this.lblTotalServices.AutoSize = true;
+            this.lblTotalServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalServices.Location = new System.Drawing.Point(637, 442);
+            this.lblTotalServices.Name = "lblTotalServices";
+            this.lblTotalServices.Size = new System.Drawing.Size(125, 20);
+            this.lblTotalServices.TabIndex = 40;
+            this.lblTotalServices.Text = "Total Services: 0";
+            // 
+            // btnSearchService
+            // 
+            this.btnSearchService.Location = new System.Drawing.Point(167, 442);
+            this.btnSearchService.Name = "btnSearchService";
+            this.btnSearchService.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchService.TabIndex = 39;
+            this.btnSearchService.Text = "Search";
+            this.btnSearchService.UseVisualStyleBackColor = true;
+            this.btnSearchService.Click += new System.EventHandler(this.btnSearchService_Click);
+            // 
+            // txtSearchService
+            // 
+            this.txtSearchService.Location = new System.Drawing.Point(248, 444);
+            this.txtSearchService.Name = "txtSearchService";
+            this.txtSearchService.Size = new System.Drawing.Size(340, 20);
+            this.txtSearchService.TabIndex = 38;
+            this.txtSearchService.TextChanged += new System.EventHandler(this.txtSearchService_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(46, 442);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(120, 20);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Search Service:";
+            // 
+            // txtServicePrice
+            // 
+            this.txtServicePrice.Location = new System.Drawing.Point(49, 177);
+            this.txtServicePrice.Name = "txtServicePrice";
+            this.txtServicePrice.Size = new System.Drawing.Size(402, 20);
+            this.txtServicePrice.TabIndex = 36;
+            // 
+            // txtServiceManagementName
+            // 
+            this.txtServiceManagementName.Location = new System.Drawing.Point(49, 127);
+            this.txtServiceManagementName.Name = "txtServiceManagementName";
+            this.txtServiceManagementName.Size = new System.Drawing.Size(402, 20);
+            this.txtServiceManagementName.TabIndex = 35;
+            // 
+            // dgvServices
+            // 
+            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServices.Location = new System.Drawing.Point(50, 476);
+            this.dgvServices.MultiSelect = false;
+            this.dgvServices.Name = "dgvServices";
+            this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvServices.Size = new System.Drawing.Size(876, 126);
+            this.dgvServices.TabIndex = 33;
+            this.dgvServices.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServices_CellClick);
+            // 
+            // btnDeleteService
+            // 
+            this.btnDeleteService.Location = new System.Drawing.Point(259, 407);
+            this.btnDeleteService.Name = "btnDeleteService";
+            this.btnDeleteService.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteService.TabIndex = 20;
+            this.btnDeleteService.Text = "Delete";
+            this.btnDeleteService.UseVisualStyleBackColor = true;
+            this.btnDeleteService.Click += new System.EventHandler(this.btnDeleteService_Click);
+            // 
+            // btnUpdateService
+            // 
+            this.btnUpdateService.Location = new System.Drawing.Point(152, 407);
+            this.btnUpdateService.Name = "btnUpdateService";
+            this.btnUpdateService.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateService.TabIndex = 19;
+            this.btnUpdateService.Text = "Update";
+            this.btnUpdateService.UseVisualStyleBackColor = true;
+            this.btnUpdateService.Click += new System.EventHandler(this.btnUpdateService_Click);
+            // 
+            // btnClearService
+            // 
+            this.btnClearService.Location = new System.Drawing.Point(362, 407);
+            this.btnClearService.Name = "btnClearService";
+            this.btnClearService.Size = new System.Drawing.Size(75, 23);
+            this.btnClearService.TabIndex = 18;
+            this.btnClearService.Text = "Clear";
+            this.btnClearService.UseVisualStyleBackColor = true;
+            this.btnClearService.Click += new System.EventHandler(this.btnClearService_Click);
+            // 
+            // lblServiceDescription
+            // 
+            this.lblServiceDescription.AutoSize = true;
+            this.lblServiceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceDescription.Location = new System.Drawing.Point(46, 278);
+            this.lblServiceDescription.Name = "lblServiceDescription";
+            this.lblServiceDescription.Size = new System.Drawing.Size(89, 20);
+            this.lblServiceDescription.TabIndex = 16;
+            this.lblServiceDescription.Text = "Description";
+            // 
+            // lblServicePrice
+            // 
+            this.lblServicePrice.AutoSize = true;
+            this.lblServicePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServicePrice.Location = new System.Drawing.Point(45, 154);
+            this.lblServicePrice.Name = "lblServicePrice";
+            this.lblServicePrice.Size = new System.Drawing.Size(44, 20);
+            this.lblServicePrice.TabIndex = 10;
+            this.lblServicePrice.Text = "Price";
+            // 
+            // lblServiceDetails
+            // 
+            this.lblServiceDetails.AutoSize = true;
+            this.lblServiceDetails.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceDetails.Location = new System.Drawing.Point(49, 16);
+            this.lblServiceDetails.Name = "lblServiceDetails";
+            this.lblServiceDetails.Size = new System.Drawing.Size(208, 32);
+            this.lblServiceDetails.TabIndex = 9;
+            this.lblServiceDetails.Text = "SERVICE DETAILS";
+            // 
+            // lblServiceID
+            // 
+            this.lblServiceID.AutoSize = true;
+            this.lblServiceID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceID.Location = new System.Drawing.Point(46, 54);
+            this.lblServiceID.Name = "lblServiceID";
+            this.lblServiceID.Size = new System.Drawing.Size(82, 20);
+            this.lblServiceID.TabIndex = 5;
+            this.lblServiceID.Text = "Service ID";
+            // 
+            // lblServiceManagementName
+            // 
+            this.lblServiceManagementName.AutoSize = true;
+            this.lblServiceManagementName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceManagementName.Location = new System.Drawing.Point(45, 104);
+            this.lblServiceManagementName.Name = "lblServiceManagementName";
+            this.lblServiceManagementName.Size = new System.Drawing.Size(107, 20);
+            this.lblServiceManagementName.TabIndex = 7;
+            this.lblServiceManagementName.Text = "Service Name";
+            // 
+            // txtServiceID
+            // 
+            this.txtServiceID.Location = new System.Drawing.Point(50, 77);
+            this.txtServiceID.Name = "txtServiceID";
+            this.txtServiceID.Size = new System.Drawing.Size(402, 20);
+            this.txtServiceID.TabIndex = 46;
+            // 
+            // rtxtServiceDescription
+            // 
+            this.rtxtServiceDescription.Location = new System.Drawing.Point(50, 302);
+            this.rtxtServiceDescription.Name = "rtxtServiceDescription";
+            this.rtxtServiceDescription.Size = new System.Drawing.Size(403, 92);
+            this.rtxtServiceDescription.TabIndex = 47;
+            this.rtxtServiceDescription.Text = "";
+            // 
+            // btnAddService
+            // 
+            this.btnAddService.Location = new System.Drawing.Point(49, 407);
+            this.btnAddService.Name = "btnAddService";
+            this.btnAddService.Size = new System.Drawing.Size(75, 23);
+            this.btnAddService.TabIndex = 48;
+            this.btnAddService.Text = "Add";
+            this.btnAddService.UseVisualStyleBackColor = true;
+            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
+            // txtServiceDuration
+            // 
+            this.txtServiceDuration.Location = new System.Drawing.Point(50, 235);
+            this.txtServiceDuration.Name = "txtServiceDuration";
+            this.txtServiceDuration.Size = new System.Drawing.Size(402, 20);
+            this.txtServiceDuration.TabIndex = 50;
+            // 
+            // lblServiceDuration
+            // 
+            this.lblServiceDuration.AutoSize = true;
+            this.lblServiceDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblServiceDuration.Location = new System.Drawing.Point(46, 212);
+            this.lblServiceDuration.Name = "lblServiceDuration";
+            this.lblServiceDuration.Size = new System.Drawing.Size(140, 20);
+            this.lblServiceDuration.TabIndex = 49;
+            this.lblServiceDuration.Text = "Duration (Minutes)";
+            // 
+            // lblUniqueBreeds
+            // 
+            this.lblUniqueBreeds.AutoSize = true;
+            this.lblUniqueBreeds.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUniqueBreeds.Location = new System.Drawing.Point(790, 384);
+            this.lblUniqueBreeds.Name = "lblUniqueBreeds";
+            this.lblUniqueBreeds.Size = new System.Drawing.Size(132, 20);
+            this.lblUniqueBreeds.TabIndex = 43;
+            this.lblUniqueBreeds.Text = "Unique Breeds: 0";
+            // 
+            // btnShowBreeds
+            // 
+            this.btnShowBreeds.Location = new System.Drawing.Point(794, 358);
+            this.btnShowBreeds.Name = "btnShowBreeds";
+            this.btnShowBreeds.Size = new System.Drawing.Size(93, 23);
+            this.btnShowBreeds.TabIndex = 44;
+            this.btnShowBreeds.Text = "Show Breeds";
+            this.btnShowBreeds.UseVisualStyleBackColor = true;
+            this.btnShowBreeds.Click += new System.EventHandler(this.btnShowBreeds_Click);
             // 
             // FrmAdminDashboard
             // 
@@ -2126,14 +2597,13 @@
             this.grpCustomerDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.tabPets.ResumeLayout(false);
-            this.grpPetInfo.ResumeLayout(false);
-            this.grpPetInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPets)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numWeight)).EndInit();
+            this.grpPetDetails.ResumeLayout(false);
+            this.grpPetDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPets)).EndInit();
             this.tabAppointments.ResumeLayout(false);
-            this.grpAppointmentBooking.ResumeLayout(false);
-            this.grpAppointmentBooking.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAppointments)).EndInit();
+            this.grpAppointmentDetails.ResumeLayout(false);
+            this.grpAppointmentDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminAppointments)).EndInit();
             this.tabPayments.ResumeLayout(false);
             this.grpPaymentInfo.ResumeLayout(false);
             this.grpPaymentInfo.PerformLayout();
@@ -2161,6 +2631,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartAppointmentStatus)).EndInit();
             this.tabStaffPerformance.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartStaffPerformance)).EndInit();
+            this.tabServices.ResumeLayout(false);
+            this.grpServiceDetails.ResumeLayout(false);
+            this.grpServiceDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2189,48 +2663,36 @@
         private System.Windows.Forms.TabControl tabMain;
         private System.Windows.Forms.TabPage tabCustomer;
         private System.Windows.Forms.TabPage tabPets;
-        private System.Windows.Forms.GroupBox grpPetInfo;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.DataGridView dgvPets;
+        private System.Windows.Forms.GroupBox grpPetDetails;
+        private System.Windows.Forms.TextBox txtSearchPet;
+        private System.Windows.Forms.Label lblSearchPet;
+        private System.Windows.Forms.DataGridView dgvAdminPets;
         private System.Windows.Forms.Button btnClearPet;
         private System.Windows.Forms.Button btnDeletePet;
         private System.Windows.Forms.Button btnUpdatePet;
-        private System.Windows.Forms.Button btnAddPet;
-        private System.Windows.Forms.NumericUpDown numWeight;
-        private System.Windows.Forms.Label lblWeight;
-        private System.Windows.Forms.RadioButton rbFemale;
-        private System.Windows.Forms.RadioButton rbMale;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.TextBox txtBreed;
-        private System.Windows.Forms.Label lblBreed;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TextBox txtPetName;
-        private System.Windows.Forms.Label lblPetName;
-        private System.Windows.Forms.ComboBox cmbSpecies;
-        private System.Windows.Forms.Label lblSpecies;
+        private System.Windows.Forms.Label lblAdminBreed;
+        private System.Windows.Forms.Label lblAdminSpecies;
+        private System.Windows.Forms.TextBox txtAdminPetName;
+        private System.Windows.Forms.Label lblAdminPetName;
+        private System.Windows.Forms.Label lblTitlePetDetails;
+        private System.Windows.Forms.TextBox txtAdminPetID;
+        private System.Windows.Forms.Label lblPetID;
+        private System.Windows.Forms.ComboBox cmbAdminOwner;
+        private System.Windows.Forms.Label lblOwnerPet;
         private System.Windows.Forms.TabPage tabAppointments;
-        private System.Windows.Forms.GroupBox grpAppointmentBooking;
-        private System.Windows.Forms.DataGridView dgvAppointments;
-        private System.Windows.Forms.TextBox txtAppointmentSearch;
-        private System.Windows.Forms.Label lblSearchAppointment;
-        private System.Windows.Forms.ComboBox cmbStatus;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.DateTimePicker dtpAppointment;
-        private System.Windows.Forms.TextBox txtDuration;
-        private System.Windows.Forms.ComboBox cmbPet;
-        private System.Windows.Forms.Button btnQueueCount;
+        private System.Windows.Forms.GroupBox grpAppointmentDetails;
+        private System.Windows.Forms.DataGridView dgvAdminAppointments;
+        private System.Windows.Forms.ComboBox cmbAdminAppointmentStatus;
+        private System.Windows.Forms.Label lblAdminAppointmentStatus;
+        private System.Windows.Forms.DateTimePicker dtpAdminAppointment;
         private System.Windows.Forms.Button btnDeleteAppointment;
         private System.Windows.Forms.Button btnUpdateAppointment;
-        private System.Windows.Forms.Button btnBookAppointment;
-        private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblDuration;
-        private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblPetInformation;
-        private System.Windows.Forms.Label lblPet;
-        private System.Windows.Forms.ComboBox cmbService;
-        private System.Windows.Forms.Label lblService;
+        private System.Windows.Forms.Button btnClearAppointment;
+        private System.Windows.Forms.Label lblAdminAppointment;
+        private System.Windows.Forms.Label lblServiceName;
+        private System.Windows.Forms.Label lblAppointmentDetails;
+        private System.Windows.Forms.Label lblAdminAppointmentID;
+        private System.Windows.Forms.Label lblPetName;
         private System.Windows.Forms.TabPage tabPayments;
         private System.Windows.Forms.GroupBox grpPaymentInfo;
         private System.Windows.Forms.ComboBox cmbPaymentStatus;
@@ -2342,5 +2804,57 @@
         private System.Windows.Forms.Label lblTotalCustomers;
         private System.Windows.Forms.Button btnSearchCustomer;
         private System.Windows.Forms.TextBox txtSearchCustomer;
+        private System.Windows.Forms.ComboBox cmbAdminSpecies;
+        private System.Windows.Forms.TextBox txtAdminBreed;
+        private System.Windows.Forms.Label lblAdminWeight;
+        private System.Windows.Forms.Button btnSearchPet;
+        private System.Windows.Forms.Label lblTotalPets;
+        private System.Windows.Forms.Label lblAdminGender;
+        private System.Windows.Forms.ComboBox cmbAdminGender;
+        private System.Windows.Forms.TextBox txtAdminWeight;
+        private System.Windows.Forms.Label lblBirds;
+        private System.Windows.Forms.Label lblCats;
+        private System.Windows.Forms.Label lblDogs;
+        private System.Windows.Forms.Label lblMostCommonSpecies;
+        private System.Windows.Forms.Label lblTotalDogs;
+        private System.Windows.Forms.Label lblMostCommonSpeciess;
+        private System.Windows.Forms.Label lblTotalBirds;
+        private System.Windows.Forms.Label lblTotalCats;
+        private System.Windows.Forms.TextBox txtAdminAppointmentID;
+        private System.Windows.Forms.TextBox txtPetName;
+        private System.Windows.Forms.TextBox txtServiceName;
+        private System.Windows.Forms.Button btnSearchAppointment;
+        private System.Windows.Forms.TextBox txtSearchAppointment;
+        private System.Windows.Forms.Label lblSearchPetName;
+        private System.Windows.Forms.Label lblCompletedAppointments;
+        private System.Windows.Forms.Label lblPendingAppointments;
+        private System.Windows.Forms.Label lblTotalAppointments;
+        private System.Windows.Forms.Button btnProcessQueue;
+        private System.Windows.Forms.Button btnAddToQueue;
+        private System.Windows.Forms.Label lblQueueCount;
+        private System.Windows.Forms.GroupBox grpServiceDetails;
+        private System.Windows.Forms.Label lblLastAction;
+        private System.Windows.Forms.Label lblTotalServices;
+        private System.Windows.Forms.Button btnSearchService;
+        private System.Windows.Forms.TextBox txtSearchService;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtServicePrice;
+        private System.Windows.Forms.TextBox txtServiceManagementName;
+        private System.Windows.Forms.DataGridView dgvServices;
+        private System.Windows.Forms.Button btnDeleteService;
+        private System.Windows.Forms.Button btnUpdateService;
+        private System.Windows.Forms.Button btnClearService;
+        private System.Windows.Forms.Label lblServiceDescription;
+        private System.Windows.Forms.Label lblServicePrice;
+        private System.Windows.Forms.Label lblServiceDetails;
+        private System.Windows.Forms.Label lblServiceID;
+        private System.Windows.Forms.Label lblServiceManagementName;
+        private System.Windows.Forms.TextBox txtServiceID;
+        private System.Windows.Forms.RichTextBox rtxtServiceDescription;
+        private System.Windows.Forms.Button btnAddService;
+        private System.Windows.Forms.TextBox txtServiceDuration;
+        private System.Windows.Forms.Label lblServiceDuration;
+        private System.Windows.Forms.Label lblUniqueBreeds;
+        private System.Windows.Forms.Button btnShowBreeds;
     }
 }

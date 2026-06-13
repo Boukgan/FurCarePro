@@ -1,4 +1,5 @@
 ﻿using FurCarePro.DataAccess;
+using FurCarePro.Models.Appointments;
 using FurCarePro.Utilities;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
+
 namespace FurCarePro
 {
     public partial class FrmAdminDashboard : Form
     {
+
+        private Queue<Appointment>
+        appointmentQueue = new Queue<Appointment>();
+
+        private List<string> petNames = new List<string>();
+
+        private Dictionary<int, string>
+        serviceDictionary = new Dictionary<int, string>();
+
+        private Stack<string> actionHistory = new Stack<string>();
+
+        private HashSet<string> breedSet = new HashSet<string>();
+
         public FrmAdminDashboard()
         {
             InitializeComponent();
@@ -147,6 +162,7 @@ namespace FurCarePro
             cmbGroomingStatus.Items.Add("In Progress");
             cmbGroomingStatus.Items.Add("Completed");
 
+
             LoadCustomers();
 
             LoadStaff();
@@ -154,6 +170,18 @@ namespace FurCarePro
             LoadStaffAppointmentCombo();
 
             LoadGroomingRecords();
+
+            LoadOwnerCombo();
+
+            LoadAdminPets();
+
+            ClearPet();
+
+            LoadAdminAppointments();
+
+            LoadPetList();
+
+            LoadAdminServices();
 
             LoadRevenueChart();
 
@@ -168,7 +196,380 @@ namespace FurCarePro
             LoadAnalytics();
 
         }
+        private void LoadUniqueBreeds()
+        {
+            breedSet.Clear();
 
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                        "SELECT Breed FROM tblPets";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    SqlDataReader dr =
+                        cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        breedSet.Add(
+                            dr["Breed"]
+                            .ToString());
+                    }
+                }
+
+                lblUniqueBreeds.Text =
+                    "Unique Breeds: " +
+                    breedSet.Count;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void AddActionHistory(
+    string action)
+        {
+            actionHistory.Push(action);
+
+            lblLastAction.Text =
+                "Last Action: " +
+                actionHistory.Peek();
+        }
+
+        private void LoadServiceDictionary()
+        {
+            serviceDictionary.Clear();
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                        "SELECT ServiceID, ServiceName FROM tblServices";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    SqlDataReader dr =
+                        cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        int id =
+                            Convert.ToInt32(
+                                dr["ServiceID"]);
+
+                        string name =
+                            dr["ServiceName"]
+                            .ToString();
+
+                        serviceDictionary.Add(
+                            id,
+                            name);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadAdminServices()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                        "SELECT * FROM tblServices";
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(sql, conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvServices.DataSource = dt;
+
+                    LoadServiceDictionary();
+                    
+                    lblTotalServices.Text =
+                        "Total Services: " +
+                        dt.Rows.Count;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LoadPetList()
+        {
+            petNames.Clear();
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                        "SELECT PetName FROM tblPets";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    SqlDataReader dr =
+                        cmd.ExecuteReader();
+
+                    while (dr.Read())
+                    {
+                        petNames.Add(
+                            dr["PetName"].ToString());
+                    }
+                }
+
+                lblTotalPets.Text =
+                    "Total Pets: " +
+                    petNames.Count;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
+
+        private void ShowQueueMessage(
+    string message)
+        {
+            MessageBox.Show(message);
+        }
+
+        private void LoadAdminAppointments()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT
+                a.AppointmentID,
+                a.PetID,
+                a.ServiceID,
+                p.PetName,
+                s.ServiceName,
+                a.AppointmentDate,
+                a.Status
+              FROM tblAppointments a
+              INNER JOIN tblPets p
+              ON a.PetID = p.PetID
+              INNER JOIN tblServices s
+              ON a.ServiceID = s.ServiceID";
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(sql, conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAdminAppointments.DataSource =
+                        dt;
+
+                    LoadAppointmentStatistics();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void LoadAppointmentStatistics()
+        {
+            try
+            {
+                DataTable dt =
+                    dgvAdminAppointments.DataSource
+                    as DataTable;
+
+                if (dt == null)
+                    return;
+
+                lblTotalAppointments.Text =
+                    "Total Appointments: " +
+                    dt.Rows.Count;
+
+                lblPendingAppointments.Text =
+                    "Pending: " +
+                    dt.AsEnumerable()
+                    .Count(r =>
+                        r["Status"]
+                        .ToString() ==
+                        "Pending");
+
+                lblCompletedAppointments.Text =
+                    "Completed: " +
+                    dt.AsEnumerable()
+                    .Count(r =>
+                        r["Status"]
+                        .ToString() ==
+                        "Completed");
+            }
+            catch
+            {
+            }
+        }
+
+        private void ShowPetStatistics()
+        {
+            try
+            {
+                DataTable dt =
+                    (DataTable)dgvAdminPets.DataSource;
+
+                if (dt == null)
+                    return;
+
+                lblDogs.Text =
+                    dt.AsEnumerable()
+                    .Count(r =>
+                        r["Species"]
+                        .ToString() == "Dog")
+                    .ToString();
+
+                lblCats.Text =
+                    dt.AsEnumerable()
+                    .Count(r =>
+                        r["Species"]
+                        .ToString() == "Cat")
+                    .ToString();
+
+                lblBirds.Text =
+                    dt.AsEnumerable()
+                    .Count(r =>
+                        r["Species"]
+                        .ToString() == "Bird")
+                    .ToString();
+            }
+            catch
+            {
+            }
+        }
+        private void ClearPet()
+        {
+            txtAdminPetID.Clear();
+
+            txtAdminPetName.Clear();
+
+            txtAdminBreed.Clear();
+
+            txtAdminWeight.Clear();
+
+            cmbAdminOwner.SelectedIndex = -1;
+
+            cmbAdminSpecies.SelectedIndex = -1;
+
+            cmbAdminGender.SelectedIndex = -1;
+        }
+
+        private void LoadAdminPets()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT
+                p.PetID,
+                p.CustomerID,
+                u.FullName,
+                p.PetName,
+                p.Species,
+                p.Breed,
+                p.Gender,
+                p.Weight
+              FROM tblPets p
+              INNER JOIN tblUsers u
+              ON p.CustomerID = u.UserID";
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(sql, conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAdminPets.DataSource = dt;
+                 
+                    ShowPetStatistics();
+                    ShowMostCommonSpecies();
+                    LoadUniqueBreeds();
+
+                    lblTotalPets.Text =
+                        "Total Pets: " +
+                        dt.Rows.Count;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
+
+        private void ShowMostCommonSpecies()
+        {
+            try
+            {
+                DataTable dt =
+                    (DataTable)dgvAdminPets.DataSource;
+
+                var species =
+                    dt.AsEnumerable()
+                    .GroupBy(r =>
+                        r["Species"].ToString())
+                    .OrderByDescending(g =>
+                        g.Count())
+                    .FirstOrDefault();
+
+                if (species != null)
+                {
+                    lblMostCommonSpecies.Text =
+                        species.Key;
+                }
+            }
+            catch
+            {
+            }
+        }
         private void LoadCustomers()
         {
             try
@@ -365,7 +766,7 @@ namespace FurCarePro
         private void ShowTodayAppointments()
         {
             DataTable dt =
-        dgvAppointments.DataSource as DataTable;
+        dgvAdminAppointments.DataSource as DataTable;
 
             if (dt == null || dt.Rows.Count == 0)
             {
@@ -389,7 +790,7 @@ namespace FurCarePro
         private void ShowUpcomingAppointments()
         {
             DataTable dt =
-        dgvAppointments.DataSource as DataTable;
+        dgvAdminAppointments.DataSource as DataTable;
 
             if (dt == null || dt.Rows.Count == 0)
             {
@@ -1052,6 +1453,866 @@ namespace FurCarePro
         private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
         {
             btnSearchCustomer.PerformClick();
+        }
+
+        private void tabPets_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpPetDetails_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoadOwnerCombo()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT
+                UserID,
+                FullName
+              FROM tblUsers
+              WHERE Role='Customer'";
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(sql, conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    cmbAdminOwner.DataSource = dt;
+
+                    cmbAdminOwner.DisplayMember =
+                        "FullName";
+
+                    cmbAdminOwner.ValueMember =
+                        "UserID";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvAdminPets_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row =
+                    dgvAdminPets.Rows[e.RowIndex];
+
+                txtAdminPetID.Text =
+                    row.Cells["PetID"]
+                    .Value.ToString();
+
+                cmbAdminOwner.SelectedValue =
+                    row.Cells["CustomerID"]
+                    .Value;
+
+                txtAdminPetName.Text =
+                    row.Cells["PetName"]
+                    .Value.ToString();
+
+                cmbAdminSpecies.Text =
+                    row.Cells["Species"]
+                    .Value.ToString();
+
+                txtAdminBreed.Text =
+                    row.Cells["Breed"]
+                    .Value.ToString();
+
+                cmbAdminGender.Text =
+                    row.Cells["Gender"]
+                    .Value.ToString();
+
+                txtAdminWeight.Text =
+                    row.Cells["Weight"]
+                    .Value.ToString();
+            }
+        }
+
+        private void btnUpdatePet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"UPDATE tblPets
+              SET
+                CustomerID=@CustomerID,
+                PetName=@PetName,
+                Species=@Species,
+                Breed=@Breed,
+                Gender=@Gender,
+                Weight=@Weight
+              WHERE PetID=@PetID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        cmbAdminOwner.SelectedValue);
+
+                    cmd.Parameters.AddWithValue(
+                        "@PetName",
+                        txtAdminPetName.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Species",
+                        cmbAdminSpecies.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Breed",
+                        txtAdminBreed.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Gender",
+                        cmbAdminGender.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Weight",
+                        Convert.ToDecimal(
+                            txtAdminWeight.Text));
+
+                    cmd.Parameters.AddWithValue(
+                        "@PetID",
+                        txtAdminPetID.Text);
+
+                    MessageBox.Show("CustomerID = " + cmbAdminOwner.SelectedValue);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Pet Updated");
+
+                LoadAdminPets();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnClearPet_Click(object sender, EventArgs e)
+        {
+            ClearPet();
+        }
+
+        private void btnDeletePet_Click(object sender, EventArgs e)
+        {
+            if (txtAdminPetID.Text == "")
+            {
+                MessageBox.Show(
+                    "Select Pet First");
+
+                return;
+            }
+
+            DialogResult result =
+                MessageBox.Show(
+                    "Delete this pet?",
+                    "Confirm",
+                    MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"DELETE FROM tblPets
+              WHERE PetID=@PetID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@PetID",
+                        txtAdminPetID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Pet Deleted");
+
+                LoadAdminPets();
+
+                ClearPet();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSearchPet_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT
+                p.PetID,
+                p.CustomerID,
+                u.FullName,
+                p.PetName,
+                p.Species,
+                p.Breed,
+                p.Gender,
+                p.Weight
+              FROM tblPets p
+              INNER JOIN tblUsers u
+              ON p.CustomerID=u.UserID
+              WHERE p.PetName LIKE @Search";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Search",
+                        "%" +
+                        txtSearchPet.Text +
+                        "%");
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(cmd);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAdminPets.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtSearchPet_TextChanged(object sender, EventArgs e)
+        {
+            btnSearchPet.PerformClick();
+        }
+
+        private void dgvAdminAppointments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row =
+                    dgvAdminAppointments.Rows[e.RowIndex];
+
+                txtAdminAppointmentID.Text =
+                    row.Cells["AppointmentID"]
+                    .Value
+                    .ToString();
+
+                txtPetName.Text =
+                    row.Cells["PetName"]
+                    .Value
+                    .ToString();
+
+                txtServiceName.Text =
+                    row.Cells["ServiceName"]
+                    .Value
+                    .ToString();
+
+                dtpAdminAppointment.Value =
+                    Convert.ToDateTime(
+                        row.Cells["AppointmentDate"]
+                        .Value);
+
+                cmbAdminAppointmentStatus.Text =
+                    row.Cells["Status"]
+                    .Value
+                    .ToString();
+            }
+        }
+        private void ClearAppointment()
+        {
+            txtAdminAppointmentID.Clear();
+
+            txtPetName.Clear();
+
+            txtServiceName.Clear();
+
+            cmbAdminAppointmentStatus.SelectedIndex = -1;
+
+            dtpAdminAppointment.Value =
+                DateTime.Now;
+        }
+
+        private void btnClearAppointment_Click(object sender, EventArgs e)
+        {
+            ClearAppointment();
+        }
+
+        private void btnUpdateAppointment_Click(object sender, EventArgs e)
+        {
+            if (txtAdminAppointmentID.Text == "")
+            {
+                MessageBox.Show(
+                    "Select Appointment First");
+
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"UPDATE tblAppointments
+              SET
+                AppointmentDate=@Date,
+                Status=@Status
+              WHERE AppointmentID=@ID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Date",
+                        dtpAdminAppointment.Value);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Status",
+                        cmbAdminAppointmentStatus.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ID",
+                        txtAdminAppointmentID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Appointment Updated");
+
+                LoadAdminAppointments();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeleteAppointment_Click(object sender, EventArgs e)
+        {
+            if (txtAdminAppointmentID.Text == "")
+            {
+                MessageBox.Show(
+                    "Select Appointment First");
+
+                return;
+            }
+
+            DialogResult result =
+                MessageBox.Show(
+                    "Delete appointment?",
+                    "Confirm",
+                    MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"DELETE FROM tblAppointments
+              WHERE AppointmentID=@ID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ID",
+                        txtAdminAppointmentID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Appointment Deleted");
+
+                LoadAdminAppointments();
+
+                ClearAppointment();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSearchAppointment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT
+                a.AppointmentID,
+                a.PetID,
+                a.ServiceID,
+                p.PetName,
+                s.ServiceName,
+                a.AppointmentDate,
+                a.Status
+              FROM tblAppointments a
+              INNER JOIN tblPets p
+              ON a.PetID = p.PetID
+              INNER JOIN tblServices s
+              ON a.ServiceID = s.ServiceID
+              WHERE p.PetName LIKE @Search";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Search",
+                        "%" +
+                        txtSearchAppointment.Text +
+                        "%");
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(cmd);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAdminAppointments.DataSource =
+                        dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtSearchAppointment_TextChanged(object sender, EventArgs e)
+        {
+            btnSearchAppointment.PerformClick();
+        }
+
+        private void btnAddToQueue_Click(object sender, EventArgs e)
+        {
+            if (txtAdminAppointmentID.Text == "")
+            {
+                MessageBox.Show(
+                    "Select Appointment First");
+
+                return;
+            }
+
+            Appointment appointment =
+                new Appointment();
+
+            appointment.AppointmentID =
+                Convert.ToInt32(
+                    txtAdminAppointmentID.Text);
+
+            appointment.PetName =
+                txtPetName.Text;
+
+            appointment.ServiceName =
+                txtServiceName.Text;
+
+            appointment.AppointmentDate =
+                dtpAdminAppointment.Value;
+
+            appointment.Status =
+                cmbAdminAppointmentStatus.Text;
+
+            appointmentQueue.Enqueue(
+                appointment);
+
+            lblQueueCount.Text =
+                "Queue Count: " +
+                appointmentQueue.Count;
+
+            AppointmentBookedHandler notify =
+        msg => MessageBox.Show(msg);
+
+            notify(
+                "Appointment Added To Queue");
+        }
+
+        private void btnProcessQueue_Click(object sender, EventArgs e)
+        {
+            if (appointmentQueue.Count == 0)
+            {
+                MessageBox.Show(
+                    "Queue Empty");
+
+                return;
+            }
+
+            Appointment appointment =
+                appointmentQueue.Dequeue();
+
+            lblQueueCount.Text =
+                "Queue Count: " +
+                appointmentQueue.Count;
+
+            AppointmentBookedHandler notify =
+         msg => MessageBox.Show(msg);
+
+            notify(
+                "Appointment Added To Queue");
+        }
+
+        private void dgvServices_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void ClearService()
+        {
+            txtServiceID.Clear();
+
+            txtServiceManagementName.Clear();
+
+            txtServicePrice.Clear();
+
+            txtServiceDuration.Clear();
+
+            rtxtServiceDescription.Clear();
+        }
+
+        private void btnAddService_Click(object sender, EventArgs e)
+        {
+            if (txtServiceManagementName.Text == "")
+            {
+                MessageBox.Show(
+                    "Service Name Required");
+
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"INSERT INTO tblServices
+            (
+                ServiceName,
+                Price,
+                Duration,
+                Description
+            )
+            VALUES
+            (
+                @ServiceName,
+                @Price,
+                @Duration,
+                @Description
+            )";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ServiceName",
+                        txtServiceManagementName.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Price",
+                        txtServicePrice.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Duration",
+                        txtServiceDuration.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Description",
+                        rtxtServiceDescription.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Service Added");
+
+                AddActionHistory("Added Service: " + txtServiceManagementName.Text);
+
+                LoadAdminServices();
+
+                ClearService();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdateService_Click(object sender, EventArgs e)
+        {
+            if (txtServiceID.Text == "")
+            {
+                MessageBox.Show(
+                    "Select Service First");
+
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"UPDATE tblServices
+              SET
+                ServiceName=@ServiceName,
+                Price=@Price,
+                Duration=@Duration,
+                Description=@Description
+              WHERE ServiceID=@ServiceID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ServiceName",
+                        txtServiceManagementName.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Price",
+                        txtServicePrice.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Duration",
+                        txtServiceDuration.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Description",
+                        rtxtServiceDescription.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ServiceID",
+                        txtServiceID.Text);
+
+                    MessageBox.Show(
+                    "Service Updated");
+
+                    AddActionHistory(
+                    "Updated Service: " +
+                    txtServiceManagementName.Text);
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    MessageBox.Show(
+                        "Rows Updated: " +
+                        rows);
+                }
+
+                MessageBox.Show(
+                    "Service Updated");
+
+                LoadAdminServices();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnDeleteService_Click(object sender, EventArgs e)
+        {
+            if (txtServiceID.Text == "")
+            {
+                MessageBox.Show(
+                    "Select Service First");
+
+                return;
+            }
+
+            DialogResult result =
+                MessageBox.Show(
+                    "Delete Service?",
+                    "Confirm",
+                    MessageBoxButtons.YesNo);
+
+            if (result != DialogResult.Yes)
+            {
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"DELETE FROM tblServices
+              WHERE ServiceID=@ServiceID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ServiceID",
+                        txtServiceID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Service Deleted");
+
+                AddActionHistory(
+                "Deleted Service ID: " +
+                txtServiceID.Text);
+
+                LoadAdminServices();
+
+                ClearService();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnClearService_Click(object sender, EventArgs e)
+        {
+            ClearService();
+        }
+
+        private void btnSearchService_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT *
+              FROM tblServices
+              WHERE ServiceName
+              LIKE @Search";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Search",
+                        "%" +
+                        txtSearchService.Text +
+                        "%");
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(cmd);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvServices.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtSearchService_TextChanged(object sender, EventArgs e)
+        {
+            btnSearchService.PerformClick();
+        }
+
+        private void dgvServices_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row =
+                    dgvServices.Rows[e.RowIndex];
+
+                txtServiceID.Text =
+                    row.Cells["ServiceID"].Value.ToString();
+
+                txtServiceManagementName.Text =
+                    row.Cells["ServiceName"].Value.ToString();
+
+                txtServicePrice.Text =
+                    row.Cells["Price"].Value.ToString();
+
+                txtServiceDuration.Text =
+                    row.Cells["Duration"].Value.ToString();
+
+                rtxtServiceDescription.Text =
+                    row.Cells["Description"].Value.ToString();
+            }
+        }
+
+        private void btnShowBreeds_Click(object sender, EventArgs e)
+        {
+            string breeds = "";
+
+            foreach (string breed in breedSet)
+            {
+                breeds += breed + "\n";
+            }
+
+            MessageBox.Show(breeds);
         }
     }
 }
