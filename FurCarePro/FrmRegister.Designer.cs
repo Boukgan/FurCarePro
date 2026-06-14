@@ -40,8 +40,6 @@
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
-            this.lblRole = new System.Windows.Forms.Label();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
@@ -149,27 +147,9 @@
             this.lblPhoneNumber.TabIndex = 11;
             this.lblPhoneNumber.Text = "Phone Number";
             // 
-            // lblRole
-            // 
-            this.lblRole.AutoSize = true;
-            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(314, 466);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(42, 20);
-            this.lblRole.TabIndex = 13;
-            this.lblRole.Text = "Role";
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(320, 490);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(121, 21);
-            this.cmbRole.TabIndex = 14;
-            // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(287, 557);
+            this.btnRegister.Location = new System.Drawing.Point(290, 482);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 15;
@@ -179,7 +159,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(398, 557);
+            this.btnClear.Location = new System.Drawing.Point(401, 482);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 16;
@@ -189,7 +169,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(512, 557);
+            this.btnBack.Location = new System.Drawing.Point(515, 482);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 17;
@@ -217,8 +197,6 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.cmbRole);
-            this.Controls.Add(this.lblRole);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.txtConfirmPassword);
@@ -254,8 +232,6 @@
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label lblPhoneNumber;
-        private System.Windows.Forms.Label lblRole;
-        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;

@@ -183,6 +183,13 @@ namespace FurCarePro
 
             LoadAdminServices();
 
+            timerClock.Start();
+
+            LoadHomeStatistics();
+
+            LoadProfile();
+
+
             LoadRevenueChart();
 
             LoadPopularServiceChart();
@@ -191,11 +198,88 @@ namespace FurCarePro
 
             LoadAppointmentStatusChart();
 
-            LoadStaffPerformanceChart();
+            LoadServicePerformanceChart();
 
             LoadAnalytics();
 
         }
+
+        private void LoadProfile()
+        {
+            txtProfileName.Text =
+                UserSession.FullName;
+
+            txtProfileEmail.Text =
+                UserSession.Email;
+
+            txtProfileRole.Text =
+                UserSession.Role;
+
+            txtProfileStatus.Text =
+                "Active";
+        }
+
+        private void LoadHomeStatistics()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    // Customers
+                    SqlCommand cmdCustomers =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblUsers
+                  WHERE Role='Customer'",
+                        conn);
+
+                    lblHomeTotalCustomers.Text =
+                        "Total Customers: " +
+                        cmdCustomers.ExecuteScalar();
+
+                    // Pets
+                    SqlCommand cmdPets =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblPets",
+                        conn);
+
+                    lblHomeTotalPets.Text =
+                        "Total Pets: " +
+                        cmdPets.ExecuteScalar();
+
+                    // Appointments
+                    SqlCommand cmdAppointments =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblAppointments",
+                        conn);
+
+                    lblHomeTotalAppointments.Text =
+                        "Total Appointments: " +
+                        cmdAppointments.ExecuteScalar();
+
+                    // Services
+                    SqlCommand cmdServices =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblServices",
+                        conn);
+
+                    lblHomeTotalServices.Text =
+                        "Total Services: " +
+                        cmdServices.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void LoadUniqueBreeds()
         {
             breedSet.Clear();
@@ -1104,13 +1188,15 @@ namespace FurCarePro
             }
         }
 
-        private void LoadStaffPerformanceChart()
+        private void LoadServicePerformanceChart()
         {
-            chartStaffPerformance.Series.Clear();
+            chartServicePerformance.Series.Clear();
 
             Series series =
-                chartStaffPerformance.Series.Add(
-                    "Performance");
+                chartServicePerformance.Series.Add(
+                    "Services");
+
+            series.ChartType = SeriesChartType.Column;
 
             try
             {
@@ -1120,14 +1206,12 @@ namespace FurCarePro
                     conn.Open();
 
                     string sql =
-                    @"SELECT
-                s.StaffName,
-                COUNT(*) AS TotalJobs
-              FROM tblGroomingRecords gr
-              INNER JOIN tblStaff s
-              ON gr.StaffID = s.StaffID
-              WHERE gr.GroomingStatus = 'Completed'
-              GROUP BY s.StaffName";
+                    @"SELECT s.ServiceName,
+                    COUNT(*) TotalBookings
+                    FROM tblAppointments a
+                    INNER JOIN tblServices s
+                    ON a.ServiceID = s.ServiceID
+                    GROUP BY s.ServiceName";
 
                     SqlCommand cmd =
                         new SqlCommand(sql, conn);
@@ -1138,8 +1222,8 @@ namespace FurCarePro
                     while (dr.Read())
                     {
                         series.Points.AddXY(
-                            dr["StaffName"],
-                            dr["TotalJobs"]);
+                            dr["ServiceName"],
+                            dr["TotalBookings"]);
                     }
                 }
             }
@@ -2313,6 +2397,71 @@ namespace FurCarePro
             }
 
             MessageBox.Show(breeds);
+        }
+
+        private void timerClock_Tick(object sender, EventArgs e)
+        {
+            lblHomeCurrentDate.Text =
+       DateTime.Now.ToString(
+           "dd/MM/yyyy");
+
+            lblHomeCurrentTime.Text =
+                DateTime.Now.ToString(
+                    "hh:mm:ss tt");
+        }
+
+        private void btnRefreshProfile_Click(object sender, EventArgs e)
+        {
+            LoadProfile();
+
+            MessageBox.Show(
+                "Profile Refreshed");
+        }
+
+        private void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"UPDATE tblUsers
+              SET FullName=@FullName
+              WHERE UserID=@UserID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@FullName",
+                        txtProfileName.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@UserID",
+                        UserSession.UserID);
+
+                    int rows =
+                        cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        UserSession.FullName =
+                            txtProfileName.Text;
+
+                        MessageBox.Show(
+                            "Profile Updated");
+
+                        LoadProfile();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

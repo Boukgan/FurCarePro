@@ -136,6 +136,24 @@
             this.lblFeedbackAppointment = new System.Windows.Forms.Label();
             this.lblRating = new System.Windows.Forms.Label();
             this.tabProfile = new System.Windows.Forms.TabPage();
+            this.lblCustomerCurrentTime = new System.Windows.Forms.Label();
+            this.lblCustomerCurrentDate = new System.Windows.Forms.Label();
+            this.lblCustomerPayments = new System.Windows.Forms.Label();
+            this.lblCustomerAppointments = new System.Windows.Forms.Label();
+            this.lblCustomerTotalPets = new System.Windows.Forms.Label();
+            this.lblCustomerWelcome = new System.Windows.Forms.Label();
+            this.grpCustomerProfile = new System.Windows.Forms.GroupBox();
+            this.txtCustomerProfileStatus = new System.Windows.Forms.TextBox();
+            this.lblProfileStatus = new System.Windows.Forms.Label();
+            this.btnCustomerRefreshProfile = new System.Windows.Forms.Button();
+            this.txtCustomerProfileName = new System.Windows.Forms.TextBox();
+            this.txtCustomerProfileRole = new System.Windows.Forms.TextBox();
+            this.txtCustomerProfileEmail = new System.Windows.Forms.TextBox();
+            this.btnCustomerUpdateProfile = new System.Windows.Forms.Button();
+            this.lblProfileRole = new System.Windows.Forms.Label();
+            this.lblCustomerTitle = new System.Windows.Forms.Label();
+            this.lblProfileName = new System.Windows.Forms.Label();
+            this.lblProfileEmail = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -144,6 +162,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabMain.SuspendLayout();
+            this.tabHome.SuspendLayout();
             this.tabPets.SuspendLayout();
             this.grpPetInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPets)).BeginInit();
@@ -158,6 +177,8 @@
             this.grpCustomerFeedback.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeedback)).BeginInit();
+            this.tabProfile.SuspendLayout();
+            this.grpCustomerProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -432,6 +453,12 @@
             // 
             // tabHome
             // 
+            this.tabHome.Controls.Add(this.lblCustomerCurrentTime);
+            this.tabHome.Controls.Add(this.lblCustomerCurrentDate);
+            this.tabHome.Controls.Add(this.lblCustomerPayments);
+            this.tabHome.Controls.Add(this.lblCustomerAppointments);
+            this.tabHome.Controls.Add(this.lblCustomerTotalPets);
+            this.tabHome.Controls.Add(this.lblCustomerWelcome);
             this.tabHome.Location = new System.Drawing.Point(4, 22);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
@@ -1249,6 +1276,7 @@
             // 
             // tabProfile
             // 
+            this.tabProfile.Controls.Add(this.grpCustomerProfile);
             this.tabProfile.Location = new System.Drawing.Point(4, 22);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
@@ -1256,6 +1284,190 @@
             this.tabProfile.TabIndex = 5;
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
+            // 
+            // lblCustomerCurrentTime
+            // 
+            this.lblCustomerCurrentTime.AutoSize = true;
+            this.lblCustomerCurrentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCurrentTime.Location = new System.Drawing.Point(332, 487);
+            this.lblCustomerCurrentTime.Name = "lblCustomerCurrentTime";
+            this.lblCustomerCurrentTime.Size = new System.Drawing.Size(43, 20);
+            this.lblCustomerCurrentTime.TabIndex = 23;
+            this.lblCustomerCurrentTime.Text = "Time";
+            // 
+            // lblCustomerCurrentDate
+            // 
+            this.lblCustomerCurrentDate.AutoSize = true;
+            this.lblCustomerCurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCurrentDate.Location = new System.Drawing.Point(331, 370);
+            this.lblCustomerCurrentDate.Name = "lblCustomerCurrentDate";
+            this.lblCustomerCurrentDate.Size = new System.Drawing.Size(44, 20);
+            this.lblCustomerCurrentDate.TabIndex = 22;
+            this.lblCustomerCurrentDate.Text = "Date";
+            // 
+            // lblCustomerPayments
+            // 
+            this.lblCustomerPayments.AutoSize = true;
+            this.lblCustomerPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerPayments.Location = new System.Drawing.Point(332, 259);
+            this.lblCustomerPayments.Name = "lblCustomerPayments";
+            this.lblCustomerPayments.Size = new System.Drawing.Size(125, 20);
+            this.lblCustomerPayments.TabIndex = 21;
+            this.lblCustomerPayments.Text = "Total Services: 0";
+            // 
+            // lblCustomerAppointments
+            // 
+            this.lblCustomerAppointments.AutoSize = true;
+            this.lblCustomerAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerAppointments.Location = new System.Drawing.Point(332, 201);
+            this.lblCustomerAppointments.Name = "lblCustomerAppointments";
+            this.lblCustomerAppointments.Size = new System.Drawing.Size(164, 20);
+            this.lblCustomerAppointments.TabIndex = 20;
+            this.lblCustomerAppointments.Text = "Total Appointments: 0";
+            // 
+            // lblCustomerTotalPets
+            // 
+            this.lblCustomerTotalPets.AutoSize = true;
+            this.lblCustomerTotalPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerTotalPets.Location = new System.Drawing.Point(332, 141);
+            this.lblCustomerTotalPets.Name = "lblCustomerTotalPets";
+            this.lblCustomerTotalPets.Size = new System.Drawing.Size(97, 20);
+            this.lblCustomerTotalPets.TabIndex = 19;
+            this.lblCustomerTotalPets.Text = "Total Pets: 0";
+            // 
+            // lblCustomerWelcome
+            // 
+            this.lblCustomerWelcome.AutoSize = true;
+            this.lblCustomerWelcome.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCustomerWelcome.Location = new System.Drawing.Point(327, 45);
+            this.lblCustomerWelcome.Name = "lblCustomerWelcome";
+            this.lblCustomerWelcome.Size = new System.Drawing.Size(369, 54);
+            this.lblCustomerWelcome.TabIndex = 17;
+            this.lblCustomerWelcome.Text = "WELCOME ADMIN";
+            // 
+            // grpCustomerProfile
+            // 
+            this.grpCustomerProfile.Controls.Add(this.txtCustomerProfileStatus);
+            this.grpCustomerProfile.Controls.Add(this.lblProfileStatus);
+            this.grpCustomerProfile.Controls.Add(this.btnCustomerRefreshProfile);
+            this.grpCustomerProfile.Controls.Add(this.txtCustomerProfileName);
+            this.grpCustomerProfile.Controls.Add(this.txtCustomerProfileRole);
+            this.grpCustomerProfile.Controls.Add(this.txtCustomerProfileEmail);
+            this.grpCustomerProfile.Controls.Add(this.btnCustomerUpdateProfile);
+            this.grpCustomerProfile.Controls.Add(this.lblProfileRole);
+            this.grpCustomerProfile.Controls.Add(this.lblCustomerTitle);
+            this.grpCustomerProfile.Controls.Add(this.lblProfileName);
+            this.grpCustomerProfile.Controls.Add(this.lblProfileEmail);
+            this.grpCustomerProfile.Location = new System.Drawing.Point(19, 20);
+            this.grpCustomerProfile.Name = "grpCustomerProfile";
+            this.grpCustomerProfile.Size = new System.Drawing.Size(985, 608);
+            this.grpCustomerProfile.TabIndex = 14;
+            this.grpCustomerProfile.TabStop = false;
+            this.grpCustomerProfile.Text = "Customer Profile";
+            // 
+            // txtCustomerProfileStatus
+            // 
+            this.txtCustomerProfileStatus.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCustomerProfileStatus.Location = new System.Drawing.Point(55, 310);
+            this.txtCustomerProfileStatus.Name = "txtCustomerProfileStatus";
+            this.txtCustomerProfileStatus.ReadOnly = true;
+            this.txtCustomerProfileStatus.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileStatus.TabIndex = 50;
+            // 
+            // lblProfileStatus
+            // 
+            this.lblProfileStatus.AutoSize = true;
+            this.lblProfileStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileStatus.Location = new System.Drawing.Point(51, 287);
+            this.lblProfileStatus.Name = "lblProfileStatus";
+            this.lblProfileStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblProfileStatus.TabIndex = 49;
+            this.lblProfileStatus.Text = "Status";
+            // 
+            // btnCustomerRefreshProfile
+            // 
+            this.btnCustomerRefreshProfile.Location = new System.Drawing.Point(55, 375);
+            this.btnCustomerRefreshProfile.Name = "btnCustomerRefreshProfile";
+            this.btnCustomerRefreshProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerRefreshProfile.TabIndex = 48;
+            this.btnCustomerRefreshProfile.Text = "Refresh";
+            this.btnCustomerRefreshProfile.UseVisualStyleBackColor = true;
+            this.btnCustomerRefreshProfile.Click += new System.EventHandler(this.btnCustomerRefreshProfile_Click);
+            // 
+            // txtCustomerProfileName
+            // 
+            this.txtCustomerProfileName.Location = new System.Drawing.Point(55, 93);
+            this.txtCustomerProfileName.Name = "txtCustomerProfileName";
+            this.txtCustomerProfileName.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileName.TabIndex = 46;
+            // 
+            // txtCustomerProfileRole
+            // 
+            this.txtCustomerProfileRole.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCustomerProfileRole.Location = new System.Drawing.Point(55, 233);
+            this.txtCustomerProfileRole.Name = "txtCustomerProfileRole";
+            this.txtCustomerProfileRole.ReadOnly = true;
+            this.txtCustomerProfileRole.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileRole.TabIndex = 36;
+            // 
+            // txtCustomerProfileEmail
+            // 
+            this.txtCustomerProfileEmail.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCustomerProfileEmail.Location = new System.Drawing.Point(54, 158);
+            this.txtCustomerProfileEmail.Name = "txtCustomerProfileEmail";
+            this.txtCustomerProfileEmail.ReadOnly = true;
+            this.txtCustomerProfileEmail.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileEmail.TabIndex = 35;
+            // 
+            // btnCustomerUpdateProfile
+            // 
+            this.btnCustomerUpdateProfile.Location = new System.Drawing.Point(158, 375);
+            this.btnCustomerUpdateProfile.Name = "btnCustomerUpdateProfile";
+            this.btnCustomerUpdateProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerUpdateProfile.TabIndex = 19;
+            this.btnCustomerUpdateProfile.Text = "Update";
+            this.btnCustomerUpdateProfile.UseVisualStyleBackColor = true;
+            this.btnCustomerUpdateProfile.Click += new System.EventHandler(this.btnCustomerUpdateProfile_Click);
+            // 
+            // lblProfileRole
+            // 
+            this.lblProfileRole.AutoSize = true;
+            this.lblProfileRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileRole.Location = new System.Drawing.Point(51, 210);
+            this.lblProfileRole.Name = "lblProfileRole";
+            this.lblProfileRole.Size = new System.Drawing.Size(42, 20);
+            this.lblProfileRole.TabIndex = 10;
+            this.lblProfileRole.Text = "Role";
+            // 
+            // lblCustomerTitle
+            // 
+            this.lblCustomerTitle.AutoSize = true;
+            this.lblCustomerTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerTitle.Location = new System.Drawing.Point(49, 16);
+            this.lblCustomerTitle.Name = "lblCustomerTitle";
+            this.lblCustomerTitle.Size = new System.Drawing.Size(243, 32);
+            this.lblCustomerTitle.TabIndex = 9;
+            this.lblCustomerTitle.Text = "CUSTOMER PROFILE";
+            // 
+            // lblProfileName
+            // 
+            this.lblProfileName.AutoSize = true;
+            this.lblProfileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileName.Location = new System.Drawing.Point(51, 70);
+            this.lblProfileName.Name = "lblProfileName";
+            this.lblProfileName.Size = new System.Drawing.Size(80, 20);
+            this.lblProfileName.TabIndex = 5;
+            this.lblProfileName.Text = "Full Name";
+            // 
+            // lblProfileEmail
+            // 
+            this.lblProfileEmail.AutoSize = true;
+            this.lblProfileEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileEmail.Location = new System.Drawing.Point(50, 135);
+            this.lblProfileEmail.Name = "lblProfileEmail";
+            this.lblProfileEmail.Size = new System.Drawing.Size(48, 20);
+            this.lblProfileEmail.TabIndex = 7;
+            this.lblProfileEmail.Text = "Email";
             // 
             // FrmCustomerDashboard
             // 
@@ -1284,6 +1496,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabMain.ResumeLayout(false);
+            this.tabHome.ResumeLayout(false);
+            this.tabHome.PerformLayout();
             this.tabPets.ResumeLayout(false);
             this.grpPetInfo.ResumeLayout(false);
             this.grpPetInfo.PerformLayout();
@@ -1302,6 +1516,9 @@
             this.grpCustomerFeedback.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numRating)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeedback)).EndInit();
+            this.tabProfile.ResumeLayout(false);
+            this.grpCustomerProfile.ResumeLayout(false);
+            this.grpCustomerProfile.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1415,5 +1632,23 @@
         private System.Windows.Forms.Label lblCustomerFeedback;
         private System.Windows.Forms.Label lblFeedbackAppointment;
         private System.Windows.Forms.Label lblRating;
+        private System.Windows.Forms.Label lblCustomerCurrentTime;
+        private System.Windows.Forms.Label lblCustomerCurrentDate;
+        private System.Windows.Forms.Label lblCustomerPayments;
+        private System.Windows.Forms.Label lblCustomerAppointments;
+        private System.Windows.Forms.Label lblCustomerTotalPets;
+        private System.Windows.Forms.Label lblCustomerWelcome;
+        private System.Windows.Forms.GroupBox grpCustomerProfile;
+        private System.Windows.Forms.TextBox txtCustomerProfileStatus;
+        private System.Windows.Forms.Label lblProfileStatus;
+        private System.Windows.Forms.Button btnCustomerRefreshProfile;
+        private System.Windows.Forms.TextBox txtCustomerProfileName;
+        private System.Windows.Forms.TextBox txtCustomerProfileRole;
+        private System.Windows.Forms.TextBox txtCustomerProfileEmail;
+        private System.Windows.Forms.Button btnCustomerUpdateProfile;
+        private System.Windows.Forms.Label lblProfileRole;
+        private System.Windows.Forms.Label lblCustomerTitle;
+        private System.Windows.Forms.Label lblProfileName;
+        private System.Windows.Forms.Label lblProfileEmail;
     }
 }

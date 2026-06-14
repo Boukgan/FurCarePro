@@ -13,6 +13,11 @@ namespace FurCarePro.AbstractClasses
         public string PetName { get; set; }
 
         public abstract string GetPetType();
+
+        public virtual string GetAnimalType()
+        {
+            return "Animal";
+        }
     }
 
 }

@@ -31,11 +31,7 @@ namespace FurCarePro
 
         private void FrmRegister_Load(object sender, EventArgs e)
         {
-            cmbRole.Items.Add("Customer");
-            cmbRole.Items.Add("Staff");
-            cmbRole.Items.Add("Admin");
 
-            cmbRole.SelectedIndex = 0;
         }
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
@@ -124,7 +120,7 @@ namespace FurCarePro
 
                     cmd.Parameters.AddWithValue(
                         "@Role",
-                        cmbRole.Text);
+                        "Customer");
 
                     int rows =
                         cmd.ExecuteNonQuery();
@@ -163,7 +159,6 @@ namespace FurCarePro
             txtConfirmPassword.Clear();
             txtPhone.Clear();
 
-            cmbRole.SelectedIndex = 0;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

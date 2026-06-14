@@ -35,8 +35,13 @@ namespace FurCarePro
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDateTime.Text =
-        DateTime.Now.ToString(
-            "dd/MM/yyyy HH:mm:ss");
+                DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+
+            lblCustomerCurrentDate.Text =
+                DateTime.Now.ToString("dd/MM/yyyy");
+
+            lblCustomerCurrentTime.Text =
+                DateTime.Now.ToString("hh:mm:ss tt");
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
@@ -48,7 +53,12 @@ namespace FurCarePro
         {
             lblUser.Text = "Customer";
 
+            lblCustomerWelcome.Text =
+            "Welcome Customer";
+
             timerClock.Start();
+            LoadCustomerHome();
+            LoadCustomerProfile();
 
             cmbStatus.Items.Add("Pending");
             cmbStatus.Items.Add("Confirmed");
@@ -81,8 +91,73 @@ namespace FurCarePro
 
             LoadFeedback();
 
+           
+
         }
 
+        private void LoadCustomerProfile()
+        {
+            txtCustomerProfileName.Text =
+                UserSession.FullName;
+
+            txtCustomerProfileEmail.Text =
+                UserSession.Email;
+
+            txtCustomerProfileRole.Text =
+                UserSession.Role;
+
+            txtCustomerProfileStatus.Text =
+                "Active";
+        }
+
+        private void LoadCustomerHome()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    // Total Pets
+                    SqlCommand cmdPets =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblPets",
+                        conn);
+
+                    lblCustomerTotalPets.Text =
+                        "Total Pets: " +
+                        cmdPets.ExecuteScalar();
+
+                    // Total Appointments
+                    SqlCommand cmdAppointments =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblAppointments",
+                        conn);
+
+                    lblCustomerAppointments.Text =
+                        "Total Appointments: " +
+                        cmdAppointments.ExecuteScalar();
+
+                    // Total Payments
+                    SqlCommand cmdPayments =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblPayments",
+                        conn);
+
+                    lblCustomerPayments.Text =
+                        "Total Payments: " +
+                        cmdPayments.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private bool IsAppointmentAvailable()
         {
             using (SqlConnection conn =
@@ -1023,6 +1098,57 @@ namespace FurCarePro
         private void chartRevenue_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCustomerRefreshProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCustomerUpdateProfile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"UPDATE tblUsers
+              SET FullName=@FullName
+              WHERE UserID=@UserID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@FullName",
+                        txtCustomerProfileName.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@UserID",
+                        UserSession.UserID);
+
+                    int rows =
+                        cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        UserSession.FullName =
+                            txtCustomerProfileName.Text;
+
+                        MessageBox.Show(
+                            "Profile Updated");
+
+                        LoadCustomerProfile();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

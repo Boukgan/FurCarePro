@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FurCarePro.Utilities;
 
 namespace FurCarePro
 {
@@ -99,6 +100,19 @@ namespace FurCarePro
 
                     if (dr.Read())
                     {
+                        UserSession.UserID =
+                        Convert.ToInt32(
+                            dr["UserID"]);
+
+                        UserSession.FullName =
+                            dr["FullName"].ToString();
+
+                        UserSession.Email =
+                            dr["Email"].ToString();
+
+                        UserSession.Role =
+                            dr["Role"].ToString();
+
                         if (cmbRole.Text == "Customer")
                         {
                             FrmCustomerDashboard dashboard =

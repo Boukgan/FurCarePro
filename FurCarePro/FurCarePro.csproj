@@ -95,6 +95,7 @@
     <Compile Include="Utilities\GroomingQueueManager.cs" />
     <Compile Include="Utilities\PaymentHistoryManager.cs" />
     <Compile Include="Utilities\ServiceDictionary.cs" />
+    <Compile Include="Utilities\UserSession.cs" />
     <EmbeddedResource Include="FrmAdminDashboard.resx">
       <DependentUpon>FrmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
