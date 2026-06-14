@@ -1102,7 +1102,10 @@ namespace FurCarePro
 
         private void btnCustomerRefreshProfile_Click(object sender, EventArgs e)
         {
+            LoadCustomerProfile();
 
+            MessageBox.Show(
+                "Profile Refreshed");
         }
 
         private void btnCustomerUpdateProfile_Click(object sender, EventArgs e)
