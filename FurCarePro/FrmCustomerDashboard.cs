@@ -89,9 +89,10 @@ namespace FurCarePro
 
             LoadPayments();
 
+            LoadFeedbackAppointmentCombo();
             LoadFeedback();
 
-           
+            
 
         }
 
@@ -119,37 +120,58 @@ namespace FurCarePro
                 {
                     conn.Open();
 
-                    // Total Pets
+                    // My Pets
                     SqlCommand cmdPets =
                         new SqlCommand(
                         @"SELECT COUNT(*)
-                  FROM tblPets",
+                  FROM tblPets
+                  WHERE CustomerID=@CustomerID",
                         conn);
 
+                    cmdPets.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
+
                     lblCustomerTotalPets.Text =
-                        "Total Pets: " +
+                        "My Pets: " +
                         cmdPets.ExecuteScalar();
 
-                    // Total Appointments
+                    // My Appointments
                     SqlCommand cmdAppointments =
                         new SqlCommand(
                         @"SELECT COUNT(*)
-                  FROM tblAppointments",
+                  FROM tblAppointments a
+                  INNER JOIN tblPets p
+                  ON a.PetID = p.PetID
+                  WHERE p.CustomerID=@CustomerID",
                         conn);
 
+                    cmdAppointments.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
+
                     lblCustomerAppointments.Text =
-                        "Total Appointments: " +
+                        "My Appointments: " +
                         cmdAppointments.ExecuteScalar();
 
-                    // Total Payments
+                    // My Payments
                     SqlCommand cmdPayments =
                         new SqlCommand(
                         @"SELECT COUNT(*)
-                  FROM tblPayments",
+                  FROM tblPayments pay
+                  INNER JOIN tblAppointments a
+                  ON pay.AppointmentID = a.AppointmentID
+                  INNER JOIN tblPets p
+                  ON a.PetID = p.PetID
+                  WHERE p.CustomerID=@CustomerID",
                         conn);
 
+                    cmdPayments.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
+
                     lblCustomerPayments.Text =
-                        "Total Payments: " +
+                        "My Payments: " +
                         cmdPayments.ExecuteScalar();
                 }
             }
@@ -158,6 +180,7 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
+
         private bool IsAppointmentAvailable()
         {
             using (SqlConnection conn =
@@ -219,28 +242,47 @@ namespace FurCarePro
         }
         private void LoadFeedbackAppointmentCombo()
         {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
+            try
             {
-                conn.Open();
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
 
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT AppointmentID FROM tblAppointments",
-                    conn);
+                    string sql =
+                    @"SELECT a.AppointmentID
+              FROM tblAppointments a
+              INNER JOIN tblPets p
+                  ON a.PetID = p.PetID
+              WHERE p.CustomerID = @CustomerID";
 
-                DataTable dt =
-                    new DataTable();
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
 
-                da.Fill(dt);
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
 
-                cmbFeedbackAppointment.DataSource = dt;
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(cmd);
 
-                cmbFeedbackAppointment.DisplayMember =
-                    "AppointmentID";
+                    DataTable dt =
+                        new DataTable();
 
-                cmbFeedbackAppointment.ValueMember =
-                    "AppointmentID";
+                    da.Fill(dt);
+
+                    cmbFeedbackAppointment.DataSource = dt;
+
+                    cmbFeedbackAppointment.DisplayMember =
+                        "AppointmentID";
+
+                    cmbFeedbackAppointment.ValueMember =
+                        "AppointmentID";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         private void LoadFeedback()
@@ -252,10 +294,24 @@ namespace FurCarePro
                 {
                     conn.Open();
 
+                    string sql =
+                    @"SELECT f.*
+              FROM tblFeedback f
+              INNER JOIN tblAppointments a
+                  ON f.AppointmentID = a.AppointmentID
+              INNER JOIN tblPets p
+                  ON a.PetID = p.PetID
+              WHERE p.CustomerID = @CustomerID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
+
                     SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT * FROM tblFeedback",
-                        conn);
+                        new SqlDataAdapter(cmd);
 
                     DataTable dt =
                         new DataTable();
@@ -270,6 +326,7 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void LoadPayments()
         {
             try
@@ -280,13 +337,23 @@ namespace FurCarePro
                     conn.Open();
 
                     string sql =
-                    @"SELECT *
-              FROM tblPayments";
+                    @"SELECT pay.*
+              FROM tblPayments pay
+              INNER JOIN tblAppointments a
+                  ON pay.AppointmentID = a.AppointmentID
+              INNER JOIN tblPets p
+                  ON a.PetID = p.PetID
+              WHERE p.CustomerID = @CustomerID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
 
                     SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        sql,
-                        conn);
+                        new SqlDataAdapter(cmd);
 
                     DataTable dt =
                         new DataTable();
@@ -301,53 +368,93 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void LoadAppointmentCombo()
         {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
+            try
             {
-                conn.Open();
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
 
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT AppointmentID FROM tblAppointments",
-                    conn);
+                    string sql =
+                    @"SELECT a.AppointmentID
+              FROM tblAppointments a
+              INNER JOIN tblPets p
+                  ON a.PetID = p.PetID
+              WHERE p.CustomerID = @CustomerID";
 
-                DataTable dt =
-                    new DataTable();
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
 
-                da.Fill(dt);
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
 
-                cmbPaymentAppointment.DataSource = dt;
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(cmd);
 
-                cmbPaymentAppointment.DisplayMember =
-                    "AppointmentID";
+                    DataTable dt =
+                        new DataTable();
 
-                cmbPaymentAppointment.ValueMember =
-                    "AppointmentID";
+                    da.Fill(dt);
+
+                    cmbPaymentAppointment.DataSource = dt;
+
+                    cmbPaymentAppointment.DisplayMember =
+                        "AppointmentID";
+
+                    cmbPaymentAppointment.ValueMember =
+                        "AppointmentID";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
+
         private void LoadAppointments()
         {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
+            try
             {
-                conn.Open();
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
 
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT * FROM tblAppointments",
-                    conn);
+                    string sql =
+                    @"SELECT a.*
+              FROM tblAppointments a
+              INNER JOIN tblPets p
+              ON a.PetID = p.PetID
+              WHERE p.CustomerID = @CustomerID";
 
-                DataTable dt =
-                    new DataTable();
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
 
-                da.Fill(dt);
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
 
-                dgvAppointments.DataSource = dt;
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(cmd);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAppointments.DataSource = dt;
+                }
             }
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
         private void LoadServices()
         {
             using (SqlConnection conn =
@@ -383,10 +490,21 @@ namespace FurCarePro
                 {
                     conn.Open();
 
+                    string sql =
+                    @"SELECT PetID,
+                     PetName
+              FROM tblPets
+              WHERE CustomerID=@CustomerID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
+
                     SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT PetID, PetName FROM tblPets",
-                        conn);
+                        new SqlDataAdapter(cmd);
 
                     DataTable dt =
                         new DataTable();
@@ -395,9 +513,11 @@ namespace FurCarePro
 
                     cmbPet.DataSource = dt;
 
-                    cmbPet.DisplayMember = "PetName";
+                    cmbPet.DisplayMember =
+                        "PetName";
 
-                    cmbPet.ValueMember = "PetID";
+                    cmbPet.ValueMember =
+                        "PetID";
                 }
             }
             catch (Exception ex)
@@ -405,6 +525,7 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
+
         private void LoadPetGrid()
         {
             try
@@ -414,10 +535,20 @@ namespace FurCarePro
                 {
                     conn.Open();
 
+                    string sql =
+                    @"SELECT *
+              FROM tblPets
+              WHERE CustomerID=@CustomerID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
+
                     SqlDataAdapter da =
-                        new SqlDataAdapter(
-                        "SELECT * FROM tblPets",
-                        conn);
+                        new SqlDataAdapter(cmd);
 
                     DataTable dt =
                         new DataTable();
@@ -504,21 +635,23 @@ namespace FurCarePro
 
                     string sql =
                     @"INSERT INTO tblPets
-            (
-                PetName,
-                Species,
-                Breed,
-                Gender,
-                Weight
-            )
-            VALUES
-            (
-                @PetName,
-                @Species,
-                @Breed,
-                @Gender,
-                @Weight
-            )";
+                    (
+                        CustomerID,
+                        PetName,
+                        Species,
+                        Breed,
+                        Gender,
+                        Weight
+                    )
+                    VALUES
+                    (
+                        @CustomerID,
+                        @PetName,
+                        @Species,
+                        @Breed,
+                        @Gender,
+                        @Weight
+                    )";
 
                     SqlCommand cmd =
                         new SqlCommand(sql, conn);
@@ -542,6 +675,10 @@ namespace FurCarePro
                     cmd.Parameters.AddWithValue(
                         "@Weight",
                         numWeight.Value);
+
+                    cmd.Parameters.AddWithValue(
+                        "@CustomerID",
+                        UserSession.UserID);
 
                     cmd.ExecuteNonQuery();
 
