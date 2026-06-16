@@ -29,7 +29,8 @@ namespace FurCarePro
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            tabMain.SelectedTab =
+        tabPets;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -606,12 +607,21 @@ namespace FurCarePro
 
         private void logToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmLogin login =
-        new FrmLogin();
+            DialogResult result =
+        MessageBox.Show(
+            "Logout now?",
+            "Confirm",
+            MessageBoxButtons.YesNo);
 
-            login.Show();
+            if (result == DialogResult.Yes)
+            {
+                FrmLogin login =
+                    new FrmLogin();
 
-            this.Close();
+                login.Show();
+
+                this.Close();
+            }
         }
 
         private void cmbSpecies_SelectedIndexChanged(object sender, EventArgs e)
@@ -1289,6 +1299,130 @@ namespace FurCarePro
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab =
+        tabProfile;
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void registerPetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab =
+        tabPets;
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+        "FurCare Pro\n\n" +
+        "Pet Grooming Management System\n\n" +
+        "Developed using C# Windows Forms and SQL Server",
+        "About FurCare Pro");
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            LoadPetGrid();
+            LoadPetComboBox();
+
+            LoadAppointments();
+
+            LoadAppointmentCombo();
+            LoadPayments();
+
+            LoadFeedbackAppointmentCombo();
+            LoadFeedback();
+
+            LoadCustomerHome();
+
+            MessageBox.Show(
+                "Data Refreshed");
+        }
+
+        private void bookAppointmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab =
+        tabAppointments;
+        }
+
+        private void makePaymentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab =
+        tabPayments;
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab =
+        tabAppointments;
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            tabMain.SelectedTab =
+        tabPayments;
+        }
+
+        private void btnHome_MouseEnter(object sender, EventArgs e)
+        {
+            btnHome.Width = 129;
+        }
+
+        private void btnHome_MouseLeave(object sender, EventArgs e)
+        {
+            btnHome.Width = 109;
+        }
+
+        private void btnAppointments_MouseEnter(object sender, EventArgs e)
+        {
+            btnAppointments.Width = 129;
+        }
+
+        private void btnAppointments_MouseLeave(object sender, EventArgs e)
+        {
+            btnAppointments.Width = 109;
+        }
+
+        private void btnPayments_MouseEnter(object sender, EventArgs e)
+        {
+            btnPayments.Width = 129;
+        }
+
+        private void btnPayments_MouseLeave(object sender, EventArgs e)
+        {
+            btnPayments.Width = 109;
+        }
+
+        private void btnFeedback_MouseEnter(object sender, EventArgs e)
+        {
+            btnFeedback.Width = 129;
+        }
+
+        private void btnFeedback_MouseLeave(object sender, EventArgs e)
+        {
+            btnFeedback.Width = 109;
+        }
+
+        private void btnProfile_MouseEnter(object sender, EventArgs e)
+        {
+            btnProfile.Width = 129;
+        }
+
+        private void btnProfile_MouseLeave(object sender, EventArgs e)
+        {
+            btnProfile.Width = 109;
         }
     }
 }

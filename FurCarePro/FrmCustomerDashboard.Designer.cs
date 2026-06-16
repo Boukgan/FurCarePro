@@ -154,6 +154,7 @@
             this.lblCustomerTitle = new System.Windows.Forms.Label();
             this.lblProfileName = new System.Windows.Forms.Label();
             this.lblProfileEmail = new System.Windows.Forms.Label();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -199,7 +200,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.exitToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -214,8 +216,9 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Profile";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // petToolStripMenuItem
             // 
@@ -228,8 +231,9 @@
             // registerPetToolStripMenuItem
             // 
             this.registerPetToolStripMenuItem.Name = "registerPetToolStripMenuItem";
-            this.registerPetToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.registerPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.registerPetToolStripMenuItem.Text = "Register Pet";
+            this.registerPetToolStripMenuItem.Click += new System.EventHandler(this.registerPetToolStripMenuItem_Click);
             // 
             // appointmentToolStripMenuItem
             // 
@@ -242,8 +246,9 @@
             // bookAppointmentToolStripMenuItem
             // 
             this.bookAppointmentToolStripMenuItem.Name = "bookAppointmentToolStripMenuItem";
-            this.bookAppointmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.bookAppointmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bookAppointmentToolStripMenuItem.Text = "Book Appointment";
+            this.bookAppointmentToolStripMenuItem.Click += new System.EventHandler(this.bookAppointmentToolStripMenuItem_Click);
             // 
             // paymentToolStripMenuItem
             // 
@@ -256,8 +261,9 @@
             // makePaymentToolStripMenuItem
             // 
             this.makePaymentToolStripMenuItem.Name = "makePaymentToolStripMenuItem";
-            this.makePaymentToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.makePaymentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.makePaymentToolStripMenuItem.Text = "Make Payment";
+            this.makePaymentToolStripMenuItem.Click += new System.EventHandler(this.makePaymentToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -266,12 +272,14 @@
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
@@ -304,6 +312,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(112, 22);
             this.toolStripButton2.Text = "Book Appointment";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // toolStripButton3
             // 
@@ -313,6 +322,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(58, 22);
             this.toolStripButton3.Text = "Payment";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStripButton4
             // 
@@ -322,6 +332,7 @@
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(50, 22);
             this.toolStripButton4.Text = "Refresh";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // statusStrip1
             // 
@@ -385,6 +396,8 @@
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.btnProfile.MouseEnter += new System.EventHandler(this.btnProfile_MouseEnter);
+            this.btnProfile.MouseLeave += new System.EventHandler(this.btnProfile_MouseLeave);
             // 
             // btnFeedback
             // 
@@ -396,6 +409,8 @@
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = false;
             this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            this.btnFeedback.MouseEnter += new System.EventHandler(this.btnFeedback_MouseEnter);
+            this.btnFeedback.MouseLeave += new System.EventHandler(this.btnFeedback_MouseLeave);
             // 
             // btnPayments
             // 
@@ -407,6 +422,8 @@
             this.btnPayments.Text = "Payments";
             this.btnPayments.UseVisualStyleBackColor = false;
             this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
+            this.btnPayments.MouseEnter += new System.EventHandler(this.btnPayments_MouseEnter);
+            this.btnPayments.MouseLeave += new System.EventHandler(this.btnPayments_MouseLeave);
             // 
             // btnAppointments
             // 
@@ -418,6 +435,8 @@
             this.btnAppointments.Text = "Appointments";
             this.btnAppointments.UseVisualStyleBackColor = false;
             this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
+            this.btnAppointments.MouseEnter += new System.EventHandler(this.btnAppointments_MouseEnter);
+            this.btnAppointments.MouseLeave += new System.EventHandler(this.btnAppointments_MouseLeave);
             // 
             // btnPets
             // 
@@ -442,6 +461,8 @@
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.btnHome.MouseEnter += new System.EventHandler(this.btnHome_MouseEnter);
+            this.btnHome.MouseLeave += new System.EventHandler(this.btnHome_MouseLeave);
             // 
             // tabMain
             // 
@@ -1475,6 +1496,13 @@
             this.lblProfileEmail.TabIndex = 7;
             this.lblProfileEmail.Text = "Email";
             // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
+            // 
             // FrmCustomerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1656,5 +1684,6 @@
         private System.Windows.Forms.Label lblCustomerTitle;
         private System.Windows.Forms.Label lblProfileName;
         private System.Windows.Forms.Label lblProfileEmail;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
     }
 }
