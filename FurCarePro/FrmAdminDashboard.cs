@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.IO;
 
 
 namespace FurCarePro
@@ -199,8 +200,8 @@ namespace FurCarePro
 
             LoadAdminFeedback();
 
-            
 
+      
 
             LoadRevenueChart();
 
@@ -212,6 +213,7 @@ namespace FurCarePro
 
             LoadServicePerformanceChart();
 
+            LoadServiceDictionary();
             LoadAnalytics();
 
             LoadHomeStatistics();
@@ -548,11 +550,13 @@ namespace FurCarePro
                         "Total Services: " +
                         dt.Rows.Count;
                 }
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
 
         private void LoadPetList()
@@ -965,198 +969,176 @@ namespace FurCarePro
         #region LINQ Reports
         private void ShowTodayAppointments()
         {
-            DataTable dt =
-        dgvAdminAppointments.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblTodayAppointments.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblAppointments
+              WHERE CAST(AppointmentDate AS DATE)
+              = CAST(GETDATE() AS DATE)",
+                    conn);
+
+                lblTodayAppointments.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToDateTime(
-                          r["AppointmentDate"]).Date
-                      ==
-                      DateTime.Today);
-
-            lblTodayAppointments.Text =
-                count.ToString();
         }
         // LINQ methods here
 
         private void ShowUpcomingAppointments()
         {
-            DataTable dt =
-        dgvAdminAppointments.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblUpcomingAppointments.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblAppointments
+              WHERE AppointmentDate > GETDATE()",
+                    conn);
+
+                lblUpcomingAppointments.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToDateTime(
-                          r["AppointmentDate"])
-                      >
-                      DateTime.Now);
-
-            lblUpcomingAppointments.Text =
-                count.ToString();
 
         }
 
         private void ShowCompletedGrooming()
         {
-            DataTable dt =
-        dgvGroomingRecords.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblCompletedGrooming.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblGroomingRecords
+              WHERE GroomingStatus='Completed'",
+                    conn);
+
+                lblCompletedGrooming.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      r["GroomingStatus"]
-                      .ToString()
-                      ==
-                      "Completed");
-
-            lblCompletedGrooming.Text =
-                count.ToString();
-
         }
         private void ShowPendingGrooming()
         {
-            DataTable dt =
-        dgvGroomingRecords.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblPendingGrooming.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblGroomingRecords
+              WHERE GroomingStatus='Pending'",
+                    conn);
+
+                lblPendingGrooming.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      r["GroomingStatus"]
-                      .ToString()
-                      ==
-                      "Pending");
-
-            lblPendingGrooming.Text =
-                count.ToString();
         }
         private void ShowHighRatings()
         {
-            DataTable dt =
-        dgvFeedback.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblHighRatings.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblFeedback
+              WHERE Rating >= 4",
+                    conn);
+
+                lblHighRatings.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToInt32(
-                          r["Rating"]) >= 4);
-
-            lblHighRatings.Text =
-                count.ToString();
         }
         private void ShowLowRatings()
         {
-            DataTable dt =
-        dgvFeedback.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+         DatabaseHelper.GetConnection())
             {
-                lblLowRatings.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblFeedback
+              WHERE Rating <= 2",
+                    conn);
+
+                lblLowRatings.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      Convert.ToInt32(
-                          r["Rating"]) <= 2);
-
-            lblLowRatings.Text =
-                count.ToString();
         }
         private void ShowPaidTransactions()
         {
-            DataTable dt =
-       dgvPayments.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblPaidTransactions.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT COUNT(*)
+              FROM tblPayments
+              WHERE PaymentStatus='Paid'",
+                    conn);
+
+                lblPaidTransactions.Text =
+                    cmd.ExecuteScalar().ToString();
             }
-
-            int count =
-                dt.AsEnumerable()
-                  .Count(r =>
-                      r["PaymentStatus"]
-                      .ToString()
-                      ==
-                      "Paid");
-
-            lblPaidTransactions.Text =
-                count.ToString();
         }
         private void ShowTotalRevenue()
         {
-            DataTable dt =
-        dgvPayments.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblRevenue.Text = "RM 0.00";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT ISNULL(
+                    SUM(Amount),0)
+              FROM tblPayments
+              WHERE PaymentStatus='Paid'",
+                    conn);
+
+                lblRevenue.Text =
+                    "RM " +
+                    Convert.ToDecimal(
+                        cmd.ExecuteScalar())
+                    .ToString("0.00");
             }
-
-            decimal total =
-                dt.AsEnumerable()
-                  .Sum(r =>
-                      Convert.ToDecimal(
-                          r["Amount"]));
-
-            lblRevenue.Text =
-                "RM " + total.ToString("N2");
         }
         private void ShowAverageRating()
         {
-            DataTable dt =
-        dgvFeedback.DataSource as DataTable;
-
-            if (dt == null || dt.Rows.Count == 0)
+            using (SqlConnection conn =
+        DatabaseHelper.GetConnection())
             {
-                lblAverageRating.Text = "0";
-                return;
+                conn.Open();
+
+                SqlCommand cmd =
+                    new SqlCommand(
+                    @"SELECT ISNULL(
+                    AVG(CAST(Rating AS FLOAT)),0)
+              FROM tblFeedback",
+                    conn);
+
+                lblAverageRating.Text =
+                    Convert.ToDouble(
+                        cmd.ExecuteScalar())
+                    .ToString("0.00");
             }
-
-            double average =
-                dt.AsEnumerable()
-                  .Average(r =>
-                      Convert.ToDouble(
-                          r["Rating"]));
-
-            lblAverageRating.Text =
-                average.ToString("0.00");
         }
         private void ShowMostPopularService()
         {
@@ -1199,15 +1181,17 @@ namespace FurCarePro
                     }
 
                     int serviceID =
-                        popular.Key;
+                        popular.Key;    
 
-                    if (ServiceDictionary
-                        .ServiceNames
-                        .ContainsKey(serviceID))
+                    if (serviceDictionary.ContainsKey(serviceID))
                     {
                         lblPopularService.Text =
-                            ServiceDictionary
-                            .ServiceNames[serviceID];
+                            serviceDictionary[serviceID];
+                    }
+                    else
+                    {
+                        lblPopularService.Text =
+                            "Unknown Service";
                     }
                 }
             }
@@ -1653,6 +1637,12 @@ namespace FurCarePro
         private void txtSearchCustomer_TextChanged(object sender, EventArgs e)
         {
             btnSearchCustomer.PerformClick();
+            DataView dv =
+        ((DataTable)dgvCustomers.DataSource)
+        .DefaultView;
+
+            dv.RowFilter =
+                $"FullName LIKE '%{txtSearchCustomer.Text}%'";
         }
 
         private void tabPets_Click(object sender, EventArgs e)
@@ -2823,6 +2813,111 @@ namespace FurCarePro
 
             MessageBox.Show(
                 "Feedback Refreshed");
+        }
+
+        private void exportReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveFileDialog save =
+                    new SaveFileDialog();
+
+                save.Filter =
+                    "Text File|*.txt";
+
+                save.FileName =
+                    "CustomerReport.txt";
+
+                if (save.ShowDialog()
+                    == DialogResult.OK)
+                {
+                    using (StreamWriter sw =
+                        new StreamWriter(
+                            save.FileName))
+                    {
+                        sw.WriteLine(
+                            "FURCARE PRO REPORT");
+
+                        sw.WriteLine(
+                            "====================");
+
+                        sw.WriteLine(
+                            "Generated: "
+                            + DateTime.Now);
+
+                        sw.WriteLine();
+
+                        foreach (DataGridViewRow row
+                            in dgvCustomers.Rows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                sw.WriteLine(
+                                    "Customer ID: "
+                                    + row.Cells["UserID"].Value);
+
+                                sw.WriteLine(
+                                    "Name: "
+                                    + row.Cells["FullName"].Value);
+
+                                sw.WriteLine(
+                                    "Email: "
+                                    + row.Cells["Email"].Value);
+
+                                sw.WriteLine(
+                                    "------------------");
+                            }
+                        }
+                    }
+
+                    MessageBox.Show(
+                        "Report Exported");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    ex.Message);
+            }
+        }
+
+        private void revenueReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    SqlCommand cmd =
+                        new SqlCommand(
+                        @"SELECT ISNULL(
+                        SUM(Amount),0)
+                  FROM tblPayments
+                  WHERE PaymentStatus='Paid'",
+                        conn);
+
+                    decimal revenue =
+                        Convert.ToDecimal(
+                            cmd.ExecuteScalar());
+
+                    MessageBox.Show(
+                        "Total Revenue: RM " +
+                        revenue.ToString("0.00"),
+                        "Revenue Report");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void appointmentReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab =
+        tabAppointments;
         }
     }
 }
