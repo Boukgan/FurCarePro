@@ -174,5 +174,10 @@ namespace FurCarePro
         {
             btnLogin.Width = 140;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

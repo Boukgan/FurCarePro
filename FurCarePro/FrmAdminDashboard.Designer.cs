@@ -195,6 +195,21 @@
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.tabFeedback = new System.Windows.Forms.TabPage();
             this.tabPayments = new System.Windows.Forms.TabPage();
+            this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
+            this.lblAdminAmount = new System.Windows.Forms.Label();
+            this.lblAdminPaymentID = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblAdminPaymentStatus = new System.Windows.Forms.Label();
+            this.btnUpdatePayment = new System.Windows.Forms.Button();
+            this.btnAdminDeletePayment = new System.Windows.Forms.Button();
+            this.btnRefreshPayment = new System.Windows.Forms.Button();
+            this.dgvAdminPayments = new System.Windows.Forms.DataGridView();
+            this.txtAdminAmount = new System.Windows.Forms.TextBox();
+            this.cmbAdminPaymentStatus = new System.Windows.Forms.ComboBox();
+            this.txtAdminPaymentID = new System.Windows.Forms.TextBox();
+            this.lblAdminTotalPayments = new System.Windows.Forms.Label();
+            this.lblAdminTotalPaymentss = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabAppointments = new System.Windows.Forms.TabPage();
             this.grpAppointmentDetails = new System.Windows.Forms.GroupBox();
             this.lblPetName = new System.Windows.Forms.Label();
@@ -286,6 +301,9 @@
             this.lblHomeCurrentDate = new System.Windows.Forms.Label();
             this.lblHomeCurrentTime = new System.Windows.Forms.Label();
             this.tabAdmin = new System.Windows.Forms.TabControl();
+            this.label18 = new System.Windows.Forms.Label();
+            this.lblAdminTotalRevenues = new System.Windows.Forms.Label();
+            this.lblAdminTotalRevenue = new System.Windows.Forms.Label();
             this.grpFeedbackManagement = new System.Windows.Forms.GroupBox();
             this.txtAdminComments = new System.Windows.Forms.TextBox();
             this.dgvAdminFeedback = new System.Windows.Forms.DataGridView();
@@ -297,22 +315,12 @@
             this.lblAdminRating = new System.Windows.Forms.Label();
             this.txtAdminFeedbackID = new System.Windows.Forms.TextBox();
             this.txtAdminRating = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblAdminAverageRatings = new System.Windows.Forms.Label();
             this.lblAdminAverageRating = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.lblAdminTotalFeedbacks = new System.Windows.Forms.Label();
             this.lblAdminTotalFeedback = new System.Windows.Forms.Label();
-            this.lblAdminAmount = new System.Windows.Forms.Label();
-            this.lblAdminPaymentID = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblAdminPaymentStatus = new System.Windows.Forms.Label();
-            this.btnUpdatePayment = new System.Windows.Forms.Button();
-            this.btnAdminDeletePayment = new System.Windows.Forms.Button();
-            this.btnRefreshPayment = new System.Windows.Forms.Button();
-            this.dgvAdminPayments = new System.Windows.Forms.DataGridView();
-            this.txtAdminAmount = new System.Windows.Forms.TextBox();
-            this.cmbAdminPaymentStatus = new System.Windows.Forms.ComboBox();
-            this.txtAdminPaymentID = new System.Windows.Forms.TextBox();
-            this.lblAdminTotalPayments = new System.Windows.Forms.Label();
-            this.lblAdminTotalRevenue = new System.Windows.Forms.Label();
-            this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -345,6 +353,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroomingRecords)).BeginInit();
             this.tabFeedback.SuspendLayout();
             this.tabPayments.SuspendLayout();
+            this.grpPaymentInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPayments)).BeginInit();
             this.tabAppointments.SuspendLayout();
             this.grpAppointmentDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminAppointments)).BeginInit();
@@ -358,8 +368,6 @@
             this.tabAdmin.SuspendLayout();
             this.grpFeedbackManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminFeedback)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPayments)).BeginInit();
-            this.grpPaymentInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -398,7 +406,6 @@
             this.exportReportToolStripMenuItem.Name = "exportReportToolStripMenuItem";
             this.exportReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exportReportToolStripMenuItem.Text = "Export Report";
-            this.exportReportToolStripMenuItem.Click += new System.EventHandler(this.exportReportToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -421,14 +428,12 @@
             this.revenueReportToolStripMenuItem.Name = "revenueReportToolStripMenuItem";
             this.revenueReportToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.revenueReportToolStripMenuItem.Text = "Revenue Report";
-            this.revenueReportToolStripMenuItem.Click += new System.EventHandler(this.revenueReportToolStripMenuItem_Click);
             // 
             // appointmentReportToolStripMenuItem
             // 
             this.appointmentReportToolStripMenuItem.Name = "appointmentReportToolStripMenuItem";
             this.appointmentReportToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.appointmentReportToolStripMenuItem.Text = "Appointment Report";
-            this.appointmentReportToolStripMenuItem.Click += new System.EventHandler(this.appointmentReportToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -1926,6 +1931,166 @@
             this.tabPayments.Text = "Payments";
             this.tabPayments.UseVisualStyleBackColor = true;
             // 
+            // grpPaymentInfo
+            // 
+            this.grpPaymentInfo.Controls.Add(this.label18);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalRevenues);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalRevenue);
+            this.grpPaymentInfo.Controls.Add(this.label13);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalPaymentss);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalPayments);
+            this.grpPaymentInfo.Controls.Add(this.txtAdminPaymentID);
+            this.grpPaymentInfo.Controls.Add(this.cmbAdminPaymentStatus);
+            this.grpPaymentInfo.Controls.Add(this.txtAdminAmount);
+            this.grpPaymentInfo.Controls.Add(this.dgvAdminPayments);
+            this.grpPaymentInfo.Controls.Add(this.btnRefreshPayment);
+            this.grpPaymentInfo.Controls.Add(this.btnAdminDeletePayment);
+            this.grpPaymentInfo.Controls.Add(this.btnUpdatePayment);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminPaymentStatus);
+            this.grpPaymentInfo.Controls.Add(this.label15);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminPaymentID);
+            this.grpPaymentInfo.Controls.Add(this.lblAdminAmount);
+            this.grpPaymentInfo.Location = new System.Drawing.Point(19, 20);
+            this.grpPaymentInfo.Name = "grpPaymentInfo";
+            this.grpPaymentInfo.Size = new System.Drawing.Size(985, 608);
+            this.grpPaymentInfo.TabIndex = 12;
+            this.grpPaymentInfo.TabStop = false;
+            this.grpPaymentInfo.Text = "Payment Info";
+            // 
+            // lblAdminAmount
+            // 
+            this.lblAdminAmount.AutoSize = true;
+            this.lblAdminAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminAmount.Location = new System.Drawing.Point(45, 129);
+            this.lblAdminAmount.Name = "lblAdminAmount";
+            this.lblAdminAmount.Size = new System.Drawing.Size(65, 20);
+            this.lblAdminAmount.TabIndex = 7;
+            this.lblAdminAmount.Text = "Amount";
+            // 
+            // lblAdminPaymentID
+            // 
+            this.lblAdminPaymentID.AutoSize = true;
+            this.lblAdminPaymentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminPaymentID.Location = new System.Drawing.Point(45, 56);
+            this.lblAdminPaymentID.Name = "lblAdminPaymentID";
+            this.lblAdminPaymentID.Size = new System.Drawing.Size(92, 20);
+            this.lblAdminPaymentID.TabIndex = 5;
+            this.lblAdminPaymentID.Text = "Payment ID";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(49, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(304, 32);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "PAYMENT INFORMATION";
+            // 
+            // lblAdminPaymentStatus
+            // 
+            this.lblAdminPaymentStatus.AutoSize = true;
+            this.lblAdminPaymentStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminPaymentStatus.Location = new System.Drawing.Point(45, 203);
+            this.lblAdminPaymentStatus.Name = "lblAdminPaymentStatus";
+            this.lblAdminPaymentStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblAdminPaymentStatus.TabIndex = 12;
+            this.lblAdminPaymentStatus.Text = "Status";
+            // 
+            // btnUpdatePayment
+            // 
+            this.btnUpdatePayment.Location = new System.Drawing.Point(47, 267);
+            this.btnUpdatePayment.Name = "btnUpdatePayment";
+            this.btnUpdatePayment.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdatePayment.TabIndex = 18;
+            this.btnUpdatePayment.Text = "Update";
+            this.btnUpdatePayment.UseVisualStyleBackColor = true;
+            this.btnUpdatePayment.Click += new System.EventHandler(this.btnUpdatePayment_Click);
+            // 
+            // btnAdminDeletePayment
+            // 
+            this.btnAdminDeletePayment.Location = new System.Drawing.Point(148, 267);
+            this.btnAdminDeletePayment.Name = "btnAdminDeletePayment";
+            this.btnAdminDeletePayment.Size = new System.Drawing.Size(75, 23);
+            this.btnAdminDeletePayment.TabIndex = 19;
+            this.btnAdminDeletePayment.Text = "Delete";
+            this.btnAdminDeletePayment.UseVisualStyleBackColor = true;
+            this.btnAdminDeletePayment.Click += new System.EventHandler(this.btnAdminDeletePayment_Click);
+            // 
+            // btnRefreshPayment
+            // 
+            this.btnRefreshPayment.Location = new System.Drawing.Point(258, 267);
+            this.btnRefreshPayment.Name = "btnRefreshPayment";
+            this.btnRefreshPayment.Size = new System.Drawing.Size(75, 23);
+            this.btnRefreshPayment.TabIndex = 21;
+            this.btnRefreshPayment.Text = "Refresh";
+            this.btnRefreshPayment.UseVisualStyleBackColor = true;
+            this.btnRefreshPayment.Click += new System.EventHandler(this.btnRefreshPayment_Click);
+            // 
+            // dgvAdminPayments
+            // 
+            this.dgvAdminPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdminPayments.Location = new System.Drawing.Point(49, 310);
+            this.dgvAdminPayments.Name = "dgvAdminPayments";
+            this.dgvAdminPayments.Size = new System.Drawing.Size(881, 275);
+            this.dgvAdminPayments.TabIndex = 22;
+            this.dgvAdminPayments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminPayments_CellContentClick);
+            // 
+            // txtAdminAmount
+            // 
+            this.txtAdminAmount.Location = new System.Drawing.Point(49, 152);
+            this.txtAdminAmount.Name = "txtAdminAmount";
+            this.txtAdminAmount.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminAmount.TabIndex = 26;
+            // 
+            // cmbAdminPaymentStatus
+            // 
+            this.cmbAdminPaymentStatus.FormattingEnabled = true;
+            this.cmbAdminPaymentStatus.Items.AddRange(new object[] {
+            "Paid",
+            "Pending"});
+            this.cmbAdminPaymentStatus.Location = new System.Drawing.Point(49, 226);
+            this.cmbAdminPaymentStatus.Name = "cmbAdminPaymentStatus";
+            this.cmbAdminPaymentStatus.Size = new System.Drawing.Size(201, 21);
+            this.cmbAdminPaymentStatus.TabIndex = 28;
+            // 
+            // txtAdminPaymentID
+            // 
+            this.txtAdminPaymentID.Location = new System.Drawing.Point(49, 79);
+            this.txtAdminPaymentID.Name = "txtAdminPaymentID";
+            this.txtAdminPaymentID.Size = new System.Drawing.Size(402, 20);
+            this.txtAdminPaymentID.TabIndex = 29;
+            // 
+            // lblAdminTotalPayments
+            // 
+            this.lblAdminTotalPayments.AutoSize = true;
+            this.lblAdminTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTotalPayments.Location = new System.Drawing.Point(782, 243);
+            this.lblAdminTotalPayments.Name = "lblAdminTotalPayments";
+            this.lblAdminTotalPayments.Size = new System.Drawing.Size(14, 20);
+            this.lblAdminTotalPayments.TabIndex = 60;
+            this.lblAdminTotalPayments.Text = "-";
+            // 
+            // lblAdminTotalPaymentss
+            // 
+            this.lblAdminTotalPaymentss.AutoSize = true;
+            this.lblAdminTotalPaymentss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTotalPaymentss.Location = new System.Drawing.Point(572, 244);
+            this.lblAdminTotalPaymentss.Name = "lblAdminTotalPaymentss";
+            this.lblAdminTotalPaymentss.Size = new System.Drawing.Size(118, 20);
+            this.lblAdminTotalPaymentss.TabIndex = 61;
+            this.lblAdminTotalPaymentss.Text = "Total Payments";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(763, 244);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 20);
+            this.label13.TabIndex = 62;
+            this.label13.Text = ":";
+            // 
             // tabAppointments
             // 
             this.tabAppointments.Controls.Add(this.grpAppointmentDetails);
@@ -2902,9 +3067,43 @@
             this.tabAdmin.Size = new System.Drawing.Size(1031, 660);
             this.tabAdmin.TabIndex = 1;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(763, 271);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(13, 20);
+            this.label18.TabIndex = 65;
+            this.label18.Text = ":";
+            // 
+            // lblAdminTotalRevenues
+            // 
+            this.lblAdminTotalRevenues.AutoSize = true;
+            this.lblAdminTotalRevenues.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTotalRevenues.Location = new System.Drawing.Point(572, 271);
+            this.lblAdminTotalRevenues.Name = "lblAdminTotalRevenues";
+            this.lblAdminTotalRevenues.Size = new System.Drawing.Size(112, 20);
+            this.lblAdminTotalRevenues.TabIndex = 64;
+            this.lblAdminTotalRevenues.Text = "Total Revenue";
+            // 
+            // lblAdminTotalRevenue
+            // 
+            this.lblAdminTotalRevenue.AutoSize = true;
+            this.lblAdminTotalRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTotalRevenue.Location = new System.Drawing.Point(782, 270);
+            this.lblAdminTotalRevenue.Name = "lblAdminTotalRevenue";
+            this.lblAdminTotalRevenue.Size = new System.Drawing.Size(14, 20);
+            this.lblAdminTotalRevenue.TabIndex = 63;
+            this.lblAdminTotalRevenue.Text = "-";
+            // 
             // grpFeedbackManagement
             // 
+            this.grpFeedbackManagement.Controls.Add(this.label14);
+            this.grpFeedbackManagement.Controls.Add(this.lblAdminAverageRatings);
             this.grpFeedbackManagement.Controls.Add(this.lblAdminAverageRating);
+            this.grpFeedbackManagement.Controls.Add(this.label22);
+            this.grpFeedbackManagement.Controls.Add(this.lblAdminTotalFeedbacks);
             this.grpFeedbackManagement.Controls.Add(this.lblAdminTotalFeedback);
             this.grpFeedbackManagement.Controls.Add(this.txtAdminRating);
             this.grpFeedbackManagement.Controls.Add(this.txtAdminFeedbackID);
@@ -3014,171 +3213,65 @@
             this.txtAdminRating.Size = new System.Drawing.Size(402, 20);
             this.txtAdminRating.TabIndex = 32;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(757, 300);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(13, 20);
+            this.label14.TabIndex = 71;
+            this.label14.Text = ":";
+            // 
+            // lblAdminAverageRatings
+            // 
+            this.lblAdminAverageRatings.AutoSize = true;
+            this.lblAdminAverageRatings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminAverageRatings.Location = new System.Drawing.Point(566, 300);
+            this.lblAdminAverageRatings.Name = "lblAdminAverageRatings";
+            this.lblAdminAverageRatings.Size = new System.Drawing.Size(119, 20);
+            this.lblAdminAverageRatings.TabIndex = 70;
+            this.lblAdminAverageRatings.Text = "Average Rating";
+            // 
             // lblAdminAverageRating
             // 
             this.lblAdminAverageRating.AutoSize = true;
             this.lblAdminAverageRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminAverageRating.Location = new System.Drawing.Point(625, 302);
+            this.lblAdminAverageRating.Location = new System.Drawing.Point(776, 299);
             this.lblAdminAverageRating.Name = "lblAdminAverageRating";
             this.lblAdminAverageRating.Size = new System.Drawing.Size(14, 20);
             this.lblAdminAverageRating.TabIndex = 69;
             this.lblAdminAverageRating.Text = "-";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(757, 273);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(13, 20);
+            this.label22.TabIndex = 68;
+            this.label22.Text = ":";
+            // 
+            // lblAdminTotalFeedbacks
+            // 
+            this.lblAdminTotalFeedbacks.AutoSize = true;
+            this.lblAdminTotalFeedbacks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminTotalFeedbacks.Location = new System.Drawing.Point(566, 273);
+            this.lblAdminTotalFeedbacks.Name = "lblAdminTotalFeedbacks";
+            this.lblAdminTotalFeedbacks.Size = new System.Drawing.Size(119, 20);
+            this.lblAdminTotalFeedbacks.TabIndex = 67;
+            this.lblAdminTotalFeedbacks.Text = "Total Feedback";
+            // 
             // lblAdminTotalFeedback
             // 
             this.lblAdminTotalFeedback.AutoSize = true;
             this.lblAdminTotalFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalFeedback.Location = new System.Drawing.Point(625, 275);
+            this.lblAdminTotalFeedback.Location = new System.Drawing.Point(776, 272);
             this.lblAdminTotalFeedback.Name = "lblAdminTotalFeedback";
             this.lblAdminTotalFeedback.Size = new System.Drawing.Size(14, 20);
             this.lblAdminTotalFeedback.TabIndex = 66;
             this.lblAdminTotalFeedback.Text = "-";
-            // 
-            // lblAdminAmount
-            // 
-            this.lblAdminAmount.AutoSize = true;
-            this.lblAdminAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminAmount.Location = new System.Drawing.Point(45, 129);
-            this.lblAdminAmount.Name = "lblAdminAmount";
-            this.lblAdminAmount.Size = new System.Drawing.Size(65, 20);
-            this.lblAdminAmount.TabIndex = 7;
-            this.lblAdminAmount.Text = "Amount";
-            // 
-            // lblAdminPaymentID
-            // 
-            this.lblAdminPaymentID.AutoSize = true;
-            this.lblAdminPaymentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminPaymentID.Location = new System.Drawing.Point(45, 56);
-            this.lblAdminPaymentID.Name = "lblAdminPaymentID";
-            this.lblAdminPaymentID.Size = new System.Drawing.Size(92, 20);
-            this.lblAdminPaymentID.TabIndex = 5;
-            this.lblAdminPaymentID.Text = "Payment ID";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(49, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(304, 32);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "PAYMENT INFORMATION";
-            // 
-            // lblAdminPaymentStatus
-            // 
-            this.lblAdminPaymentStatus.AutoSize = true;
-            this.lblAdminPaymentStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminPaymentStatus.Location = new System.Drawing.Point(45, 203);
-            this.lblAdminPaymentStatus.Name = "lblAdminPaymentStatus";
-            this.lblAdminPaymentStatus.Size = new System.Drawing.Size(56, 20);
-            this.lblAdminPaymentStatus.TabIndex = 12;
-            this.lblAdminPaymentStatus.Text = "Status";
-            // 
-            // btnUpdatePayment
-            // 
-            this.btnUpdatePayment.Location = new System.Drawing.Point(47, 267);
-            this.btnUpdatePayment.Name = "btnUpdatePayment";
-            this.btnUpdatePayment.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdatePayment.TabIndex = 18;
-            this.btnUpdatePayment.Text = "Update";
-            this.btnUpdatePayment.UseVisualStyleBackColor = true;
-            this.btnUpdatePayment.Click += new System.EventHandler(this.btnUpdatePayment_Click);
-            // 
-            // btnAdminDeletePayment
-            // 
-            this.btnAdminDeletePayment.Location = new System.Drawing.Point(148, 267);
-            this.btnAdminDeletePayment.Name = "btnAdminDeletePayment";
-            this.btnAdminDeletePayment.Size = new System.Drawing.Size(75, 23);
-            this.btnAdminDeletePayment.TabIndex = 19;
-            this.btnAdminDeletePayment.Text = "Delete";
-            this.btnAdminDeletePayment.UseVisualStyleBackColor = true;
-            this.btnAdminDeletePayment.Click += new System.EventHandler(this.btnAdminDeletePayment_Click);
-            // 
-            // btnRefreshPayment
-            // 
-            this.btnRefreshPayment.Location = new System.Drawing.Point(258, 267);
-            this.btnRefreshPayment.Name = "btnRefreshPayment";
-            this.btnRefreshPayment.Size = new System.Drawing.Size(75, 23);
-            this.btnRefreshPayment.TabIndex = 21;
-            this.btnRefreshPayment.Text = "Refresh";
-            this.btnRefreshPayment.UseVisualStyleBackColor = true;
-            this.btnRefreshPayment.Click += new System.EventHandler(this.btnRefreshPayment_Click);
-            // 
-            // dgvAdminPayments
-            // 
-            this.dgvAdminPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAdminPayments.Location = new System.Drawing.Point(49, 310);
-            this.dgvAdminPayments.Name = "dgvAdminPayments";
-            this.dgvAdminPayments.Size = new System.Drawing.Size(881, 275);
-            this.dgvAdminPayments.TabIndex = 22;
-            this.dgvAdminPayments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdminPayments_CellContentClick);
-            // 
-            // txtAdminAmount
-            // 
-            this.txtAdminAmount.Location = new System.Drawing.Point(49, 152);
-            this.txtAdminAmount.Name = "txtAdminAmount";
-            this.txtAdminAmount.Size = new System.Drawing.Size(402, 20);
-            this.txtAdminAmount.TabIndex = 26;
-            // 
-            // cmbAdminPaymentStatus
-            // 
-            this.cmbAdminPaymentStatus.FormattingEnabled = true;
-            this.cmbAdminPaymentStatus.Items.AddRange(new object[] {
-            "Paid",
-            "Pending"});
-            this.cmbAdminPaymentStatus.Location = new System.Drawing.Point(49, 226);
-            this.cmbAdminPaymentStatus.Name = "cmbAdminPaymentStatus";
-            this.cmbAdminPaymentStatus.Size = new System.Drawing.Size(201, 21);
-            this.cmbAdminPaymentStatus.TabIndex = 28;
-            // 
-            // txtAdminPaymentID
-            // 
-            this.txtAdminPaymentID.Location = new System.Drawing.Point(49, 79);
-            this.txtAdminPaymentID.Name = "txtAdminPaymentID";
-            this.txtAdminPaymentID.Size = new System.Drawing.Size(402, 20);
-            this.txtAdminPaymentID.TabIndex = 29;
-            // 
-            // lblAdminTotalPayments
-            // 
-            this.lblAdminTotalPayments.AutoSize = true;
-            this.lblAdminTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalPayments.Location = new System.Drawing.Point(622, 243);
-            this.lblAdminTotalPayments.Name = "lblAdminTotalPayments";
-            this.lblAdminTotalPayments.Size = new System.Drawing.Size(14, 20);
-            this.lblAdminTotalPayments.TabIndex = 60;
-            this.lblAdminTotalPayments.Text = "-";
-            // 
-            // lblAdminTotalRevenue
-            // 
-            this.lblAdminTotalRevenue.AutoSize = true;
-            this.lblAdminTotalRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalRevenue.Location = new System.Drawing.Point(622, 270);
-            this.lblAdminTotalRevenue.Name = "lblAdminTotalRevenue";
-            this.lblAdminTotalRevenue.Size = new System.Drawing.Size(14, 20);
-            this.lblAdminTotalRevenue.TabIndex = 63;
-            this.lblAdminTotalRevenue.Text = "-";
-            // 
-            // grpPaymentInfo
-            // 
-            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalRevenue);
-            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalPayments);
-            this.grpPaymentInfo.Controls.Add(this.txtAdminPaymentID);
-            this.grpPaymentInfo.Controls.Add(this.cmbAdminPaymentStatus);
-            this.grpPaymentInfo.Controls.Add(this.txtAdminAmount);
-            this.grpPaymentInfo.Controls.Add(this.dgvAdminPayments);
-            this.grpPaymentInfo.Controls.Add(this.btnRefreshPayment);
-            this.grpPaymentInfo.Controls.Add(this.btnAdminDeletePayment);
-            this.grpPaymentInfo.Controls.Add(this.btnUpdatePayment);
-            this.grpPaymentInfo.Controls.Add(this.lblAdminPaymentStatus);
-            this.grpPaymentInfo.Controls.Add(this.label15);
-            this.grpPaymentInfo.Controls.Add(this.lblAdminPaymentID);
-            this.grpPaymentInfo.Controls.Add(this.lblAdminAmount);
-            this.grpPaymentInfo.Location = new System.Drawing.Point(19, 20);
-            this.grpPaymentInfo.Name = "grpPaymentInfo";
-            this.grpPaymentInfo.Size = new System.Drawing.Size(985, 608);
-            this.grpPaymentInfo.TabIndex = 12;
-            this.grpPaymentInfo.TabStop = false;
-            this.grpPaymentInfo.Text = "Payment Info";
             // 
             // FrmAdminDashboard
             // 
@@ -3231,6 +3324,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroomingRecords)).EndInit();
             this.tabFeedback.ResumeLayout(false);
             this.tabPayments.ResumeLayout(false);
+            this.grpPaymentInfo.ResumeLayout(false);
+            this.grpPaymentInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPayments)).EndInit();
             this.tabAppointments.ResumeLayout(false);
             this.grpAppointmentDetails.ResumeLayout(false);
             this.grpAppointmentDetails.PerformLayout();
@@ -3249,9 +3345,6 @@
             this.grpFeedbackManagement.ResumeLayout(false);
             this.grpFeedbackManagement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminFeedback)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAdminPayments)).EndInit();
-            this.grpPaymentInfo.ResumeLayout(false);
-            this.grpPaymentInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3408,6 +3501,24 @@
         private System.Windows.Forms.Label lblAdminAppointmentID;
         private System.Windows.Forms.Label lblPetName;
         private System.Windows.Forms.TabPage tabPayments;
+        private System.Windows.Forms.GroupBox grpPaymentInfo;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblAdminTotalRevenues;
+        private System.Windows.Forms.Label lblAdminTotalRevenue;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblAdminTotalPaymentss;
+        private System.Windows.Forms.Label lblAdminTotalPayments;
+        private System.Windows.Forms.TextBox txtAdminPaymentID;
+        private System.Windows.Forms.ComboBox cmbAdminPaymentStatus;
+        private System.Windows.Forms.TextBox txtAdminAmount;
+        private System.Windows.Forms.DataGridView dgvAdminPayments;
+        private System.Windows.Forms.Button btnRefreshPayment;
+        private System.Windows.Forms.Button btnAdminDeletePayment;
+        private System.Windows.Forms.Button btnUpdatePayment;
+        private System.Windows.Forms.Label lblAdminPaymentStatus;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblAdminPaymentID;
+        private System.Windows.Forms.Label lblAdminAmount;
         private System.Windows.Forms.TabPage tabFeedback;
         private System.Windows.Forms.TabPage tabGroomingManagement;
         private System.Windows.Forms.GroupBox grpStaffManagement;
@@ -3511,21 +3622,11 @@
         private System.Windows.Forms.Label lblAdminRating;
         private System.Windows.Forms.TextBox txtAdminFeedbackID;
         private System.Windows.Forms.TextBox txtAdminRating;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblAdminAverageRatings;
         private System.Windows.Forms.Label lblAdminAverageRating;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblAdminTotalFeedbacks;
         private System.Windows.Forms.Label lblAdminTotalFeedback;
-        private System.Windows.Forms.GroupBox grpPaymentInfo;
-        private System.Windows.Forms.Label lblAdminTotalRevenue;
-        private System.Windows.Forms.Label lblAdminTotalPayments;
-        private System.Windows.Forms.TextBox txtAdminPaymentID;
-        private System.Windows.Forms.ComboBox cmbAdminPaymentStatus;
-        private System.Windows.Forms.TextBox txtAdminAmount;
-        private System.Windows.Forms.DataGridView dgvAdminPayments;
-        private System.Windows.Forms.Button btnRefreshPayment;
-        private System.Windows.Forms.Button btnAdminDeletePayment;
-        private System.Windows.Forms.Button btnUpdatePayment;
-        private System.Windows.Forms.Label lblAdminPaymentStatus;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lblAdminPaymentID;
-        private System.Windows.Forms.Label lblAdminAmount;
     }
 }

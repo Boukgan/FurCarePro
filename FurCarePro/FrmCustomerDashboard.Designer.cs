@@ -34,6 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.petToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerPetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.appointmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -154,7 +155,6 @@
             this.lblCustomerTitle = new System.Windows.Forms.Label();
             this.lblProfileName = new System.Windows.Forms.Label();
             this.lblProfileEmail = new System.Windows.Forms.Label();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -209,7 +209,7 @@
             // logToolStripMenuItem
             // 
             this.logToolStripMenuItem.Name = "logToolStripMenuItem";
-            this.logToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
+            this.logToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logToolStripMenuItem.Text = "Logout";
             this.logToolStripMenuItem.Click += new System.EventHandler(this.logToolStripMenuItem_Click);
             // 
@@ -219,6 +219,13 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Profile";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
             // petToolStripMenuItem
             // 
@@ -231,7 +238,7 @@
             // registerPetToolStripMenuItem
             // 
             this.registerPetToolStripMenuItem.Name = "registerPetToolStripMenuItem";
-            this.registerPetToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registerPetToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.registerPetToolStripMenuItem.Text = "Register Pet";
             this.registerPetToolStripMenuItem.Click += new System.EventHandler(this.registerPetToolStripMenuItem_Click);
             // 
@@ -246,7 +253,7 @@
             // bookAppointmentToolStripMenuItem
             // 
             this.bookAppointmentToolStripMenuItem.Name = "bookAppointmentToolStripMenuItem";
-            this.bookAppointmentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookAppointmentToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.bookAppointmentToolStripMenuItem.Text = "Book Appointment";
             this.bookAppointmentToolStripMenuItem.Click += new System.EventHandler(this.bookAppointmentToolStripMenuItem_Click);
             // 
@@ -261,7 +268,7 @@
             // makePaymentToolStripMenuItem
             // 
             this.makePaymentToolStripMenuItem.Name = "makePaymentToolStripMenuItem";
-            this.makePaymentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.makePaymentToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.makePaymentToolStripMenuItem.Text = "Make Payment";
             this.makePaymentToolStripMenuItem.Click += new System.EventHandler(this.makePaymentToolStripMenuItem_Click);
             // 
@@ -277,7 +284,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -1059,6 +1066,7 @@
             this.grpPaymentInfo.TabIndex = 11;
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment Info";
+         
             // 
             // cmbPaymentStatus
             // 
@@ -1495,13 +1503,6 @@
             this.lblProfileEmail.Size = new System.Drawing.Size(48, 20);
             this.lblProfileEmail.TabIndex = 7;
             this.lblProfileEmail.Text = "Email";
-            // 
-            // exitToolStripMenuItem1
-            // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem1.Text = "Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
             // FrmCustomerDashboard
             // 
