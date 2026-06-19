@@ -57,7 +57,11 @@ namespace FurCarePro
 
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
-
+            FrmAdminDashboard_Load(
+    sender,
+    e);
+            MessageBox.Show(
+        "Dashboard Refreshed");
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -67,52 +71,58 @@ namespace FurCarePro
 
         private void btnAssign_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn =
-        DatabaseHelper.GetConnection())
+            try
             {
-                conn.Open();
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
 
-                string sql =
-                @"INSERT INTO tblGroomingRecords
-        (
-            AppointmentID,
-            StaffID,
-            GroomingNotes,
-            GroomingStatus,
-            CompletionDate
-        )
-        VALUES
-        (
-            @AppointmentID,
-            @StaffID,
-            @Notes,
-            @Status,
-            NULL
-        )";
+                    string sql =
+                    @"INSERT INTO tblGroomingRecords
+            (
+                AppointmentID,
+                StaffID,
+                GroomingNotes,
+                GroomingStatus,
+                CompletionDate
+            )
+            VALUES
+            (
+                @AppointmentID,
+                NULL,
+                @Notes,
+                @Status,
+                NULL
+            )";
 
-                SqlCommand cmd =
-                    new SqlCommand(sql, conn);
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue(
-                    "@AppointmentID",
-                    cmbStaffAppointment.SelectedValue);
+                    cmd.Parameters.AddWithValue(
+                        "@AppointmentID",
+                        cmbStaffAppointment.SelectedValue);
 
-                cmd.Parameters.AddWithValue(
-                    "@StaffID",
-                    cmbStaff.SelectedValue);
+                    cmd.Parameters.AddWithValue(
+                        "@Notes",
+                        txtNotes.Text);
 
-                cmd.Parameters.AddWithValue(
-                    "@Notes",
-                    txtNotes.Text);
+                    cmd.Parameters.AddWithValue(
+                        "@Status",
+                        cmbGroomingStatus.Text);
 
-                cmd.Parameters.AddWithValue(
-                    "@Status",
-                    cmbGroomingStatus.Text);
+                    cmd.ExecuteNonQuery();
+                }
 
-                cmd.ExecuteNonQuery();
+                MessageBox.Show(
+                    "Grooming Record Added");
+
+                LoadGroomingRecords();
             }
-
-            LoadGroomingRecords();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnComplete_Click(object sender, EventArgs e)
@@ -165,9 +175,7 @@ namespace FurCarePro
 
             LoadCustomers();
 
-            LoadStaff();
-
-            LoadStaffAppointmentCombo();
+            LoadGroomingAppointmentCombo();
 
             LoadGroomingRecords();
 
@@ -185,9 +193,13 @@ namespace FurCarePro
 
             timerClock.Start();
 
-            LoadHomeStatistics();
-
             LoadProfile();
+
+            LoadAdminPayments();
+
+            LoadAdminFeedback();
+
+            
 
 
             LoadRevenueChart();
@@ -202,6 +214,144 @@ namespace FurCarePro
 
             LoadAnalytics();
 
+            LoadHomeStatistics();
+
+        }
+        private void LoadFeedbackSummary()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    SqlCommand cmdTotal =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblFeedback",
+                        conn);
+
+                    lblAdminTotalFeedback.Text =
+                        "Total Feedback: "
+                        + cmdTotal.ExecuteScalar();
+
+                    SqlCommand cmdAverage =
+                        new SqlCommand(
+                        @"SELECT ISNULL(
+                        AVG(CAST(Rating AS FLOAT)),0)
+                  FROM tblFeedback",
+                        conn);
+
+                    lblAdminAverageRating.Text =
+                        "Average Rating: "
+                        + Convert.ToDouble(
+                            cmdAverage.ExecuteScalar())
+                        .ToString("0.00");
+                }
+            }
+            catch
+            {
+            }
+        }
+        private void LoadAdminFeedback()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT *
+              FROM tblFeedback";
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(sql, conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAdminFeedback.DataSource = dt;
+                }
+
+                LoadFeedbackSummary();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void LoadPaymentSummary()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    SqlCommand cmdCount =
+                        new SqlCommand(
+                        @"SELECT COUNT(*)
+                  FROM tblPayments",
+                        conn);
+
+                    lblAdminTotalPayments.Text =
+                        "Total Payments: "
+                        + cmdCount.ExecuteScalar();
+
+                    SqlCommand cmdRevenue =
+                        new SqlCommand(
+                        @"SELECT ISNULL(
+                        SUM(Amount),0)
+                  FROM tblPayments
+                  WHERE PaymentStatus='Paid'",
+                        conn);
+
+                    lblAdminTotalRevenue.Text =
+                        "Revenue: RM "
+                        + cmdRevenue.ExecuteScalar();
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        private void LoadAdminPayments()
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"SELECT *
+              FROM tblPayments";
+
+                    SqlDataAdapter da =
+                        new SqlDataAdapter(sql, conn);
+
+                    DataTable dt =
+                        new DataTable();
+
+                    da.Fill(dt);
+
+                    dgvAdminPayments.DataSource = dt;
+                }
+
+                LoadPaymentSummary();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void LoadProfile()
@@ -705,15 +855,12 @@ namespace FurCarePro
 
                     string sql =
                     @"SELECT
-                gr.RecordID,
-                gr.AppointmentID,
-                s.StaffName,
-                gr.GroomingNotes,
-                gr.GroomingStatus,
-                gr.CompletionDate
-              FROM tblGroomingRecords gr
-              INNER JOIN tblStaff s
-              ON gr.StaffID = s.StaffID";
+                RecordID,
+                AppointmentID,
+                GroomingNotes,
+                GroomingStatus,
+                CompletionDate
+              FROM tblGroomingRecords";
 
                     SqlDataAdapter da =
                         new SqlDataAdapter(sql, conn);
@@ -731,7 +878,7 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
-        private void LoadStaffAppointmentCombo()
+        private void LoadGroomingAppointmentCombo()
         {
             try
             {
@@ -764,43 +911,12 @@ namespace FurCarePro
                 MessageBox.Show(ex.Message);
             }
         }
-        private void LoadStaff()
-        {
-            using (SqlConnection conn =
-                DatabaseHelper.GetConnection())
-            {
-                conn.Open();
-
-                SqlDataAdapter da =
-                    new SqlDataAdapter(
-                    "SELECT * FROM tblStaff",
-                    conn);
-
-                DataTable dt =
-                    new DataTable();
-
-                da.Fill(dt);
-
-                cmbStaff.DataSource = dt;
-
-                cmbStaff.DisplayMember =
-                    "StaffName";
-
-                cmbStaff.ValueMember =
-                    "StaffID";
-            }
-        }
+        
 
         private void dgvGroomingRecords_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                cmbStaff.Text =
-                    dgvGroomingRecords
-                    .CurrentRow
-                    .Cells["StaffName"]
-                    .Value
-                    .ToString();
 
                 txtNotes.Text =
                     dgvGroomingRecords
@@ -2462,6 +2578,251 @@ namespace FurCarePro
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabHome;
+        }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabCustomer;
+        }
+
+        private void btnPets_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabPets;
+        }
+
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabAppointments;
+        }
+
+        private void btnPayments_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabPayments;
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabFeedback;
+        }
+
+        private void btnGroomingManagement_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabGroomingManagement;
+        }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabReports;
+        }
+
+        private void btnServiceManagement_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabServices;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabProfile;
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAdminDashboard_Load(
+        sender,
+        e);
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+        "FurCare Pro\n" +
+        "Pet Grooming Management System\n\n" +
+        "Admin Dashboard");
+        }
+
+        private void tsbNewCustomer_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabCustomer;
+        }
+
+        private void tsbNewPet_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabPets;
+        }
+
+        private void tsbNewAppointment_Click(object sender, EventArgs e)
+        {
+            tabAdmin.SelectedTab = tabAppointments;
+        }
+
+        private void dgvAdminPayments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row =
+                    dgvAdminPayments.Rows[e.RowIndex];
+
+                txtAdminPaymentID.Text =
+                    row.Cells["PaymentID"]
+                    .Value.ToString();
+
+                txtAdminAmount.Text =
+                    row.Cells["Amount"]
+                    .Value.ToString();
+
+                cmbAdminPaymentStatus.Text =
+                    row.Cells["PaymentStatus"]
+                    .Value.ToString();
+            }
+        }
+
+        private void btnUpdatePayment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"UPDATE tblPayments
+              SET PaymentStatus=@Status
+              WHERE PaymentID=@ID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Status",
+                        cmbAdminPaymentStatus.Text);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ID",
+                        txtAdminPaymentID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Payment Updated");
+
+                LoadAdminPayments();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAdminDeletePayment_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"DELETE FROM tblPayments
+              WHERE PaymentID=@ID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ID",
+                        txtAdminPaymentID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Payment Deleted");
+
+                LoadAdminPayments();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvAdminFeedback_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row =
+                    dgvAdminFeedback.Rows[e.RowIndex];
+
+                txtAdminFeedbackID.Text =
+                    row.Cells["FeedbackID"]
+                    .Value.ToString();
+
+                txtAdminRating.Text =
+                    row.Cells["Rating"]
+                    .Value.ToString();
+
+                txtAdminComments.Text =
+                    row.Cells["Comments"]
+                    .Value.ToString();
+            }
+        }
+
+        private void btnAdminDeleteFeedback_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn =
+                    DatabaseHelper.GetConnection())
+                {
+                    conn.Open();
+
+                    string sql =
+                    @"DELETE FROM tblFeedback
+              WHERE FeedbackID=@ID";
+
+                    SqlCommand cmd =
+                        new SqlCommand(sql, conn);
+
+                    cmd.Parameters.AddWithValue(
+                        "@ID",
+                        txtAdminFeedbackID.Text);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show(
+                    "Feedback Deleted");
+
+                LoadAdminFeedback();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnRefreshPayment_Click(object sender, EventArgs e)
+        {
+            LoadAdminPayments();
+
+            MessageBox.Show(
+                "Payments Refreshed");
+        }
+
+        private void btnRefreshFeedback_Click(object sender, EventArgs e)
+        {
+            LoadAdminFeedback();
+
+            MessageBox.Show(
+                "Feedback Refreshed");
         }
     }
 }

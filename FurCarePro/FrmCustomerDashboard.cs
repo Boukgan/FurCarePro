@@ -1424,5 +1424,10 @@ namespace FurCarePro
         {
             btnProfile.Width = 109;
         }
+
+        private void grpPaymentInfo_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
