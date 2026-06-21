@@ -55,7 +55,7 @@
             this.lblTitle.BackColor = System.Drawing.Color.SteelBlue;
             this.lblTitle.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Peru;
-            this.lblTitle.Location = new System.Drawing.Point(314, 22);
+            this.lblTitle.Location = new System.Drawing.Point(567, 94);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(173, 27);
             this.lblTitle.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(318, 89);
+            this.txtFullName.Location = new System.Drawing.Point(571, 161);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(250, 20);
             this.txtFullName.TabIndex = 4;
@@ -76,7 +76,7 @@
             this.lblFullName.BackColor = System.Drawing.Color.SteelBlue;
             this.lblFullName.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFullName.Location = new System.Drawing.Point(314, 66);
+            this.lblFullName.Location = new System.Drawing.Point(567, 138);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(76, 18);
             this.lblFullName.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(318, 165);
+            this.txtEmail.Location = new System.Drawing.Point(571, 237);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(250, 20);
             this.txtEmail.TabIndex = 6;
@@ -96,7 +96,7 @@
             this.lblEmail.BackColor = System.Drawing.Color.SteelBlue;
             this.lblEmail.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblEmail.Location = new System.Drawing.Point(314, 142);
+            this.lblEmail.Location = new System.Drawing.Point(567, 214);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(46, 18);
             this.lblEmail.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.SteelBlue;
             this.lblPassword.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPassword.Location = new System.Drawing.Point(314, 223);
+            this.lblPassword.Location = new System.Drawing.Point(567, 295);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(68, 18);
             this.lblPassword.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(318, 246);
+            this.txtPassword.Location = new System.Drawing.Point(571, 318);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(250, 20);
             this.txtPassword.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(318, 336);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(571, 408);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(250, 20);
             this.txtConfirmPassword.TabIndex = 10;
@@ -136,7 +136,7 @@
             this.lblConfirmPassword.BackColor = System.Drawing.Color.SteelBlue;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPassword.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(314, 313);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(567, 385);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(126, 18);
             this.lblConfirmPassword.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(318, 423);
+            this.txtPhone.Location = new System.Drawing.Point(571, 495);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(250, 20);
             this.txtPhone.TabIndex = 12;
@@ -156,7 +156,7 @@
             this.lblPhoneNumber.BackColor = System.Drawing.Color.SteelBlue;
             this.lblPhoneNumber.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhoneNumber.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(314, 400);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(567, 472);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(106, 18);
             this.lblPhoneNumber.TabIndex = 11;
@@ -165,7 +165,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(290, 482);
+            this.btnRegister.Location = new System.Drawing.Point(543, 554);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 15;
@@ -176,7 +176,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(401, 482);
+            this.btnClear.Location = new System.Drawing.Point(654, 554);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 16;
@@ -187,7 +187,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(515, 482);
+            this.btnBack.Location = new System.Drawing.Point(768, 554);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 17;
@@ -201,7 +201,7 @@
             // 
             // progressPassword
             // 
-            this.progressPassword.Location = new System.Drawing.Point(320, 273);
+            this.progressPassword.Location = new System.Drawing.Point(573, 345);
             this.progressPassword.Name = "progressPassword";
             this.progressPassword.Size = new System.Drawing.Size(248, 23);
             this.progressPassword.TabIndex = 18;
@@ -209,7 +209,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(275, 12);
+            this.groupBox1.Location = new System.Drawing.Point(528, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(331, 541);
             this.groupBox1.TabIndex = 19;
@@ -220,7 +220,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::FurCarePro.Properties.Resources._8;
-            this.ClientSize = new System.Drawing.Size(884, 611);
+            this.ClientSize = new System.Drawing.Size(1384, 761);
             this.Controls.Add(this.progressPassword);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
