@@ -155,6 +155,7 @@
             this.lblCustomerTitle = new System.Windows.Forms.Label();
             this.lblProfileName = new System.Windows.Forms.Label();
             this.lblProfileEmail = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -209,21 +210,21 @@
             // logToolStripMenuItem
             // 
             this.logToolStripMenuItem.Name = "logToolStripMenuItem";
-            this.logToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logToolStripMenuItem.Text = "Logout";
             this.logToolStripMenuItem.Click += new System.EventHandler(this.logToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem.Text = "Profile";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -378,6 +379,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightBlue;
             this.splitContainer1.Panel1.Controls.Add(this.btnProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnFeedback);
             this.splitContainer1.Panel1.Controls.Add(this.btnPayments);
@@ -387,6 +389,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackgroundImage = global::FurCarePro.Properties.Resources._8;
             this.splitContainer1.Panel2.Controls.Add(this.tabMain);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1384, 690);
@@ -395,7 +398,9 @@
             // 
             // btnProfile
             // 
-            this.btnProfile.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnProfile.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnProfile.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.SystemColors.Window;
             this.btnProfile.Location = new System.Drawing.Point(48, 511);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(109, 45);
@@ -408,7 +413,9 @@
             // 
             // btnFeedback
             // 
-            this.btnFeedback.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnFeedback.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnFeedback.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFeedback.ForeColor = System.Drawing.SystemColors.Window;
             this.btnFeedback.Location = new System.Drawing.Point(48, 433);
             this.btnFeedback.Name = "btnFeedback";
             this.btnFeedback.Size = new System.Drawing.Size(109, 45);
@@ -421,7 +428,9 @@
             // 
             // btnPayments
             // 
-            this.btnPayments.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPayments.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPayments.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayments.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPayments.Location = new System.Drawing.Point(48, 354);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(109, 45);
@@ -434,7 +443,9 @@
             // 
             // btnAppointments
             // 
-            this.btnAppointments.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAppointments.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAppointments.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointments.ForeColor = System.Drawing.SystemColors.Window;
             this.btnAppointments.Location = new System.Drawing.Point(48, 283);
             this.btnAppointments.Name = "btnAppointments";
             this.btnAppointments.Size = new System.Drawing.Size(109, 45);
@@ -447,7 +458,9 @@
             // 
             // btnPets
             // 
-            this.btnPets.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPets.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnPets.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPets.ForeColor = System.Drawing.SystemColors.Window;
             this.btnPets.Location = new System.Drawing.Point(48, 208);
             this.btnPets.Name = "btnPets";
             this.btnPets.Size = new System.Drawing.Size(109, 45);
@@ -460,7 +473,9 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnHome.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnHome.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Window;
             this.btnHome.Location = new System.Drawing.Point(48, 132);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(109, 45);
@@ -479,6 +494,7 @@
             this.tabMain.Controls.Add(this.tabPayments);
             this.tabMain.Controls.Add(this.tabFeedback);
             this.tabMain.Controls.Add(this.tabProfile);
+            this.tabMain.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabMain.Location = new System.Drawing.Point(71, 27);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
@@ -487,11 +503,13 @@
             // 
             // tabHome
             // 
+            this.tabHome.BackColor = System.Drawing.Color.LightBlue;
             this.tabHome.Controls.Add(this.lblCustomerCurrentTime);
             this.tabHome.Controls.Add(this.lblCustomerCurrentDate);
             this.tabHome.Controls.Add(this.lblCustomerPayments);
             this.tabHome.Controls.Add(this.lblCustomerAppointments);
             this.tabHome.Controls.Add(this.lblCustomerTotalPets);
+            this.tabHome.Controls.Add(this.groupBox1);
             this.tabHome.Controls.Add(this.lblCustomerWelcome);
             this.tabHome.Location = new System.Drawing.Point(4, 22);
             this.tabHome.Name = "tabHome";
@@ -499,70 +517,81 @@
             this.tabHome.Size = new System.Drawing.Size(1023, 634);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Home";
-            this.tabHome.UseVisualStyleBackColor = true;
             // 
             // lblCustomerCurrentTime
             // 
             this.lblCustomerCurrentTime.AutoSize = true;
-            this.lblCustomerCurrentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCurrentTime.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblCustomerCurrentTime.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCurrentTime.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCustomerCurrentTime.Location = new System.Drawing.Point(332, 487);
             this.lblCustomerCurrentTime.Name = "lblCustomerCurrentTime";
-            this.lblCustomerCurrentTime.Size = new System.Drawing.Size(43, 20);
+            this.lblCustomerCurrentTime.Size = new System.Drawing.Size(43, 18);
             this.lblCustomerCurrentTime.TabIndex = 23;
             this.lblCustomerCurrentTime.Text = "Time";
             // 
             // lblCustomerCurrentDate
             // 
             this.lblCustomerCurrentDate.AutoSize = true;
-            this.lblCustomerCurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCurrentDate.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblCustomerCurrentDate.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerCurrentDate.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCustomerCurrentDate.Location = new System.Drawing.Point(331, 370);
             this.lblCustomerCurrentDate.Name = "lblCustomerCurrentDate";
-            this.lblCustomerCurrentDate.Size = new System.Drawing.Size(44, 20);
+            this.lblCustomerCurrentDate.Size = new System.Drawing.Size(38, 18);
             this.lblCustomerCurrentDate.TabIndex = 22;
             this.lblCustomerCurrentDate.Text = "Date";
             // 
             // lblCustomerPayments
             // 
             this.lblCustomerPayments.AutoSize = true;
-            this.lblCustomerPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerPayments.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblCustomerPayments.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerPayments.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCustomerPayments.Location = new System.Drawing.Point(332, 259);
             this.lblCustomerPayments.Name = "lblCustomerPayments";
-            this.lblCustomerPayments.Size = new System.Drawing.Size(125, 20);
+            this.lblCustomerPayments.Size = new System.Drawing.Size(114, 18);
             this.lblCustomerPayments.TabIndex = 21;
             this.lblCustomerPayments.Text = "Total Services: 0";
             // 
             // lblCustomerAppointments
             // 
             this.lblCustomerAppointments.AutoSize = true;
-            this.lblCustomerAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerAppointments.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblCustomerAppointments.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerAppointments.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCustomerAppointments.Location = new System.Drawing.Point(332, 201);
             this.lblCustomerAppointments.Name = "lblCustomerAppointments";
-            this.lblCustomerAppointments.Size = new System.Drawing.Size(164, 20);
+            this.lblCustomerAppointments.Size = new System.Drawing.Size(151, 18);
             this.lblCustomerAppointments.TabIndex = 20;
             this.lblCustomerAppointments.Text = "Total Appointments: 0";
             // 
             // lblCustomerTotalPets
             // 
             this.lblCustomerTotalPets.AutoSize = true;
-            this.lblCustomerTotalPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerTotalPets.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblCustomerTotalPets.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerTotalPets.ForeColor = System.Drawing.SystemColors.Window;
             this.lblCustomerTotalPets.Location = new System.Drawing.Point(332, 141);
             this.lblCustomerTotalPets.Name = "lblCustomerTotalPets";
-            this.lblCustomerTotalPets.Size = new System.Drawing.Size(97, 20);
+            this.lblCustomerTotalPets.Size = new System.Drawing.Size(88, 18);
             this.lblCustomerTotalPets.TabIndex = 19;
             this.lblCustomerTotalPets.Text = "Total Pets: 0";
             // 
             // lblCustomerWelcome
             // 
             this.lblCustomerWelcome.AutoSize = true;
-            this.lblCustomerWelcome.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
+            this.lblCustomerWelcome.Font = new System.Drawing.Font("Baskerville Old Face", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerWelcome.ForeColor = System.Drawing.Color.Peru;
             this.lblCustomerWelcome.Location = new System.Drawing.Point(327, 45);
             this.lblCustomerWelcome.Name = "lblCustomerWelcome";
-            this.lblCustomerWelcome.Size = new System.Drawing.Size(369, 54);
+            this.lblCustomerWelcome.Size = new System.Drawing.Size(393, 45);
             this.lblCustomerWelcome.TabIndex = 17;
             this.lblCustomerWelcome.Text = "WELCOME ADMIN";
             // 
             // tabPets
             // 
+            this.tabPets.BackColor = System.Drawing.Color.LightBlue;
             this.tabPets.Controls.Add(this.grpPetInfo);
             this.tabPets.Location = new System.Drawing.Point(4, 22);
             this.tabPets.Name = "tabPets";
@@ -570,7 +599,6 @@
             this.tabPets.Size = new System.Drawing.Size(1023, 634);
             this.tabPets.TabIndex = 1;
             this.tabPets.Text = "Pets";
-            this.tabPets.UseVisualStyleBackColor = true;
             // 
             // grpPetInfo
             // 
@@ -593,6 +621,7 @@
             this.grpPetInfo.Controls.Add(this.lblPetName);
             this.grpPetInfo.Controls.Add(this.cmbSpecies);
             this.grpPetInfo.Controls.Add(this.lblSpecies);
+            this.grpPetInfo.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpPetInfo.Location = new System.Drawing.Point(19, 20);
             this.grpPetInfo.Name = "grpPetInfo";
             this.grpPetInfo.Size = new System.Drawing.Size(985, 608);
@@ -611,10 +640,10 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.Location = new System.Drawing.Point(45, 401);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(64, 20);
+            this.lblSearch.Size = new System.Drawing.Size(55, 18);
             this.lblSearch.TabIndex = 23;
             this.lblSearch.Text = "Search:";
             // 
@@ -629,6 +658,7 @@
             // 
             // btnClearPet
             // 
+            this.btnClearPet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearPet.Location = new System.Drawing.Point(370, 353);
             this.btnClearPet.Name = "btnClearPet";
             this.btnClearPet.Size = new System.Drawing.Size(75, 23);
@@ -639,6 +669,7 @@
             // 
             // btnDeletePet
             // 
+            this.btnDeletePet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePet.Location = new System.Drawing.Point(257, 353);
             this.btnDeletePet.Name = "btnDeletePet";
             this.btnDeletePet.Size = new System.Drawing.Size(75, 23);
@@ -649,6 +680,7 @@
             // 
             // btnUpdatePet
             // 
+            this.btnUpdatePet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePet.Location = new System.Drawing.Point(150, 353);
             this.btnUpdatePet.Name = "btnUpdatePet";
             this.btnUpdatePet.Size = new System.Drawing.Size(75, 23);
@@ -659,6 +691,7 @@
             // 
             // btnAddPet
             // 
+            this.btnAddPet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPet.Location = new System.Drawing.Point(49, 353);
             this.btnAddPet.Name = "btnAddPet";
             this.btnAddPet.Size = new System.Drawing.Size(75, 23);
@@ -692,42 +725,46 @@
             // lblWeight
             // 
             this.lblWeight.AutoSize = true;
-            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeight.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWeight.Location = new System.Drawing.Point(45, 285);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(59, 20);
+            this.lblWeight.Size = new System.Drawing.Size(55, 18);
             this.lblWeight.TabIndex = 16;
             this.lblWeight.Text = "Weight";
             // 
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
+            this.rbFemale.BackColor = System.Drawing.SystemColors.Window;
+            this.rbFemale.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbFemale.Location = new System.Drawing.Point(156, 256);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(59, 17);
+            this.rbFemale.Size = new System.Drawing.Size(58, 17);
             this.rbFemale.TabIndex = 15;
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
-            this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.UseVisualStyleBackColor = false;
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
+            this.rbMale.BackColor = System.Drawing.SystemColors.Window;
+            this.rbMale.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMale.Location = new System.Drawing.Point(49, 256);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(48, 17);
             this.rbMale.TabIndex = 14;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
-            this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.UseVisualStyleBackColor = false;
             // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.Location = new System.Drawing.Point(45, 231);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(63, 20);
+            this.lblGender.Size = new System.Drawing.Size(56, 18);
             this.lblGender.TabIndex = 12;
             this.lblGender.Text = "Gender";
             // 
@@ -741,20 +778,21 @@
             // lblBreed
             // 
             this.lblBreed.AutoSize = true;
-            this.lblBreed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBreed.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBreed.Location = new System.Drawing.Point(45, 171);
             this.lblBreed.Name = "lblBreed";
-            this.lblBreed.Size = new System.Drawing.Size(52, 20);
+            this.lblBreed.Size = new System.Drawing.Size(47, 18);
             this.lblBreed.TabIndex = 10;
             this.lblBreed.Text = "Breed";
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Peru;
             this.lblTitle.Location = new System.Drawing.Point(49, 16);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(233, 32);
+            this.lblTitle.Size = new System.Drawing.Size(253, 27);
             this.lblTitle.TabIndex = 9;
             this.lblTitle.Text = "PET INFORMATION";
             // 
@@ -768,10 +806,10 @@
             // lblPetName
             // 
             this.lblPetName.AutoSize = true;
-            this.lblPetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPetName.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPetName.Location = new System.Drawing.Point(48, 56);
             this.lblPetName.Name = "lblPetName";
-            this.lblPetName.Size = new System.Drawing.Size(79, 20);
+            this.lblPetName.Size = new System.Drawing.Size(71, 18);
             this.lblPetName.TabIndex = 5;
             this.lblPetName.Text = "Pet Name";
             // 
@@ -793,15 +831,16 @@
             // lblSpecies
             // 
             this.lblSpecies.AutoSize = true;
-            this.lblSpecies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpecies.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpecies.Location = new System.Drawing.Point(45, 110);
             this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(66, 20);
+            this.lblSpecies.Size = new System.Drawing.Size(55, 18);
             this.lblSpecies.TabIndex = 7;
             this.lblSpecies.Text = "Species";
             // 
             // tabAppointments
             // 
+            this.tabAppointments.BackColor = System.Drawing.Color.LightBlue;
             this.tabAppointments.Controls.Add(this.grpAppointmentBooking);
             this.tabAppointments.Location = new System.Drawing.Point(4, 22);
             this.tabAppointments.Name = "tabAppointments";
@@ -809,7 +848,6 @@
             this.tabAppointments.Size = new System.Drawing.Size(1023, 634);
             this.tabAppointments.TabIndex = 2;
             this.tabAppointments.Text = "Appointments";
-            this.tabAppointments.UseVisualStyleBackColor = true;
             // 
             // grpAppointmentBooking
             // 
@@ -833,6 +871,7 @@
             this.grpAppointmentBooking.Controls.Add(this.lblPet);
             this.grpAppointmentBooking.Controls.Add(this.cmbService);
             this.grpAppointmentBooking.Controls.Add(this.lblService);
+            this.grpAppointmentBooking.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAppointmentBooking.Location = new System.Drawing.Point(19, 20);
             this.grpAppointmentBooking.Name = "grpAppointmentBooking";
             this.grpAppointmentBooking.Size = new System.Drawing.Size(985, 608);
@@ -860,10 +899,10 @@
             // lblSearchAppointment
             // 
             this.lblSearchAppointment.AutoSize = true;
-            this.lblSearchAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearchAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchAppointment.Location = new System.Drawing.Point(45, 417);
             this.lblSearchAppointment.Name = "lblSearchAppointment";
-            this.lblSearchAppointment.Size = new System.Drawing.Size(159, 20);
+            this.lblSearchAppointment.Size = new System.Drawing.Size(142, 18);
             this.lblSearchAppointment.TabIndex = 31;
             this.lblSearchAppointment.Text = "Search Appointment:";
             // 
@@ -878,15 +917,16 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(46, 320);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblStatus.Size = new System.Drawing.Size(45, 18);
             this.lblStatus.TabIndex = 28;
             this.lblStatus.Text = "Status";
             // 
             // dtpAppointment
             // 
+            this.dtpAppointment.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpAppointment.Location = new System.Drawing.Point(49, 287);
             this.dtpAppointment.Name = "dtpAppointment";
             this.dtpAppointment.Size = new System.Drawing.Size(200, 20);
@@ -917,6 +957,7 @@
             // 
             // btnQueueCount
             // 
+            this.btnQueueCount.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQueueCount.Location = new System.Drawing.Point(376, 379);
             this.btnQueueCount.Name = "btnQueueCount";
             this.btnQueueCount.Size = new System.Drawing.Size(93, 23);
@@ -927,6 +968,7 @@
             // 
             // btnDeleteAppointment
             // 
+            this.btnDeleteAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAppointment.Location = new System.Drawing.Point(258, 379);
             this.btnDeleteAppointment.Name = "btnDeleteAppointment";
             this.btnDeleteAppointment.Size = new System.Drawing.Size(75, 23);
@@ -937,6 +979,7 @@
             // 
             // btnUpdateAppointment
             // 
+            this.btnUpdateAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateAppointment.Location = new System.Drawing.Point(151, 379);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
             this.btnUpdateAppointment.Size = new System.Drawing.Size(75, 23);
@@ -947,6 +990,7 @@
             // 
             // btnBookAppointment
             // 
+            this.btnBookAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookAppointment.Location = new System.Drawing.Point(50, 379);
             this.btnBookAppointment.Name = "btnBookAppointment";
             this.btnBookAppointment.Size = new System.Drawing.Size(75, 23);
@@ -958,20 +1002,20 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(45, 264);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(44, 20);
+            this.lblDate.Size = new System.Drawing.Size(38, 18);
             this.lblDate.TabIndex = 16;
             this.lblDate.Text = "Date";
             // 
             // lblDuration
             // 
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDuration.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuration.Location = new System.Drawing.Point(45, 208);
             this.lblDuration.Name = "lblDuration";
-            this.lblDuration.Size = new System.Drawing.Size(70, 20);
+            this.lblDuration.Size = new System.Drawing.Size(65, 18);
             this.lblDuration.TabIndex = 12;
             this.lblDuration.Text = "Duration";
             // 
@@ -986,30 +1030,31 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(45, 154);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(44, 20);
+            this.lblPrice.Size = new System.Drawing.Size(41, 18);
             this.lblPrice.TabIndex = 10;
             this.lblPrice.Text = "Price";
             // 
             // lblPetInformation
             // 
             this.lblPetInformation.AutoSize = true;
-            this.lblPetInformation.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPetInformation.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPetInformation.ForeColor = System.Drawing.Color.Peru;
             this.lblPetInformation.Location = new System.Drawing.Point(49, 16);
             this.lblPetInformation.Name = "lblPetInformation";
-            this.lblPetInformation.Size = new System.Drawing.Size(307, 32);
+            this.lblPetInformation.Size = new System.Drawing.Size(330, 27);
             this.lblPetInformation.TabIndex = 9;
             this.lblPetInformation.Text = "APPOINTMENT BOOKING";
             // 
             // lblPet
             // 
             this.lblPet.AutoSize = true;
-            this.lblPet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPet.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPet.Location = new System.Drawing.Point(45, 54);
             this.lblPet.Name = "lblPet";
-            this.lblPet.Size = new System.Drawing.Size(33, 20);
+            this.lblPet.Size = new System.Drawing.Size(28, 18);
             this.lblPet.TabIndex = 5;
             this.lblPet.Text = "Pet";
             // 
@@ -1025,23 +1070,25 @@
             // lblService
             // 
             this.lblService.AutoSize = true;
-            this.lblService.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblService.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblService.Location = new System.Drawing.Point(45, 104);
             this.lblService.Name = "lblService";
-            this.lblService.Size = new System.Drawing.Size(61, 20);
+            this.lblService.Size = new System.Drawing.Size(54, 18);
             this.lblService.TabIndex = 7;
             this.lblService.Text = "Service";
             // 
             // tabPayments
             // 
+            this.tabPayments.BackColor = System.Drawing.Color.LightBlue;
             this.tabPayments.Controls.Add(this.grpPaymentInfo);
+            this.tabPayments.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPayments.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPayments.Location = new System.Drawing.Point(4, 22);
             this.tabPayments.Name = "tabPayments";
             this.tabPayments.Padding = new System.Windows.Forms.Padding(3);
             this.tabPayments.Size = new System.Drawing.Size(1023, 634);
             this.tabPayments.TabIndex = 3;
             this.tabPayments.Text = "Payments";
-            this.tabPayments.UseVisualStyleBackColor = true;
             // 
             // grpPaymentInfo
             // 
@@ -1066,7 +1113,6 @@
             this.grpPaymentInfo.TabIndex = 11;
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment Info";
-         
             // 
             // cmbPaymentStatus
             // 
@@ -1111,10 +1157,10 @@
             // lblPaymentSearch
             // 
             this.lblPaymentSearch.AutoSize = true;
-            this.lblPaymentSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentSearch.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentSearch.Location = new System.Drawing.Point(51, 340);
             this.lblPaymentSearch.Name = "lblPaymentSearch";
-            this.lblPaymentSearch.Size = new System.Drawing.Size(64, 20);
+            this.lblPaymentSearch.Size = new System.Drawing.Size(55, 18);
             this.lblPaymentSearch.TabIndex = 23;
             this.lblPaymentSearch.Text = "Search:";
             // 
@@ -1157,63 +1203,65 @@
             // lblPaymentStatus
             // 
             this.lblPaymentStatus.AutoSize = true;
-            this.lblPaymentStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentStatus.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentStatus.Location = new System.Drawing.Point(45, 231);
             this.lblPaymentStatus.Name = "lblPaymentStatus";
-            this.lblPaymentStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblPaymentStatus.Size = new System.Drawing.Size(45, 18);
             this.lblPaymentStatus.TabIndex = 12;
             this.lblPaymentStatus.Text = "Status";
             // 
             // lblMethod
             // 
             this.lblMethod.AutoSize = true;
-            this.lblMethod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMethod.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMethod.Location = new System.Drawing.Point(45, 171);
             this.lblMethod.Name = "lblMethod";
-            this.lblMethod.Size = new System.Drawing.Size(63, 20);
+            this.lblMethod.Size = new System.Drawing.Size(57, 18);
             this.lblMethod.TabIndex = 10;
             this.lblMethod.Text = "Method";
             // 
             // lblPaymentInfo
             // 
             this.lblPaymentInfo.AutoSize = true;
-            this.lblPaymentInfo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentInfo.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentInfo.ForeColor = System.Drawing.Color.Peru;
             this.lblPaymentInfo.Location = new System.Drawing.Point(49, 16);
             this.lblPaymentInfo.Name = "lblPaymentInfo";
-            this.lblPaymentInfo.Size = new System.Drawing.Size(304, 32);
+            this.lblPaymentInfo.Size = new System.Drawing.Size(329, 27);
             this.lblPaymentInfo.TabIndex = 9;
             this.lblPaymentInfo.Text = "PAYMENT INFORMATION";
             // 
             // lblPaymentAppointment
             // 
             this.lblPaymentAppointment.AutoSize = true;
-            this.lblPaymentAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentAppointment.Location = new System.Drawing.Point(45, 56);
             this.lblPaymentAppointment.Name = "lblPaymentAppointment";
-            this.lblPaymentAppointment.Size = new System.Drawing.Size(100, 20);
+            this.lblPaymentAppointment.Size = new System.Drawing.Size(91, 18);
             this.lblPaymentAppointment.TabIndex = 5;
             this.lblPaymentAppointment.Text = "Appointment";
             // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.Location = new System.Drawing.Point(45, 110);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(65, 20);
+            this.lblAmount.Size = new System.Drawing.Size(60, 18);
             this.lblAmount.TabIndex = 7;
             this.lblAmount.Text = "Amount";
             // 
             // tabFeedback
             // 
+            this.tabFeedback.BackColor = System.Drawing.Color.LightBlue;
             this.tabFeedback.Controls.Add(this.grpCustomerFeedback);
+            this.tabFeedback.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabFeedback.Location = new System.Drawing.Point(4, 22);
             this.tabFeedback.Name = "tabFeedback";
             this.tabFeedback.Padding = new System.Windows.Forms.Padding(3);
             this.tabFeedback.Size = new System.Drawing.Size(1023, 634);
             this.tabFeedback.TabIndex = 4;
             this.tabFeedback.Text = "Feedback";
-            this.tabFeedback.UseVisualStyleBackColor = true;
             // 
             // grpCustomerFeedback
             // 
@@ -1286,10 +1334,10 @@
             // lblFeedbackSearch
             // 
             this.lblFeedbackSearch.AutoSize = true;
-            this.lblFeedbackSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeedbackSearch.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFeedbackSearch.Location = new System.Drawing.Point(51, 340);
             this.lblFeedbackSearch.Name = "lblFeedbackSearch";
-            this.lblFeedbackSearch.Size = new System.Drawing.Size(64, 20);
+            this.lblFeedbackSearch.Size = new System.Drawing.Size(55, 18);
             this.lblFeedbackSearch.TabIndex = 23;
             this.lblFeedbackSearch.Text = "Search:";
             // 
@@ -1332,53 +1380,55 @@
             // lblComments
             // 
             this.lblComments.AutoSize = true;
-            this.lblComments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComments.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComments.Location = new System.Drawing.Point(45, 171);
             this.lblComments.Name = "lblComments";
-            this.lblComments.Size = new System.Drawing.Size(86, 20);
+            this.lblComments.Size = new System.Drawing.Size(78, 18);
             this.lblComments.TabIndex = 10;
             this.lblComments.Text = "Comments";
             // 
             // lblCustomerFeedback
             // 
             this.lblCustomerFeedback.AutoSize = true;
-            this.lblCustomerFeedback.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerFeedback.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerFeedback.ForeColor = System.Drawing.Color.Peru;
             this.lblCustomerFeedback.Location = new System.Drawing.Point(49, 16);
             this.lblCustomerFeedback.Name = "lblCustomerFeedback";
-            this.lblCustomerFeedback.Size = new System.Drawing.Size(268, 32);
+            this.lblCustomerFeedback.Size = new System.Drawing.Size(296, 27);
             this.lblCustomerFeedback.TabIndex = 9;
             this.lblCustomerFeedback.Text = "CUSTOMER FEEDBACK";
             // 
             // lblFeedbackAppointment
             // 
             this.lblFeedbackAppointment.AutoSize = true;
-            this.lblFeedbackAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeedbackAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFeedbackAppointment.Location = new System.Drawing.Point(45, 56);
             this.lblFeedbackAppointment.Name = "lblFeedbackAppointment";
-            this.lblFeedbackAppointment.Size = new System.Drawing.Size(100, 20);
+            this.lblFeedbackAppointment.Size = new System.Drawing.Size(91, 18);
             this.lblFeedbackAppointment.TabIndex = 5;
             this.lblFeedbackAppointment.Text = "Appointment";
             // 
             // lblRating
             // 
             this.lblRating.AutoSize = true;
-            this.lblRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRating.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRating.Location = new System.Drawing.Point(45, 110);
             this.lblRating.Name = "lblRating";
-            this.lblRating.Size = new System.Drawing.Size(56, 20);
+            this.lblRating.Size = new System.Drawing.Size(48, 18);
             this.lblRating.TabIndex = 7;
             this.lblRating.Text = "Rating";
             // 
             // tabProfile
             // 
+            this.tabProfile.BackColor = System.Drawing.Color.LightBlue;
             this.tabProfile.Controls.Add(this.grpCustomerProfile);
+            this.tabProfile.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabProfile.Location = new System.Drawing.Point(4, 22);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
             this.tabProfile.Size = new System.Drawing.Size(1023, 634);
             this.tabProfile.TabIndex = 5;
             this.tabProfile.Text = "Profile";
-            this.tabProfile.UseVisualStyleBackColor = true;
             // 
             // grpCustomerProfile
             // 
@@ -1412,10 +1462,10 @@
             // lblProfileStatus
             // 
             this.lblProfileStatus.AutoSize = true;
-            this.lblProfileStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileStatus.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfileStatus.Location = new System.Drawing.Point(51, 287);
             this.lblProfileStatus.Name = "lblProfileStatus";
-            this.lblProfileStatus.Size = new System.Drawing.Size(56, 20);
+            this.lblProfileStatus.Size = new System.Drawing.Size(45, 18);
             this.lblProfileStatus.TabIndex = 49;
             this.lblProfileStatus.Text = "Status";
             // 
@@ -1467,42 +1517,52 @@
             // lblProfileRole
             // 
             this.lblProfileRole.AutoSize = true;
-            this.lblProfileRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileRole.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfileRole.Location = new System.Drawing.Point(51, 210);
             this.lblProfileRole.Name = "lblProfileRole";
-            this.lblProfileRole.Size = new System.Drawing.Size(42, 20);
+            this.lblProfileRole.Size = new System.Drawing.Size(37, 18);
             this.lblProfileRole.TabIndex = 10;
             this.lblProfileRole.Text = "Role";
             // 
             // lblCustomerTitle
             // 
             this.lblCustomerTitle.AutoSize = true;
-            this.lblCustomerTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerTitle.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerTitle.ForeColor = System.Drawing.Color.Peru;
             this.lblCustomerTitle.Location = new System.Drawing.Point(49, 16);
             this.lblCustomerTitle.Name = "lblCustomerTitle";
-            this.lblCustomerTitle.Size = new System.Drawing.Size(243, 32);
+            this.lblCustomerTitle.Size = new System.Drawing.Size(268, 27);
             this.lblCustomerTitle.TabIndex = 9;
             this.lblCustomerTitle.Text = "CUSTOMER PROFILE";
             // 
             // lblProfileName
             // 
             this.lblProfileName.AutoSize = true;
-            this.lblProfileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileName.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfileName.Location = new System.Drawing.Point(51, 70);
             this.lblProfileName.Name = "lblProfileName";
-            this.lblProfileName.Size = new System.Drawing.Size(80, 20);
+            this.lblProfileName.Size = new System.Drawing.Size(76, 18);
             this.lblProfileName.TabIndex = 5;
             this.lblProfileName.Text = "Full Name";
             // 
             // lblProfileEmail
             // 
             this.lblProfileEmail.AutoSize = true;
-            this.lblProfileEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfileEmail.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfileEmail.Location = new System.Drawing.Point(50, 135);
             this.lblProfileEmail.Name = "lblProfileEmail";
-            this.lblProfileEmail.Size = new System.Drawing.Size(48, 20);
+            this.lblProfileEmail.Size = new System.Drawing.Size(46, 18);
             this.lblProfileEmail.TabIndex = 7;
             this.lblProfileEmail.Text = "Email";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Location = new System.Drawing.Point(316, 110);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(412, 485);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
             // 
             // FrmCustomerDashboard
             // 
@@ -1686,5 +1746,6 @@
         private System.Windows.Forms.Label lblProfileName;
         private System.Windows.Forms.Label lblProfileEmail;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
