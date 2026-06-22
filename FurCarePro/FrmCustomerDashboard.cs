@@ -361,7 +361,11 @@ namespace FurCarePro
 
                     da.Fill(dt);
 
-                    dgvPayments.DataSource = dt;
+                    var sorted = dt.AsEnumerable()
+                    .OrderByDescending(row => row.Field<DateTime>("PaymentDate"))
+                    .CopyToDataTable();
+
+                    dgvPayments.DataSource = sorted;
                 }
             }
             catch (Exception ex)

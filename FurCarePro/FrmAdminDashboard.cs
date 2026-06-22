@@ -1,4 +1,5 @@
 ﻿using FurCarePro.DataAccess;
+using FurCarePro.Interfaces;
 using FurCarePro.Models.Appointments;
 using FurCarePro.Utilities;
 using System;
@@ -7,17 +8,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using System.IO;
 
 
 namespace FurCarePro
 {
-    public partial class FrmAdminDashboard : Form
+    public partial class FrmAdminDashboard : Form, IReport
     {
 
         private Queue<Appointment>
@@ -154,10 +155,9 @@ namespace FurCarePro
                 }
 
                 GroomingCompletedHandler notify;
-
-                notify = ShowCompletionMessage;
-
-                notify("Grooming Completed Successfully");
+                notify = (msg) => MessageBox.Show(msg, "Done",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                notify("Grooming session marked as completed!");
 
                 LoadGroomingRecords();
             }
@@ -201,23 +201,20 @@ namespace FurCarePro
             LoadAdminFeedback();
 
 
-      
-
-            LoadRevenueChart();
-
-            LoadPopularServiceChart();
-
-            LoadCustomerGrowthChart();
-
-            LoadAppointmentStatusChart();
-
-            LoadServicePerformanceChart();
-
             LoadServiceDictionary();
-            LoadAnalytics();
 
             LoadHomeStatistics();
 
+            GenerateReport();
+        }
+        public void GenerateReport()
+        {
+            LoadAnalytics();
+            LoadRevenueChart();
+            LoadPopularServiceChart();
+            LoadCustomerGrowthChart();
+            LoadAppointmentStatusChart();
+            LoadServicePerformanceChart();
         }
         private void LoadFeedbackSummary()
         {
@@ -410,6 +407,7 @@ namespace FurCarePro
                   FROM tblAppointments",
                         conn);
 
+                    
                     lblHomeTotalAppointments.Text =
                         "Total Appointments: " +
                         cmdAppointments.ExecuteScalar();
@@ -1505,9 +1503,12 @@ namespace FurCarePro
         {
             try
             {
+                DataTable dt =
+                    (DataTable)dgvCustomers.DataSource;
+
                 lblTotalCustomers.Text =
                     "Total Customers: " +
-                    dgvCustomers.Rows.Count;
+                    dt.Rows.Count;
             }
             catch (Exception ex)
             {
@@ -1643,6 +1644,23 @@ namespace FurCarePro
 
             dv.RowFilter =
                 $"FullName LIKE '%{txtSearchCustomer.Text}%'";
+        }
+
+
+        private void txtSearchCustomer_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+            if (txt == null || txt.IsDisposed) return;
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearchCustomer.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                txt.Clear();
+            }
         }
 
         private void tabPets_Click(object sender, EventArgs e)
@@ -2918,6 +2936,19 @@ namespace FurCarePro
         {
             tabAdmin.SelectedTab =
         tabAppointments;
+        }
+
+        private void txtSearchCustomer_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearchCustomer.PerformClick();
+                e.SuppressKeyPress = true;
+            }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                txtSearchCustomer.Clear();
+            }
         }
     }
 }

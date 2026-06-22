@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea41 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend41 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea42 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend42 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea43 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend43 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series43 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea44 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend44 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series44 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea45 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend45 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series45 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,6 +81,7 @@
             this.lblHomeTotalAppointments = new System.Windows.Forms.Label();
             this.lblHomeTotalPets = new System.Windows.Forms.Label();
             this.lblHomeTotalCustomers = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblWelcomeAdmin = new System.Windows.Forms.Label();
             this.tabCustomer = new System.Windows.Forms.TabPage();
             this.grpCustomerDetails = new System.Windows.Forms.GroupBox();
@@ -202,7 +203,7 @@
             this.lblAdminFeedbackID = new System.Windows.Forms.Label();
             this.lblAdminRating = new System.Windows.Forms.Label();
             this.tabGroomingManagement = new System.Windows.Forms.TabPage();
-            this.grpStaffManagement = new System.Windows.Forms.GroupBox();
+            this.grpGroomingManagement = new System.Windows.Forms.GroupBox();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.lblNotes = new System.Windows.Forms.Label();
             this.cmbStaffAppointment = new System.Windows.Forms.ComboBox();
@@ -211,7 +212,7 @@
             this.btnComplete = new System.Windows.Forms.Button();
             this.btnAssign = new System.Windows.Forms.Button();
             this.lblGroomingStatus = new System.Windows.Forms.Label();
-            this.lblStaffManagement = new System.Windows.Forms.Label();
+            this.lblGroomingManagement = new System.Windows.Forms.Label();
             this.lblStaffAppointment = new System.Windows.Forms.Label();
             this.tabReports = new System.Windows.Forms.TabPage();
             this.grpAnalytics = new System.Windows.Forms.GroupBox();
@@ -321,7 +322,6 @@
             this.cmbPaymentMethod = new System.Windows.Forms.ComboBox();
             this.cmbPaymentStatus = new System.Windows.Forms.ComboBox();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -346,7 +346,7 @@
             this.grpFeedbackManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminFeedback)).BeginInit();
             this.tabGroomingManagement.SuspendLayout();
-            this.grpStaffManagement.SuspendLayout();
+            this.grpGroomingManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroomingRecords)).BeginInit();
             this.tabReports.SuspendLayout();
             this.grpAnalytics.SuspendLayout();
@@ -715,7 +715,7 @@
             this.tabHome.Location = new System.Drawing.Point(4, 22);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1023, 634);
+            this.tabHome.Size = new System.Drawing.Size(1022, 634);
             this.tabHome.TabIndex = 9;
             this.tabHome.Text = "Home";
             // 
@@ -791,6 +791,15 @@
             this.lblHomeTotalCustomers.TabIndex = 11;
             this.lblHomeTotalCustomers.Text = "Total Customers: 0";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Location = new System.Drawing.Point(307, 93);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(419, 484);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            // 
             // lblWelcomeAdmin
             // 
             this.lblWelcomeAdmin.AutoSize = true;
@@ -809,7 +818,7 @@
             this.tabCustomer.Location = new System.Drawing.Point(4, 22);
             this.tabCustomer.Name = "tabCustomer";
             this.tabCustomer.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCustomer.Size = new System.Drawing.Size(1023, 634);
+            this.tabCustomer.Size = new System.Drawing.Size(1022, 634);
             this.tabCustomer.TabIndex = 0;
             this.tabCustomer.Text = "Customer Management";
             // 
@@ -848,6 +857,7 @@
             this.txtSearchCustomer.Size = new System.Drawing.Size(402, 20);
             this.txtSearchCustomer.TabIndex = 30;
             this.txtSearchCustomer.TextChanged += new System.EventHandler(this.txtSearchCustomer_TextChanged);
+            this.txtSearchCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchCustomer_KeyDown_1);
             // 
             // btnSearchCustomer
             // 
@@ -1029,7 +1039,7 @@
             this.tabPets.Location = new System.Drawing.Point(4, 22);
             this.tabPets.Name = "tabPets";
             this.tabPets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPets.Size = new System.Drawing.Size(1023, 634);
+            this.tabPets.Size = new System.Drawing.Size(1022, 634);
             this.tabPets.TabIndex = 1;
             this.tabPets.Text = "Pet Management";
             this.tabPets.Click += new System.EventHandler(this.tabPets_Click);
@@ -1405,7 +1415,7 @@
             this.tabAppointments.Location = new System.Drawing.Point(4, 22);
             this.tabAppointments.Name = "tabAppointments";
             this.tabAppointments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAppointments.Size = new System.Drawing.Size(1023, 634);
+            this.tabAppointments.Size = new System.Drawing.Size(1022, 634);
             this.tabAppointments.TabIndex = 2;
             this.tabAppointments.Text = "Appointment Management";
             // 
@@ -1685,7 +1695,7 @@
             this.tabPayments.Location = new System.Drawing.Point(4, 22);
             this.tabPayments.Name = "tabPayments";
             this.tabPayments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPayments.Size = new System.Drawing.Size(1023, 634);
+            this.tabPayments.Size = new System.Drawing.Size(1022, 634);
             this.tabPayments.TabIndex = 3;
             this.tabPayments.Text = "Payments";
             // 
@@ -1887,7 +1897,7 @@
             this.tabFeedback.Location = new System.Drawing.Point(4, 22);
             this.tabFeedback.Name = "tabFeedback";
             this.tabFeedback.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFeedback.Size = new System.Drawing.Size(1023, 634);
+            this.tabFeedback.Size = new System.Drawing.Size(1022, 634);
             this.tabFeedback.TabIndex = 4;
             this.tabFeedback.Text = "Feedback";
             // 
@@ -2071,32 +2081,32 @@
             // tabGroomingManagement
             // 
             this.tabGroomingManagement.BackColor = System.Drawing.Color.LightBlue;
-            this.tabGroomingManagement.Controls.Add(this.grpStaffManagement);
+            this.tabGroomingManagement.Controls.Add(this.grpGroomingManagement);
             this.tabGroomingManagement.Location = new System.Drawing.Point(4, 22);
             this.tabGroomingManagement.Name = "tabGroomingManagement";
             this.tabGroomingManagement.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGroomingManagement.Size = new System.Drawing.Size(1023, 634);
+            this.tabGroomingManagement.Size = new System.Drawing.Size(1022, 634);
             this.tabGroomingManagement.TabIndex = 6;
             this.tabGroomingManagement.Text = "Grooming Management";
             // 
-            // grpStaffManagement
+            // grpGroomingManagement
             // 
-            this.grpStaffManagement.Controls.Add(this.txtNotes);
-            this.grpStaffManagement.Controls.Add(this.lblNotes);
-            this.grpStaffManagement.Controls.Add(this.cmbStaffAppointment);
-            this.grpStaffManagement.Controls.Add(this.cmbGroomingStatus);
-            this.grpStaffManagement.Controls.Add(this.dgvGroomingRecords);
-            this.grpStaffManagement.Controls.Add(this.btnComplete);
-            this.grpStaffManagement.Controls.Add(this.btnAssign);
-            this.grpStaffManagement.Controls.Add(this.lblGroomingStatus);
-            this.grpStaffManagement.Controls.Add(this.lblStaffManagement);
-            this.grpStaffManagement.Controls.Add(this.lblStaffAppointment);
-            this.grpStaffManagement.Location = new System.Drawing.Point(19, 20);
-            this.grpStaffManagement.Name = "grpStaffManagement";
-            this.grpStaffManagement.Size = new System.Drawing.Size(985, 608);
-            this.grpStaffManagement.TabIndex = 12;
-            this.grpStaffManagement.TabStop = false;
-            this.grpStaffManagement.Text = "Payment Info";
+            this.grpGroomingManagement.Controls.Add(this.txtNotes);
+            this.grpGroomingManagement.Controls.Add(this.lblNotes);
+            this.grpGroomingManagement.Controls.Add(this.cmbStaffAppointment);
+            this.grpGroomingManagement.Controls.Add(this.cmbGroomingStatus);
+            this.grpGroomingManagement.Controls.Add(this.dgvGroomingRecords);
+            this.grpGroomingManagement.Controls.Add(this.btnComplete);
+            this.grpGroomingManagement.Controls.Add(this.btnAssign);
+            this.grpGroomingManagement.Controls.Add(this.lblGroomingStatus);
+            this.grpGroomingManagement.Controls.Add(this.lblGroomingManagement);
+            this.grpGroomingManagement.Controls.Add(this.lblStaffAppointment);
+            this.grpGroomingManagement.Location = new System.Drawing.Point(19, 20);
+            this.grpGroomingManagement.Name = "grpGroomingManagement";
+            this.grpGroomingManagement.Size = new System.Drawing.Size(985, 608);
+            this.grpGroomingManagement.TabIndex = 12;
+            this.grpGroomingManagement.TabStop = false;
+            this.grpGroomingManagement.Text = "Grooming Management";
             // 
             // txtNotes
             // 
@@ -2170,16 +2180,16 @@
             this.lblGroomingStatus.TabIndex = 10;
             this.lblGroomingStatus.Text = "Grooming Status";
             // 
-            // lblStaffManagement
+            // lblGroomingManagement
             // 
-            this.lblStaffManagement.AutoSize = true;
-            this.lblStaffManagement.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaffManagement.ForeColor = System.Drawing.Color.Peru;
-            this.lblStaffManagement.Location = new System.Drawing.Point(49, 16);
-            this.lblStaffManagement.Name = "lblStaffManagement";
-            this.lblStaffManagement.Size = new System.Drawing.Size(329, 27);
-            this.lblStaffManagement.TabIndex = 9;
-            this.lblStaffManagement.Text = "PAYMENT INFORMATION";
+            this.lblGroomingManagement.AutoSize = true;
+            this.lblGroomingManagement.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroomingManagement.ForeColor = System.Drawing.Color.Peru;
+            this.lblGroomingManagement.Location = new System.Drawing.Point(49, 16);
+            this.lblGroomingManagement.Name = "lblGroomingManagement";
+            this.lblGroomingManagement.Size = new System.Drawing.Size(351, 27);
+            this.lblGroomingManagement.TabIndex = 9;
+            this.lblGroomingManagement.Text = "GROOMING MANAGEMENT";
             // 
             // lblStaffAppointment
             // 
@@ -2199,7 +2209,7 @@
             this.tabReports.Location = new System.Drawing.Point(4, 22);
             this.tabReports.Name = "tabReports";
             this.tabReports.Padding = new System.Windows.Forms.Padding(3);
-            this.tabReports.Size = new System.Drawing.Size(1023, 634);
+            this.tabReports.Size = new System.Drawing.Size(1022, 634);
             this.tabReports.TabIndex = 7;
             this.tabReports.Text = "Reports & Analytics";
             // 
@@ -2568,16 +2578,16 @@
             // 
             // chartRevenue
             // 
-            chartArea41.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea41);
-            legend41.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend41);
+            chartArea1.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend1);
             this.chartRevenue.Location = new System.Drawing.Point(319, 26);
             this.chartRevenue.Name = "chartRevenue";
-            series41.ChartArea = "ChartArea1";
-            series41.Legend = "Legend1";
-            series41.Name = "Series1";
-            this.chartRevenue.Series.Add(series41);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartRevenue.Series.Add(series1);
             this.chartRevenue.Size = new System.Drawing.Size(320, 210);
             this.chartRevenue.TabIndex = 1;
             this.chartRevenue.Text = "chart2";
@@ -2595,16 +2605,16 @@
             // 
             // chartPopularService
             // 
-            chartArea42.Name = "ChartArea1";
-            this.chartPopularService.ChartAreas.Add(chartArea42);
-            legend42.Name = "Legend1";
-            this.chartPopularService.Legends.Add(legend42);
+            chartArea2.Name = "ChartArea1";
+            this.chartPopularService.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartPopularService.Legends.Add(legend2);
             this.chartPopularService.Location = new System.Drawing.Point(319, 26);
             this.chartPopularService.Name = "chartPopularService";
-            series42.ChartArea = "ChartArea1";
-            series42.Legend = "Legend1";
-            series42.Name = "Series1";
-            this.chartPopularService.Series.Add(series42);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartPopularService.Series.Add(series2);
             this.chartPopularService.Size = new System.Drawing.Size(320, 210);
             this.chartPopularService.TabIndex = 2;
             this.chartPopularService.Text = "chart2";
@@ -2622,16 +2632,16 @@
             // 
             // chartCustomerGrowth
             // 
-            chartArea43.Name = "ChartArea1";
-            this.chartCustomerGrowth.ChartAreas.Add(chartArea43);
-            legend43.Name = "Legend1";
-            this.chartCustomerGrowth.Legends.Add(legend43);
+            chartArea3.Name = "ChartArea1";
+            this.chartCustomerGrowth.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartCustomerGrowth.Legends.Add(legend3);
             this.chartCustomerGrowth.Location = new System.Drawing.Point(319, 26);
             this.chartCustomerGrowth.Name = "chartCustomerGrowth";
-            series43.ChartArea = "ChartArea1";
-            series43.Legend = "Legend1";
-            series43.Name = "Series1";
-            this.chartCustomerGrowth.Series.Add(series43);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartCustomerGrowth.Series.Add(series3);
             this.chartCustomerGrowth.Size = new System.Drawing.Size(320, 210);
             this.chartCustomerGrowth.TabIndex = 3;
             this.chartCustomerGrowth.Text = "chart2";
@@ -2649,16 +2659,16 @@
             // 
             // chartAppointmentStatus
             // 
-            chartArea44.Name = "ChartArea1";
-            this.chartAppointmentStatus.ChartAreas.Add(chartArea44);
-            legend44.Name = "Legend1";
-            this.chartAppointmentStatus.Legends.Add(legend44);
+            chartArea4.Name = "ChartArea1";
+            this.chartAppointmentStatus.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartAppointmentStatus.Legends.Add(legend4);
             this.chartAppointmentStatus.Location = new System.Drawing.Point(319, 26);
             this.chartAppointmentStatus.Name = "chartAppointmentStatus";
-            series44.ChartArea = "ChartArea1";
-            series44.Legend = "Legend1";
-            series44.Name = "Series1";
-            this.chartAppointmentStatus.Series.Add(series44);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartAppointmentStatus.Series.Add(series4);
             this.chartAppointmentStatus.Size = new System.Drawing.Size(320, 210);
             this.chartAppointmentStatus.TabIndex = 4;
             this.chartAppointmentStatus.Text = "chart2";
@@ -2676,16 +2686,16 @@
             // 
             // chartServicePerformance
             // 
-            chartArea45.Name = "ChartArea1";
-            this.chartServicePerformance.ChartAreas.Add(chartArea45);
-            legend45.Name = "Legend1";
-            this.chartServicePerformance.Legends.Add(legend45);
+            chartArea5.Name = "ChartArea1";
+            this.chartServicePerformance.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartServicePerformance.Legends.Add(legend5);
             this.chartServicePerformance.Location = new System.Drawing.Point(319, 26);
             this.chartServicePerformance.Name = "chartServicePerformance";
-            series45.ChartArea = "ChartArea1";
-            series45.Legend = "Legend1";
-            series45.Name = "Series1";
-            this.chartServicePerformance.Series.Add(series45);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartServicePerformance.Series.Add(series5);
             this.chartServicePerformance.Size = new System.Drawing.Size(320, 210);
             this.chartServicePerformance.TabIndex = 5;
             this.chartServicePerformance.Text = "chart2";
@@ -2697,7 +2707,7 @@
             this.tabServices.Location = new System.Drawing.Point(4, 22);
             this.tabServices.Name = "tabServices";
             this.tabServices.Padding = new System.Windows.Forms.Padding(3);
-            this.tabServices.Size = new System.Drawing.Size(1023, 634);
+            this.tabServices.Size = new System.Drawing.Size(1022, 634);
             this.tabServices.TabIndex = 8;
             this.tabServices.Text = "Service Management";
             // 
@@ -3321,15 +3331,6 @@
             this.timerClock.Interval = 1000;
             this.timerClock.Tick += new System.EventHandler(this.timerClock_Tick);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(307, 93);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(419, 484);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            // 
             // FrmAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3375,8 +3376,8 @@
             this.grpFeedbackManagement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdminFeedback)).EndInit();
             this.tabGroomingManagement.ResumeLayout(false);
-            this.grpStaffManagement.ResumeLayout(false);
-            this.grpStaffManagement.PerformLayout();
+            this.grpGroomingManagement.ResumeLayout(false);
+            this.grpGroomingManagement.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGroomingRecords)).EndInit();
             this.tabReports.ResumeLayout(false);
             this.grpAnalytics.ResumeLayout(false);
@@ -3578,7 +3579,7 @@
         private System.Windows.Forms.Label lblAdminAmount;
         private System.Windows.Forms.TabPage tabFeedback;
         private System.Windows.Forms.TabPage tabGroomingManagement;
-        private System.Windows.Forms.GroupBox grpStaffManagement;
+        private System.Windows.Forms.GroupBox grpGroomingManagement;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.Label lblNotes;
         private System.Windows.Forms.ComboBox cmbStaffAppointment;
@@ -3587,7 +3588,7 @@
         private System.Windows.Forms.Button btnComplete;
         private System.Windows.Forms.Button btnAssign;
         private System.Windows.Forms.Label lblGroomingStatus;
-        private System.Windows.Forms.Label lblStaffManagement;
+        private System.Windows.Forms.Label lblGroomingManagement;
         private System.Windows.Forms.Label lblStaffAppointment;
         private System.Windows.Forms.TabPage tabReports;
         private System.Windows.Forms.GroupBox grpAnalytics;
