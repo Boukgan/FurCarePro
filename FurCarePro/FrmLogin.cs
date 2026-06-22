@@ -167,13 +167,12 @@ namespace FurCarePro
 
         private void btnLogin_MouseLeave(object sender, EventArgs e)
         {
-            btnLogin.Width = 251
-                ;
+            btnLogin.Width = 120;
         }
 
         private void btnLogin_MouseEnter(object sender, EventArgs e)
         {
-            btnLogin.Width = 271;
+            btnLogin.Width = 140;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
