@@ -2950,6 +2950,116 @@ namespace FurCarePro
                 txtSearchCustomer.Clear();
             }
         }
+
+        private void button1_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            btnAdminHome.Width = 129;
+        }
+
+        private void btnAdminHome_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdminHome.Width = 109;
+        }
+
+        private void btnCustomers_MouseEnter(object sender, EventArgs e)
+        {
+            btnCustomers.Width = 129;
+        }
+
+        private void btnCustomers_MouseLeave(object sender, EventArgs e)
+        {
+            btnCustomers.Width = 109;
+        }
+
+        private void btnPets_MouseEnter(object sender, EventArgs e)
+        {
+            btnPets.Width = 129;
+        }
+
+        private void btnPets_MouseLeave(object sender, EventArgs e)
+        {
+            btnPets.Width = 109;
+        }
+
+        private void btnAppointments_MouseEnter(object sender, EventArgs e)
+        {
+            btnAppointments.Width = 129;
+        }
+
+        private void btnAppointments_MouseLeave(object sender, EventArgs e)
+        {
+            btnAppointments.Width = 109;
+        }
+
+        private void btnPayments_MouseEnter(object sender, EventArgs e)
+        {
+            btnPayments.Width = 129;
+        }
+
+        private void btnPayments_MouseLeave(object sender, EventArgs e)
+        {
+            btnPayments.Width = 109;
+        }
+
+        private void btnFeedback_MouseEnter(object sender, EventArgs e)
+        {
+            btnFeedback.Width = 129;
+        }
+
+        private void btnFeedback_MouseLeave(object sender, EventArgs e)
+        {
+            btnFeedback.Width = 109;
+        }
+
+        private void btnGroomingManagement_MouseEnter(object sender, EventArgs e)
+        {
+            btnGroomingManagement.Width = 129;
+        }
+
+        private void btnGroomingManagement_MouseLeave(object sender, EventArgs e)
+        {
+            btnGroomingManagement.Width = 109;
+        }
+
+        private void btnReports_MouseEnter(object sender, EventArgs e)
+        {
+            btnReports.Width = 129;
+        }
+
+        private void btnReports_MouseLeave(object sender, EventArgs e)
+        {
+            btnReports.Width = 109;
+        }
+
+        private void btnServiceManagement_MouseEnter(object sender, EventArgs e)
+        {
+            btnServiceManagement.Width = 129;
+        }
+
+        private void btnServiceManagement_MouseLeave(object sender, EventArgs e)
+        {
+            btnServiceManagement.Width = 109;
+        }
+
+        private void button3_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void btnAdminProfile_MouseEnter(object sender, EventArgs e)
+        {
+            btnAdminProfile.Width = 129;
+        }
+
+        private void btnAdminProfile_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdminProfile.Width = 109;
+        }
     }
 }
 

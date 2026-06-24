@@ -66,6 +66,7 @@
             this.lblCustomerPayments = new System.Windows.Forms.Label();
             this.lblCustomerAppointments = new System.Windows.Forms.Label();
             this.lblCustomerTotalPets = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblCustomerWelcome = new System.Windows.Forms.Label();
             this.tabPets = new System.Windows.Forms.TabPage();
             this.grpPetInfo = new System.Windows.Forms.GroupBox();
@@ -155,7 +156,6 @@
             this.lblCustomerTitle = new System.Windows.Forms.Label();
             this.lblProfileName = new System.Windows.Forms.Label();
             this.lblProfileEmail = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -193,7 +193,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1384, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(2076, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -204,7 +205,7 @@
             this.exitToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // logToolStripMenuItem
@@ -233,7 +234,7 @@
             this.petToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registerPetToolStripMenuItem});
             this.petToolStripMenuItem.Name = "petToolStripMenuItem";
-            this.petToolStripMenuItem.Size = new System.Drawing.Size(36, 20);
+            this.petToolStripMenuItem.Size = new System.Drawing.Size(36, 19);
             this.petToolStripMenuItem.Text = "Pet";
             // 
             // registerPetToolStripMenuItem
@@ -248,7 +249,7 @@
             this.appointmentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookAppointmentToolStripMenuItem});
             this.appointmentToolStripMenuItem.Name = "appointmentToolStripMenuItem";
-            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
+            this.appointmentToolStripMenuItem.Size = new System.Drawing.Size(90, 19);
             this.appointmentToolStripMenuItem.Text = "Appointment";
             // 
             // bookAppointmentToolStripMenuItem
@@ -263,7 +264,7 @@
             this.paymentToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.makePaymentToolStripMenuItem});
             this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
-            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
             this.paymentToolStripMenuItem.Text = "Payment";
             // 
             // makePaymentToolStripMenuItem
@@ -278,7 +279,7 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 19);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -296,9 +297,10 @@
             this.toolStripButton2,
             this.toolStripButton3,
             this.toolStripButton4});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1384, 25);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(2076, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -347,9 +349,10 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblUser,
             this.lblDateTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 739);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1149);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1384, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(2076, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -374,7 +377,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 49);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 50);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -392,8 +396,9 @@
             this.splitContainer1.Panel2.BackgroundImage = global::FurCarePro.Properties.Resources._8;
             this.splitContainer1.Panel2.Controls.Add(this.tabMain);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1384, 690);
-            this.splitContainer1.SplitterDistance = 200;
+            this.splitContainer1.Size = new System.Drawing.Size(2076, 1099);
+            this.splitContainer1.SplitterDistance = 300;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 3;
             // 
             // btnProfile
@@ -401,9 +406,10 @@
             this.btnProfile.BackColor = System.Drawing.Color.SteelBlue;
             this.btnProfile.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnProfile.Location = new System.Drawing.Point(48, 511);
+            this.btnProfile.Location = new System.Drawing.Point(72, 786);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(109, 45);
+            this.btnProfile.Size = new System.Drawing.Size(164, 69);
             this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -416,9 +422,10 @@
             this.btnFeedback.BackColor = System.Drawing.Color.SteelBlue;
             this.btnFeedback.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFeedback.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnFeedback.Location = new System.Drawing.Point(48, 433);
+            this.btnFeedback.Location = new System.Drawing.Point(72, 666);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(109, 45);
+            this.btnFeedback.Size = new System.Drawing.Size(164, 69);
             this.btnFeedback.TabIndex = 4;
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = false;
@@ -431,9 +438,10 @@
             this.btnPayments.BackColor = System.Drawing.Color.SteelBlue;
             this.btnPayments.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayments.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPayments.Location = new System.Drawing.Point(48, 354);
+            this.btnPayments.Location = new System.Drawing.Point(72, 545);
+            this.btnPayments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPayments.Name = "btnPayments";
-            this.btnPayments.Size = new System.Drawing.Size(109, 45);
+            this.btnPayments.Size = new System.Drawing.Size(164, 69);
             this.btnPayments.TabIndex = 3;
             this.btnPayments.Text = "Payments";
             this.btnPayments.UseVisualStyleBackColor = false;
@@ -446,9 +454,10 @@
             this.btnAppointments.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAppointments.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppointments.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAppointments.Location = new System.Drawing.Point(48, 283);
+            this.btnAppointments.Location = new System.Drawing.Point(72, 435);
+            this.btnAppointments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAppointments.Name = "btnAppointments";
-            this.btnAppointments.Size = new System.Drawing.Size(109, 45);
+            this.btnAppointments.Size = new System.Drawing.Size(164, 69);
             this.btnAppointments.TabIndex = 2;
             this.btnAppointments.Text = "Appointments";
             this.btnAppointments.UseVisualStyleBackColor = false;
@@ -461,9 +470,10 @@
             this.btnPets.BackColor = System.Drawing.Color.SteelBlue;
             this.btnPets.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPets.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPets.Location = new System.Drawing.Point(48, 208);
+            this.btnPets.Location = new System.Drawing.Point(72, 320);
+            this.btnPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPets.Name = "btnPets";
-            this.btnPets.Size = new System.Drawing.Size(109, 45);
+            this.btnPets.Size = new System.Drawing.Size(164, 69);
             this.btnPets.TabIndex = 1;
             this.btnPets.Text = "Pets";
             this.btnPets.UseVisualStyleBackColor = false;
@@ -476,9 +486,10 @@
             this.btnHome.BackColor = System.Drawing.Color.SteelBlue;
             this.btnHome.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnHome.Location = new System.Drawing.Point(48, 132);
+            this.btnHome.Location = new System.Drawing.Point(72, 203);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(109, 45);
+            this.btnHome.Size = new System.Drawing.Size(164, 69);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -495,10 +506,11 @@
             this.tabMain.Controls.Add(this.tabFeedback);
             this.tabMain.Controls.Add(this.tabProfile);
             this.tabMain.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMain.Location = new System.Drawing.Point(71, 27);
+            this.tabMain.Location = new System.Drawing.Point(106, 42);
+            this.tabMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabMain.Name = "tabMain";
             this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(1031, 660);
+            this.tabMain.Size = new System.Drawing.Size(1546, 1015);
             this.tabMain.TabIndex = 0;
             // 
             // tabHome
@@ -512,9 +524,10 @@
             this.tabHome.Controls.Add(this.groupBox1);
             this.tabHome.Controls.Add(this.lblCustomerWelcome);
             this.tabHome.Location = new System.Drawing.Point(4, 22);
+            this.tabHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabHome.Name = "tabHome";
-            this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1023, 634);
+            this.tabHome.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabHome.Size = new System.Drawing.Size(1538, 989);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Home";
             // 
@@ -524,7 +537,8 @@
             this.lblCustomerCurrentTime.BackColor = System.Drawing.Color.SteelBlue;
             this.lblCustomerCurrentTime.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerCurrentTime.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCustomerCurrentTime.Location = new System.Drawing.Point(332, 487);
+            this.lblCustomerCurrentTime.Location = new System.Drawing.Point(498, 749);
+            this.lblCustomerCurrentTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerCurrentTime.Name = "lblCustomerCurrentTime";
             this.lblCustomerCurrentTime.Size = new System.Drawing.Size(43, 18);
             this.lblCustomerCurrentTime.TabIndex = 23;
@@ -536,7 +550,8 @@
             this.lblCustomerCurrentDate.BackColor = System.Drawing.Color.SteelBlue;
             this.lblCustomerCurrentDate.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerCurrentDate.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCustomerCurrentDate.Location = new System.Drawing.Point(331, 370);
+            this.lblCustomerCurrentDate.Location = new System.Drawing.Point(496, 569);
+            this.lblCustomerCurrentDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerCurrentDate.Name = "lblCustomerCurrentDate";
             this.lblCustomerCurrentDate.Size = new System.Drawing.Size(38, 18);
             this.lblCustomerCurrentDate.TabIndex = 22;
@@ -548,7 +563,8 @@
             this.lblCustomerPayments.BackColor = System.Drawing.Color.SteelBlue;
             this.lblCustomerPayments.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerPayments.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCustomerPayments.Location = new System.Drawing.Point(332, 259);
+            this.lblCustomerPayments.Location = new System.Drawing.Point(498, 398);
+            this.lblCustomerPayments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerPayments.Name = "lblCustomerPayments";
             this.lblCustomerPayments.Size = new System.Drawing.Size(114, 18);
             this.lblCustomerPayments.TabIndex = 21;
@@ -560,7 +576,8 @@
             this.lblCustomerAppointments.BackColor = System.Drawing.Color.SteelBlue;
             this.lblCustomerAppointments.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerAppointments.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCustomerAppointments.Location = new System.Drawing.Point(332, 201);
+            this.lblCustomerAppointments.Location = new System.Drawing.Point(498, 309);
+            this.lblCustomerAppointments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerAppointments.Name = "lblCustomerAppointments";
             this.lblCustomerAppointments.Size = new System.Drawing.Size(151, 18);
             this.lblCustomerAppointments.TabIndex = 20;
@@ -572,18 +589,31 @@
             this.lblCustomerTotalPets.BackColor = System.Drawing.Color.SteelBlue;
             this.lblCustomerTotalPets.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerTotalPets.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCustomerTotalPets.Location = new System.Drawing.Point(332, 141);
+            this.lblCustomerTotalPets.Location = new System.Drawing.Point(498, 217);
+            this.lblCustomerTotalPets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerTotalPets.Name = "lblCustomerTotalPets";
             this.lblCustomerTotalPets.Size = new System.Drawing.Size(88, 18);
             this.lblCustomerTotalPets.TabIndex = 19;
             this.lblCustomerTotalPets.Text = "Total Pets: 0";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.groupBox1.Location = new System.Drawing.Point(474, 169);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Size = new System.Drawing.Size(618, 746);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
             // 
             // lblCustomerWelcome
             // 
             this.lblCustomerWelcome.AutoSize = true;
             this.lblCustomerWelcome.Font = new System.Drawing.Font("Baskerville Old Face", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerWelcome.ForeColor = System.Drawing.Color.Peru;
-            this.lblCustomerWelcome.Location = new System.Drawing.Point(327, 45);
+            this.lblCustomerWelcome.Location = new System.Drawing.Point(490, 69);
+            this.lblCustomerWelcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerWelcome.Name = "lblCustomerWelcome";
             this.lblCustomerWelcome.Size = new System.Drawing.Size(393, 45);
             this.lblCustomerWelcome.TabIndex = 17;
@@ -594,9 +624,10 @@
             this.tabPets.BackColor = System.Drawing.Color.LightBlue;
             this.tabPets.Controls.Add(this.grpPetInfo);
             this.tabPets.Location = new System.Drawing.Point(4, 22);
+            this.tabPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPets.Name = "tabPets";
-            this.tabPets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPets.Size = new System.Drawing.Size(1023, 634);
+            this.tabPets.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPets.Size = new System.Drawing.Size(1538, 989);
             this.tabPets.TabIndex = 1;
             this.tabPets.Text = "Pets";
             // 
@@ -622,18 +653,21 @@
             this.grpPetInfo.Controls.Add(this.cmbSpecies);
             this.grpPetInfo.Controls.Add(this.lblSpecies);
             this.grpPetInfo.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpPetInfo.Location = new System.Drawing.Point(19, 20);
+            this.grpPetInfo.Location = new System.Drawing.Point(28, 31);
+            this.grpPetInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpPetInfo.Name = "grpPetInfo";
-            this.grpPetInfo.Size = new System.Drawing.Size(985, 608);
+            this.grpPetInfo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpPetInfo.Size = new System.Drawing.Size(1478, 935);
             this.grpPetInfo.TabIndex = 10;
             this.grpPetInfo.TabStop = false;
             this.grpPetInfo.Text = "Pet Info";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(115, 401);
+            this.txtSearch.Location = new System.Drawing.Point(172, 617);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(414, 20);
+            this.txtSearch.Size = new System.Drawing.Size(619, 20);
             this.txtSearch.TabIndex = 24;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -641,7 +675,8 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(45, 401);
+            this.lblSearch.Location = new System.Drawing.Point(68, 617);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(55, 18);
             this.lblSearch.TabIndex = 23;
@@ -650,18 +685,20 @@
             // dgvPets
             // 
             this.dgvPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPets.Location = new System.Drawing.Point(49, 442);
+            this.dgvPets.Location = new System.Drawing.Point(74, 680);
+            this.dgvPets.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPets.Name = "dgvPets";
-            this.dgvPets.Size = new System.Drawing.Size(881, 143);
+            this.dgvPets.Size = new System.Drawing.Size(1322, 220);
             this.dgvPets.TabIndex = 22;
             this.dgvPets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPets_CellContentClick);
             // 
             // btnClearPet
             // 
             this.btnClearPet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearPet.Location = new System.Drawing.Point(370, 353);
+            this.btnClearPet.Location = new System.Drawing.Point(555, 543);
+            this.btnClearPet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClearPet.Name = "btnClearPet";
-            this.btnClearPet.Size = new System.Drawing.Size(75, 23);
+            this.btnClearPet.Size = new System.Drawing.Size(112, 35);
             this.btnClearPet.TabIndex = 21;
             this.btnClearPet.Text = "Clear";
             this.btnClearPet.UseVisualStyleBackColor = true;
@@ -670,9 +707,10 @@
             // btnDeletePet
             // 
             this.btnDeletePet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePet.Location = new System.Drawing.Point(257, 353);
+            this.btnDeletePet.Location = new System.Drawing.Point(386, 543);
+            this.btnDeletePet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletePet.Name = "btnDeletePet";
-            this.btnDeletePet.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePet.Size = new System.Drawing.Size(112, 35);
             this.btnDeletePet.TabIndex = 20;
             this.btnDeletePet.Text = "Delete";
             this.btnDeletePet.UseVisualStyleBackColor = true;
@@ -681,9 +719,10 @@
             // btnUpdatePet
             // 
             this.btnUpdatePet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdatePet.Location = new System.Drawing.Point(150, 353);
+            this.btnUpdatePet.Location = new System.Drawing.Point(225, 543);
+            this.btnUpdatePet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdatePet.Name = "btnUpdatePet";
-            this.btnUpdatePet.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdatePet.Size = new System.Drawing.Size(112, 35);
             this.btnUpdatePet.TabIndex = 19;
             this.btnUpdatePet.Text = "Update";
             this.btnUpdatePet.UseVisualStyleBackColor = true;
@@ -692,9 +731,10 @@
             // btnAddPet
             // 
             this.btnAddPet.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPet.Location = new System.Drawing.Point(49, 353);
+            this.btnAddPet.Location = new System.Drawing.Point(74, 543);
+            this.btnAddPet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddPet.Name = "btnAddPet";
-            this.btnAddPet.Size = new System.Drawing.Size(75, 23);
+            this.btnAddPet.Size = new System.Drawing.Size(112, 35);
             this.btnAddPet.TabIndex = 18;
             this.btnAddPet.Text = "Add";
             this.btnAddPet.UseVisualStyleBackColor = true;
@@ -702,7 +742,8 @@
             // 
             // numWeight
             // 
-            this.numWeight.Location = new System.Drawing.Point(49, 308);
+            this.numWeight.Location = new System.Drawing.Point(74, 474);
+            this.numWeight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numWeight.Maximum = new decimal(new int[] {
             150,
             0,
@@ -714,7 +755,7 @@
             0,
             0});
             this.numWeight.Name = "numWeight";
-            this.numWeight.Size = new System.Drawing.Size(120, 20);
+            this.numWeight.Size = new System.Drawing.Size(180, 20);
             this.numWeight.TabIndex = 17;
             this.numWeight.Value = new decimal(new int[] {
             1,
@@ -726,7 +767,8 @@
             // 
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Location = new System.Drawing.Point(45, 285);
+            this.lblWeight.Location = new System.Drawing.Point(68, 438);
+            this.lblWeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWeight.Name = "lblWeight";
             this.lblWeight.Size = new System.Drawing.Size(55, 18);
             this.lblWeight.TabIndex = 16;
@@ -737,7 +779,8 @@
             this.rbFemale.AutoSize = true;
             this.rbFemale.BackColor = System.Drawing.SystemColors.Window;
             this.rbFemale.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFemale.Location = new System.Drawing.Point(156, 256);
+            this.rbFemale.Location = new System.Drawing.Point(234, 394);
+            this.rbFemale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(58, 17);
             this.rbFemale.TabIndex = 15;
@@ -750,7 +793,8 @@
             this.rbMale.AutoSize = true;
             this.rbMale.BackColor = System.Drawing.SystemColors.Window;
             this.rbMale.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMale.Location = new System.Drawing.Point(49, 256);
+            this.rbMale.Location = new System.Drawing.Point(74, 394);
+            this.rbMale.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(48, 17);
             this.rbMale.TabIndex = 14;
@@ -762,7 +806,8 @@
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(45, 231);
+            this.lblGender.Location = new System.Drawing.Point(68, 355);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(56, 18);
             this.lblGender.TabIndex = 12;
@@ -770,16 +815,18 @@
             // 
             // txtBreed
             // 
-            this.txtBreed.Location = new System.Drawing.Point(49, 194);
+            this.txtBreed.Location = new System.Drawing.Point(74, 298);
+            this.txtBreed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(402, 20);
+            this.txtBreed.Size = new System.Drawing.Size(601, 20);
             this.txtBreed.TabIndex = 11;
             // 
             // lblBreed
             // 
             this.lblBreed.AutoSize = true;
             this.lblBreed.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreed.Location = new System.Drawing.Point(45, 171);
+            this.lblBreed.Location = new System.Drawing.Point(68, 263);
+            this.lblBreed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblBreed.Name = "lblBreed";
             this.lblBreed.Size = new System.Drawing.Size(47, 18);
             this.lblBreed.TabIndex = 10;
@@ -790,7 +837,8 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Peru;
-            this.lblTitle.Location = new System.Drawing.Point(49, 16);
+            this.lblTitle.Location = new System.Drawing.Point(74, 25);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(253, 27);
             this.lblTitle.TabIndex = 9;
@@ -798,16 +846,18 @@
             // 
             // txtPetName
             // 
-            this.txtPetName.Location = new System.Drawing.Point(52, 79);
+            this.txtPetName.Location = new System.Drawing.Point(78, 122);
+            this.txtPetName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPetName.Name = "txtPetName";
-            this.txtPetName.Size = new System.Drawing.Size(402, 20);
+            this.txtPetName.Size = new System.Drawing.Size(601, 20);
             this.txtPetName.TabIndex = 6;
             // 
             // lblPetName
             // 
             this.lblPetName.AutoSize = true;
             this.lblPetName.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetName.Location = new System.Drawing.Point(48, 56);
+            this.lblPetName.Location = new System.Drawing.Point(72, 86);
+            this.lblPetName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetName.Name = "lblPetName";
             this.lblPetName.Size = new System.Drawing.Size(71, 18);
             this.lblPetName.TabIndex = 5;
@@ -822,9 +872,10 @@
             "Rabbit",
             "Bird",
             "Hamster"});
-            this.cmbSpecies.Location = new System.Drawing.Point(49, 133);
+            this.cmbSpecies.Location = new System.Drawing.Point(74, 205);
+            this.cmbSpecies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbSpecies.Name = "cmbSpecies";
-            this.cmbSpecies.Size = new System.Drawing.Size(121, 21);
+            this.cmbSpecies.Size = new System.Drawing.Size(180, 21);
             this.cmbSpecies.TabIndex = 8;
             this.cmbSpecies.SelectedIndexChanged += new System.EventHandler(this.cmbSpecies_SelectedIndexChanged);
             // 
@@ -832,7 +883,8 @@
             // 
             this.lblSpecies.AutoSize = true;
             this.lblSpecies.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecies.Location = new System.Drawing.Point(45, 110);
+            this.lblSpecies.Location = new System.Drawing.Point(68, 169);
+            this.lblSpecies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpecies.Name = "lblSpecies";
             this.lblSpecies.Size = new System.Drawing.Size(55, 18);
             this.lblSpecies.TabIndex = 7;
@@ -843,9 +895,10 @@
             this.tabAppointments.BackColor = System.Drawing.Color.LightBlue;
             this.tabAppointments.Controls.Add(this.grpAppointmentBooking);
             this.tabAppointments.Location = new System.Drawing.Point(4, 22);
+            this.tabAppointments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabAppointments.Name = "tabAppointments";
-            this.tabAppointments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAppointments.Size = new System.Drawing.Size(1023, 634);
+            this.tabAppointments.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabAppointments.Size = new System.Drawing.Size(1538, 989);
             this.tabAppointments.TabIndex = 2;
             this.tabAppointments.Text = "Appointments";
             // 
@@ -872,9 +925,11 @@
             this.grpAppointmentBooking.Controls.Add(this.cmbService);
             this.grpAppointmentBooking.Controls.Add(this.lblService);
             this.grpAppointmentBooking.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpAppointmentBooking.Location = new System.Drawing.Point(19, 20);
+            this.grpAppointmentBooking.Location = new System.Drawing.Point(28, 31);
+            this.grpAppointmentBooking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpAppointmentBooking.Name = "grpAppointmentBooking";
-            this.grpAppointmentBooking.Size = new System.Drawing.Size(985, 608);
+            this.grpAppointmentBooking.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpAppointmentBooking.Size = new System.Drawing.Size(1478, 935);
             this.grpAppointmentBooking.TabIndex = 11;
             this.grpAppointmentBooking.TabStop = false;
             this.grpAppointmentBooking.Text = "Appointment Booking";
@@ -882,17 +937,19 @@
             // dgvAppointments
             // 
             this.dgvAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAppointments.Location = new System.Drawing.Point(50, 443);
+            this.dgvAppointments.Location = new System.Drawing.Point(75, 682);
+            this.dgvAppointments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvAppointments.Name = "dgvAppointments";
-            this.dgvAppointments.Size = new System.Drawing.Size(876, 159);
+            this.dgvAppointments.Size = new System.Drawing.Size(1314, 245);
             this.dgvAppointments.TabIndex = 33;
             this.dgvAppointments.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAppointments_CellContentClick);
             // 
             // txtAppointmentSearch
             // 
-            this.txtAppointmentSearch.Location = new System.Drawing.Point(207, 417);
+            this.txtAppointmentSearch.Location = new System.Drawing.Point(310, 642);
+            this.txtAppointmentSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAppointmentSearch.Name = "txtAppointmentSearch";
-            this.txtAppointmentSearch.Size = new System.Drawing.Size(402, 20);
+            this.txtAppointmentSearch.Size = new System.Drawing.Size(601, 20);
             this.txtAppointmentSearch.TabIndex = 32;
             this.txtAppointmentSearch.TextChanged += new System.EventHandler(this.txtAppointmentSearch_TextChanged);
             // 
@@ -900,7 +957,8 @@
             // 
             this.lblSearchAppointment.AutoSize = true;
             this.lblSearchAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearchAppointment.Location = new System.Drawing.Point(45, 417);
+            this.lblSearchAppointment.Location = new System.Drawing.Point(68, 642);
+            this.lblSearchAppointment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchAppointment.Name = "lblSearchAppointment";
             this.lblSearchAppointment.Size = new System.Drawing.Size(142, 18);
             this.lblSearchAppointment.TabIndex = 31;
@@ -909,16 +967,18 @@
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(50, 343);
+            this.cmbStatus.Location = new System.Drawing.Point(75, 528);
+            this.cmbStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(176, 21);
+            this.cmbStatus.Size = new System.Drawing.Size(262, 21);
             this.cmbStatus.TabIndex = 30;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(46, 320);
+            this.lblStatus.Location = new System.Drawing.Point(69, 492);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(45, 18);
             this.lblStatus.TabIndex = 28;
@@ -927,18 +987,20 @@
             // dtpAppointment
             // 
             this.dtpAppointment.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpAppointment.Location = new System.Drawing.Point(49, 287);
+            this.dtpAppointment.Location = new System.Drawing.Point(74, 442);
+            this.dtpAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpAppointment.Name = "dtpAppointment";
-            this.dtpAppointment.Size = new System.Drawing.Size(200, 20);
+            this.dtpAppointment.Size = new System.Drawing.Size(298, 20);
             this.dtpAppointment.TabIndex = 27;
             this.dtpAppointment.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // txtDuration
             // 
-            this.txtDuration.Location = new System.Drawing.Point(49, 231);
+            this.txtDuration.Location = new System.Drawing.Point(74, 355);
+            this.txtDuration.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.ReadOnly = true;
-            this.txtDuration.Size = new System.Drawing.Size(402, 20);
+            this.txtDuration.Size = new System.Drawing.Size(601, 20);
             this.txtDuration.TabIndex = 26;
             // 
             // cmbPet
@@ -950,17 +1012,19 @@
             "Rabbit",
             "Bird",
             "Hamster"});
-            this.cmbPet.Location = new System.Drawing.Point(49, 77);
+            this.cmbPet.Location = new System.Drawing.Point(74, 118);
+            this.cmbPet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPet.Name = "cmbPet";
-            this.cmbPet.Size = new System.Drawing.Size(176, 21);
+            this.cmbPet.Size = new System.Drawing.Size(262, 21);
             this.cmbPet.TabIndex = 25;
             // 
             // btnQueueCount
             // 
             this.btnQueueCount.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQueueCount.Location = new System.Drawing.Point(376, 379);
+            this.btnQueueCount.Location = new System.Drawing.Point(564, 583);
+            this.btnQueueCount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQueueCount.Name = "btnQueueCount";
-            this.btnQueueCount.Size = new System.Drawing.Size(93, 23);
+            this.btnQueueCount.Size = new System.Drawing.Size(140, 35);
             this.btnQueueCount.TabIndex = 21;
             this.btnQueueCount.Text = "Queue Count";
             this.btnQueueCount.UseVisualStyleBackColor = true;
@@ -969,9 +1033,10 @@
             // btnDeleteAppointment
             // 
             this.btnDeleteAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteAppointment.Location = new System.Drawing.Point(258, 379);
+            this.btnDeleteAppointment.Location = new System.Drawing.Point(387, 583);
+            this.btnDeleteAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteAppointment.Name = "btnDeleteAppointment";
-            this.btnDeleteAppointment.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteAppointment.Size = new System.Drawing.Size(112, 35);
             this.btnDeleteAppointment.TabIndex = 20;
             this.btnDeleteAppointment.Text = "Delete";
             this.btnDeleteAppointment.UseVisualStyleBackColor = true;
@@ -980,9 +1045,10 @@
             // btnUpdateAppointment
             // 
             this.btnUpdateAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateAppointment.Location = new System.Drawing.Point(151, 379);
+            this.btnUpdateAppointment.Location = new System.Drawing.Point(226, 583);
+            this.btnUpdateAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
-            this.btnUpdateAppointment.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateAppointment.Size = new System.Drawing.Size(112, 35);
             this.btnUpdateAppointment.TabIndex = 19;
             this.btnUpdateAppointment.Text = "Update";
             this.btnUpdateAppointment.UseVisualStyleBackColor = true;
@@ -991,9 +1057,10 @@
             // btnBookAppointment
             // 
             this.btnBookAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookAppointment.Location = new System.Drawing.Point(50, 379);
+            this.btnBookAppointment.Location = new System.Drawing.Point(75, 583);
+            this.btnBookAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBookAppointment.Name = "btnBookAppointment";
-            this.btnBookAppointment.Size = new System.Drawing.Size(75, 23);
+            this.btnBookAppointment.Size = new System.Drawing.Size(112, 35);
             this.btnBookAppointment.TabIndex = 18;
             this.btnBookAppointment.Text = "Book";
             this.btnBookAppointment.UseVisualStyleBackColor = true;
@@ -1003,7 +1070,8 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(45, 264);
+            this.lblDate.Location = new System.Drawing.Point(68, 406);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(38, 18);
             this.lblDate.TabIndex = 16;
@@ -1013,7 +1081,8 @@
             // 
             this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuration.Location = new System.Drawing.Point(45, 208);
+            this.lblDuration.Location = new System.Drawing.Point(68, 320);
+            this.lblDuration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(65, 18);
             this.lblDuration.TabIndex = 12;
@@ -1021,17 +1090,19 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(49, 177);
+            this.txtPrice.Location = new System.Drawing.Point(74, 272);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(402, 20);
+            this.txtPrice.Size = new System.Drawing.Size(601, 20);
             this.txtPrice.TabIndex = 11;
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(45, 154);
+            this.lblPrice.Location = new System.Drawing.Point(68, 237);
+            this.lblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(41, 18);
             this.lblPrice.TabIndex = 10;
@@ -1042,7 +1113,8 @@
             this.lblPetInformation.AutoSize = true;
             this.lblPetInformation.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPetInformation.ForeColor = System.Drawing.Color.Peru;
-            this.lblPetInformation.Location = new System.Drawing.Point(49, 16);
+            this.lblPetInformation.Location = new System.Drawing.Point(74, 25);
+            this.lblPetInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetInformation.Name = "lblPetInformation";
             this.lblPetInformation.Size = new System.Drawing.Size(330, 27);
             this.lblPetInformation.TabIndex = 9;
@@ -1052,7 +1124,8 @@
             // 
             this.lblPet.AutoSize = true;
             this.lblPet.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPet.Location = new System.Drawing.Point(45, 54);
+            this.lblPet.Location = new System.Drawing.Point(68, 83);
+            this.lblPet.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPet.Name = "lblPet";
             this.lblPet.Size = new System.Drawing.Size(28, 18);
             this.lblPet.TabIndex = 5;
@@ -1061,9 +1134,10 @@
             // cmbService
             // 
             this.cmbService.FormattingEnabled = true;
-            this.cmbService.Location = new System.Drawing.Point(49, 127);
+            this.cmbService.Location = new System.Drawing.Point(74, 195);
+            this.cmbService.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbService.Name = "cmbService";
-            this.cmbService.Size = new System.Drawing.Size(176, 21);
+            this.cmbService.Size = new System.Drawing.Size(262, 21);
             this.cmbService.TabIndex = 8;
             this.cmbService.SelectedIndexChanged += new System.EventHandler(this.cmbService_SelectedIndexChanged);
             // 
@@ -1071,7 +1145,8 @@
             // 
             this.lblService.AutoSize = true;
             this.lblService.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblService.Location = new System.Drawing.Point(45, 104);
+            this.lblService.Location = new System.Drawing.Point(68, 160);
+            this.lblService.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblService.Name = "lblService";
             this.lblService.Size = new System.Drawing.Size(54, 18);
             this.lblService.TabIndex = 7;
@@ -1084,9 +1159,10 @@
             this.tabPayments.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPayments.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPayments.Location = new System.Drawing.Point(4, 22);
+            this.tabPayments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPayments.Name = "tabPayments";
-            this.tabPayments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPayments.Size = new System.Drawing.Size(1023, 634);
+            this.tabPayments.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPayments.Size = new System.Drawing.Size(1538, 989);
             this.tabPayments.TabIndex = 3;
             this.tabPayments.Text = "Payments";
             // 
@@ -1107,9 +1183,11 @@
             this.grpPaymentInfo.Controls.Add(this.lblPaymentInfo);
             this.grpPaymentInfo.Controls.Add(this.lblPaymentAppointment);
             this.grpPaymentInfo.Controls.Add(this.lblAmount);
-            this.grpPaymentInfo.Location = new System.Drawing.Point(19, 20);
+            this.grpPaymentInfo.Location = new System.Drawing.Point(28, 31);
+            this.grpPaymentInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpPaymentInfo.Name = "grpPaymentInfo";
-            this.grpPaymentInfo.Size = new System.Drawing.Size(985, 608);
+            this.grpPaymentInfo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpPaymentInfo.Size = new System.Drawing.Size(1478, 935);
             this.grpPaymentInfo.TabIndex = 11;
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment Info";
@@ -1117,40 +1195,45 @@
             // cmbPaymentStatus
             // 
             this.cmbPaymentStatus.FormattingEnabled = true;
-            this.cmbPaymentStatus.Location = new System.Drawing.Point(49, 254);
+            this.cmbPaymentStatus.Location = new System.Drawing.Point(74, 391);
+            this.cmbPaymentStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPaymentStatus.Name = "cmbPaymentStatus";
-            this.cmbPaymentStatus.Size = new System.Drawing.Size(201, 21);
+            this.cmbPaymentStatus.Size = new System.Drawing.Size(300, 21);
             this.cmbPaymentStatus.TabIndex = 28;
             // 
             // cmbPaymentMethod
             // 
             this.cmbPaymentMethod.FormattingEnabled = true;
-            this.cmbPaymentMethod.Location = new System.Drawing.Point(49, 194);
+            this.cmbPaymentMethod.Location = new System.Drawing.Point(74, 298);
+            this.cmbPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPaymentMethod.Name = "cmbPaymentMethod";
-            this.cmbPaymentMethod.Size = new System.Drawing.Size(201, 21);
+            this.cmbPaymentMethod.Size = new System.Drawing.Size(300, 21);
             this.cmbPaymentMethod.TabIndex = 27;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(49, 133);
+            this.txtAmount.Location = new System.Drawing.Point(74, 205);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(402, 20);
+            this.txtAmount.Size = new System.Drawing.Size(601, 20);
             this.txtAmount.TabIndex = 26;
             // 
             // cmbPaymentAppointment
             // 
             this.cmbPaymentAppointment.FormattingEnabled = true;
-            this.cmbPaymentAppointment.Location = new System.Drawing.Point(49, 79);
+            this.cmbPaymentAppointment.Location = new System.Drawing.Point(74, 122);
+            this.cmbPaymentAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPaymentAppointment.Name = "cmbPaymentAppointment";
-            this.cmbPaymentAppointment.Size = new System.Drawing.Size(201, 21);
+            this.cmbPaymentAppointment.Size = new System.Drawing.Size(300, 21);
             this.cmbPaymentAppointment.TabIndex = 25;
             this.cmbPaymentAppointment.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentAppointment_SelectedIndexChanged);
             // 
             // txtPaymentSearch
             // 
-            this.txtPaymentSearch.Location = new System.Drawing.Point(55, 364);
+            this.txtPaymentSearch.Location = new System.Drawing.Point(82, 560);
+            this.txtPaymentSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPaymentSearch.Name = "txtPaymentSearch";
-            this.txtPaymentSearch.Size = new System.Drawing.Size(414, 20);
+            this.txtPaymentSearch.Size = new System.Drawing.Size(619, 20);
             this.txtPaymentSearch.TabIndex = 24;
             this.txtPaymentSearch.TextChanged += new System.EventHandler(this.txtPaymentSearch_TextChanged);
             // 
@@ -1158,7 +1241,8 @@
             // 
             this.lblPaymentSearch.AutoSize = true;
             this.lblPaymentSearch.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentSearch.Location = new System.Drawing.Point(51, 340);
+            this.lblPaymentSearch.Location = new System.Drawing.Point(76, 523);
+            this.lblPaymentSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentSearch.Name = "lblPaymentSearch";
             this.lblPaymentSearch.Size = new System.Drawing.Size(55, 18);
             this.lblPaymentSearch.TabIndex = 23;
@@ -1167,34 +1251,38 @@
             // dgvPayments
             // 
             this.dgvPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPayments.Location = new System.Drawing.Point(49, 400);
+            this.dgvPayments.Location = new System.Drawing.Point(74, 615);
+            this.dgvPayments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPayments.Name = "dgvPayments";
-            this.dgvPayments.Size = new System.Drawing.Size(881, 185);
+            this.dgvPayments.Size = new System.Drawing.Size(1322, 285);
             this.dgvPayments.TabIndex = 22;
             // 
             // btnClearPayment
             // 
-            this.btnClearPayment.Location = new System.Drawing.Point(260, 296);
+            this.btnClearPayment.Location = new System.Drawing.Point(390, 455);
+            this.btnClearPayment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClearPayment.Name = "btnClearPayment";
-            this.btnClearPayment.Size = new System.Drawing.Size(75, 23);
+            this.btnClearPayment.Size = new System.Drawing.Size(112, 35);
             this.btnClearPayment.TabIndex = 21;
             this.btnClearPayment.Text = "Clear";
             this.btnClearPayment.UseVisualStyleBackColor = true;
             // 
             // btnDeletePayment
             // 
-            this.btnDeletePayment.Location = new System.Drawing.Point(150, 296);
+            this.btnDeletePayment.Location = new System.Drawing.Point(225, 455);
+            this.btnDeletePayment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeletePayment.Name = "btnDeletePayment";
-            this.btnDeletePayment.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePayment.Size = new System.Drawing.Size(112, 35);
             this.btnDeletePayment.TabIndex = 19;
             this.btnDeletePayment.Text = "Delete";
             this.btnDeletePayment.UseVisualStyleBackColor = true;
             // 
             // btnPay
             // 
-            this.btnPay.Location = new System.Drawing.Point(49, 296);
+            this.btnPay.Location = new System.Drawing.Point(74, 455);
+            this.btnPay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(75, 23);
+            this.btnPay.Size = new System.Drawing.Size(112, 35);
             this.btnPay.TabIndex = 18;
             this.btnPay.Text = "Pay";
             this.btnPay.UseVisualStyleBackColor = true;
@@ -1204,7 +1292,8 @@
             // 
             this.lblPaymentStatus.AutoSize = true;
             this.lblPaymentStatus.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentStatus.Location = new System.Drawing.Point(45, 231);
+            this.lblPaymentStatus.Location = new System.Drawing.Point(68, 355);
+            this.lblPaymentStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentStatus.Name = "lblPaymentStatus";
             this.lblPaymentStatus.Size = new System.Drawing.Size(45, 18);
             this.lblPaymentStatus.TabIndex = 12;
@@ -1214,7 +1303,8 @@
             // 
             this.lblMethod.AutoSize = true;
             this.lblMethod.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMethod.Location = new System.Drawing.Point(45, 171);
+            this.lblMethod.Location = new System.Drawing.Point(68, 263);
+            this.lblMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMethod.Name = "lblMethod";
             this.lblMethod.Size = new System.Drawing.Size(57, 18);
             this.lblMethod.TabIndex = 10;
@@ -1225,7 +1315,8 @@
             this.lblPaymentInfo.AutoSize = true;
             this.lblPaymentInfo.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentInfo.ForeColor = System.Drawing.Color.Peru;
-            this.lblPaymentInfo.Location = new System.Drawing.Point(49, 16);
+            this.lblPaymentInfo.Location = new System.Drawing.Point(74, 25);
+            this.lblPaymentInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentInfo.Name = "lblPaymentInfo";
             this.lblPaymentInfo.Size = new System.Drawing.Size(329, 27);
             this.lblPaymentInfo.TabIndex = 9;
@@ -1235,7 +1326,8 @@
             // 
             this.lblPaymentAppointment.AutoSize = true;
             this.lblPaymentAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentAppointment.Location = new System.Drawing.Point(45, 56);
+            this.lblPaymentAppointment.Location = new System.Drawing.Point(68, 86);
+            this.lblPaymentAppointment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentAppointment.Name = "lblPaymentAppointment";
             this.lblPaymentAppointment.Size = new System.Drawing.Size(91, 18);
             this.lblPaymentAppointment.TabIndex = 5;
@@ -1245,7 +1337,8 @@
             // 
             this.lblAmount.AutoSize = true;
             this.lblAmount.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(45, 110);
+            this.lblAmount.Location = new System.Drawing.Point(68, 169);
+            this.lblAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(60, 18);
             this.lblAmount.TabIndex = 7;
@@ -1257,9 +1350,10 @@
             this.tabFeedback.Controls.Add(this.grpCustomerFeedback);
             this.tabFeedback.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabFeedback.Location = new System.Drawing.Point(4, 22);
+            this.tabFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabFeedback.Name = "tabFeedback";
-            this.tabFeedback.Padding = new System.Windows.Forms.Padding(3);
-            this.tabFeedback.Size = new System.Drawing.Size(1023, 634);
+            this.tabFeedback.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabFeedback.Size = new System.Drawing.Size(1538, 989);
             this.tabFeedback.TabIndex = 4;
             this.tabFeedback.Text = "Feedback";
             // 
@@ -1278,24 +1372,28 @@
             this.grpCustomerFeedback.Controls.Add(this.lblCustomerFeedback);
             this.grpCustomerFeedback.Controls.Add(this.lblFeedbackAppointment);
             this.grpCustomerFeedback.Controls.Add(this.lblRating);
-            this.grpCustomerFeedback.Location = new System.Drawing.Point(19, 20);
+            this.grpCustomerFeedback.Location = new System.Drawing.Point(28, 31);
+            this.grpCustomerFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpCustomerFeedback.Name = "grpCustomerFeedback";
-            this.grpCustomerFeedback.Size = new System.Drawing.Size(985, 608);
+            this.grpCustomerFeedback.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpCustomerFeedback.Size = new System.Drawing.Size(1478, 935);
             this.grpCustomerFeedback.TabIndex = 12;
             this.grpCustomerFeedback.TabStop = false;
             this.grpCustomerFeedback.Text = "Customer Feedback";
             // 
             // txtComments
             // 
-            this.txtComments.Location = new System.Drawing.Point(49, 194);
+            this.txtComments.Location = new System.Drawing.Point(74, 298);
+            this.txtComments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtComments.Multiline = true;
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(402, 87);
+            this.txtComments.Size = new System.Drawing.Size(601, 132);
             this.txtComments.TabIndex = 30;
             // 
             // numRating
             // 
-            this.numRating.Location = new System.Drawing.Point(49, 133);
+            this.numRating.Location = new System.Drawing.Point(74, 205);
+            this.numRating.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.numRating.Maximum = new decimal(new int[] {
             5,
             0,
@@ -1307,7 +1405,7 @@
             0,
             0});
             this.numRating.Name = "numRating";
-            this.numRating.Size = new System.Drawing.Size(120, 20);
+            this.numRating.Size = new System.Drawing.Size(180, 20);
             this.numRating.TabIndex = 29;
             this.numRating.Value = new decimal(new int[] {
             5,
@@ -1318,16 +1416,18 @@
             // cmbFeedbackAppointment
             // 
             this.cmbFeedbackAppointment.FormattingEnabled = true;
-            this.cmbFeedbackAppointment.Location = new System.Drawing.Point(49, 79);
+            this.cmbFeedbackAppointment.Location = new System.Drawing.Point(74, 122);
+            this.cmbFeedbackAppointment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbFeedbackAppointment.Name = "cmbFeedbackAppointment";
-            this.cmbFeedbackAppointment.Size = new System.Drawing.Size(201, 21);
+            this.cmbFeedbackAppointment.Size = new System.Drawing.Size(300, 21);
             this.cmbFeedbackAppointment.TabIndex = 25;
             // 
             // txtFeedbackSearch
             // 
-            this.txtFeedbackSearch.Location = new System.Drawing.Point(55, 364);
+            this.txtFeedbackSearch.Location = new System.Drawing.Point(82, 560);
+            this.txtFeedbackSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFeedbackSearch.Name = "txtFeedbackSearch";
-            this.txtFeedbackSearch.Size = new System.Drawing.Size(414, 20);
+            this.txtFeedbackSearch.Size = new System.Drawing.Size(619, 20);
             this.txtFeedbackSearch.TabIndex = 24;
             this.txtFeedbackSearch.TextChanged += new System.EventHandler(this.txtFeedbackSearch_TextChanged);
             // 
@@ -1335,7 +1435,8 @@
             // 
             this.lblFeedbackSearch.AutoSize = true;
             this.lblFeedbackSearch.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeedbackSearch.Location = new System.Drawing.Point(51, 340);
+            this.lblFeedbackSearch.Location = new System.Drawing.Point(76, 523);
+            this.lblFeedbackSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeedbackSearch.Name = "lblFeedbackSearch";
             this.lblFeedbackSearch.Size = new System.Drawing.Size(55, 18);
             this.lblFeedbackSearch.TabIndex = 23;
@@ -1344,34 +1445,38 @@
             // dgvFeedback
             // 
             this.dgvFeedback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFeedback.Location = new System.Drawing.Point(49, 400);
+            this.dgvFeedback.Location = new System.Drawing.Point(74, 615);
+            this.dgvFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvFeedback.Name = "dgvFeedback";
-            this.dgvFeedback.Size = new System.Drawing.Size(881, 185);
+            this.dgvFeedback.Size = new System.Drawing.Size(1322, 285);
             this.dgvFeedback.TabIndex = 22;
             // 
             // btnClearFeedback
             // 
-            this.btnClearFeedback.Location = new System.Drawing.Point(260, 296);
+            this.btnClearFeedback.Location = new System.Drawing.Point(390, 455);
+            this.btnClearFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClearFeedback.Name = "btnClearFeedback";
-            this.btnClearFeedback.Size = new System.Drawing.Size(75, 23);
+            this.btnClearFeedback.Size = new System.Drawing.Size(112, 35);
             this.btnClearFeedback.TabIndex = 21;
             this.btnClearFeedback.Text = "Clear";
             this.btnClearFeedback.UseVisualStyleBackColor = true;
             // 
             // btnDeleteFeedback
             // 
-            this.btnDeleteFeedback.Location = new System.Drawing.Point(150, 296);
+            this.btnDeleteFeedback.Location = new System.Drawing.Point(225, 455);
+            this.btnDeleteFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteFeedback.Name = "btnDeleteFeedback";
-            this.btnDeleteFeedback.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteFeedback.Size = new System.Drawing.Size(112, 35);
             this.btnDeleteFeedback.TabIndex = 19;
             this.btnDeleteFeedback.Text = "Delete";
             this.btnDeleteFeedback.UseVisualStyleBackColor = true;
             // 
             // btnSubmitFeedback
             // 
-            this.btnSubmitFeedback.Location = new System.Drawing.Point(49, 296);
+            this.btnSubmitFeedback.Location = new System.Drawing.Point(74, 455);
+            this.btnSubmitFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubmitFeedback.Name = "btnSubmitFeedback";
-            this.btnSubmitFeedback.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmitFeedback.Size = new System.Drawing.Size(112, 35);
             this.btnSubmitFeedback.TabIndex = 18;
             this.btnSubmitFeedback.Text = "Submit";
             this.btnSubmitFeedback.UseVisualStyleBackColor = true;
@@ -1381,7 +1486,8 @@
             // 
             this.lblComments.AutoSize = true;
             this.lblComments.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComments.Location = new System.Drawing.Point(45, 171);
+            this.lblComments.Location = new System.Drawing.Point(68, 263);
+            this.lblComments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblComments.Name = "lblComments";
             this.lblComments.Size = new System.Drawing.Size(78, 18);
             this.lblComments.TabIndex = 10;
@@ -1392,7 +1498,8 @@
             this.lblCustomerFeedback.AutoSize = true;
             this.lblCustomerFeedback.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerFeedback.ForeColor = System.Drawing.Color.Peru;
-            this.lblCustomerFeedback.Location = new System.Drawing.Point(49, 16);
+            this.lblCustomerFeedback.Location = new System.Drawing.Point(74, 25);
+            this.lblCustomerFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerFeedback.Name = "lblCustomerFeedback";
             this.lblCustomerFeedback.Size = new System.Drawing.Size(296, 27);
             this.lblCustomerFeedback.TabIndex = 9;
@@ -1402,7 +1509,8 @@
             // 
             this.lblFeedbackAppointment.AutoSize = true;
             this.lblFeedbackAppointment.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFeedbackAppointment.Location = new System.Drawing.Point(45, 56);
+            this.lblFeedbackAppointment.Location = new System.Drawing.Point(68, 86);
+            this.lblFeedbackAppointment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFeedbackAppointment.Name = "lblFeedbackAppointment";
             this.lblFeedbackAppointment.Size = new System.Drawing.Size(91, 18);
             this.lblFeedbackAppointment.TabIndex = 5;
@@ -1412,7 +1520,8 @@
             // 
             this.lblRating.AutoSize = true;
             this.lblRating.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRating.Location = new System.Drawing.Point(45, 110);
+            this.lblRating.Location = new System.Drawing.Point(68, 169);
+            this.lblRating.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRating.Name = "lblRating";
             this.lblRating.Size = new System.Drawing.Size(48, 18);
             this.lblRating.TabIndex = 7;
@@ -1424,9 +1533,10 @@
             this.tabProfile.Controls.Add(this.grpCustomerProfile);
             this.tabProfile.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabProfile.Location = new System.Drawing.Point(4, 22);
+            this.tabProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabProfile.Name = "tabProfile";
-            this.tabProfile.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfile.Size = new System.Drawing.Size(1023, 634);
+            this.tabProfile.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabProfile.Size = new System.Drawing.Size(1538, 989);
             this.tabProfile.TabIndex = 5;
             this.tabProfile.Text = "Profile";
             // 
@@ -1443,9 +1553,11 @@
             this.grpCustomerProfile.Controls.Add(this.lblCustomerTitle);
             this.grpCustomerProfile.Controls.Add(this.lblProfileName);
             this.grpCustomerProfile.Controls.Add(this.lblProfileEmail);
-            this.grpCustomerProfile.Location = new System.Drawing.Point(19, 20);
+            this.grpCustomerProfile.Location = new System.Drawing.Point(28, 31);
+            this.grpCustomerProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grpCustomerProfile.Name = "grpCustomerProfile";
-            this.grpCustomerProfile.Size = new System.Drawing.Size(985, 608);
+            this.grpCustomerProfile.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpCustomerProfile.Size = new System.Drawing.Size(1478, 935);
             this.grpCustomerProfile.TabIndex = 14;
             this.grpCustomerProfile.TabStop = false;
             this.grpCustomerProfile.Text = "Customer Profile";
@@ -1453,17 +1565,19 @@
             // txtCustomerProfileStatus
             // 
             this.txtCustomerProfileStatus.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCustomerProfileStatus.Location = new System.Drawing.Point(55, 310);
+            this.txtCustomerProfileStatus.Location = new System.Drawing.Point(82, 477);
+            this.txtCustomerProfileStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomerProfileStatus.Name = "txtCustomerProfileStatus";
             this.txtCustomerProfileStatus.ReadOnly = true;
-            this.txtCustomerProfileStatus.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileStatus.Size = new System.Drawing.Size(601, 20);
             this.txtCustomerProfileStatus.TabIndex = 50;
             // 
             // lblProfileStatus
             // 
             this.lblProfileStatus.AutoSize = true;
             this.lblProfileStatus.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfileStatus.Location = new System.Drawing.Point(51, 287);
+            this.lblProfileStatus.Location = new System.Drawing.Point(76, 442);
+            this.lblProfileStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfileStatus.Name = "lblProfileStatus";
             this.lblProfileStatus.Size = new System.Drawing.Size(45, 18);
             this.lblProfileStatus.TabIndex = 49;
@@ -1471,9 +1585,10 @@
             // 
             // btnCustomerRefreshProfile
             // 
-            this.btnCustomerRefreshProfile.Location = new System.Drawing.Point(55, 375);
+            this.btnCustomerRefreshProfile.Location = new System.Drawing.Point(82, 577);
+            this.btnCustomerRefreshProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCustomerRefreshProfile.Name = "btnCustomerRefreshProfile";
-            this.btnCustomerRefreshProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerRefreshProfile.Size = new System.Drawing.Size(112, 35);
             this.btnCustomerRefreshProfile.TabIndex = 48;
             this.btnCustomerRefreshProfile.Text = "Refresh";
             this.btnCustomerRefreshProfile.UseVisualStyleBackColor = true;
@@ -1481,34 +1596,38 @@
             // 
             // txtCustomerProfileName
             // 
-            this.txtCustomerProfileName.Location = new System.Drawing.Point(55, 93);
+            this.txtCustomerProfileName.Location = new System.Drawing.Point(82, 143);
+            this.txtCustomerProfileName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomerProfileName.Name = "txtCustomerProfileName";
-            this.txtCustomerProfileName.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileName.Size = new System.Drawing.Size(601, 20);
             this.txtCustomerProfileName.TabIndex = 46;
             // 
             // txtCustomerProfileRole
             // 
             this.txtCustomerProfileRole.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCustomerProfileRole.Location = new System.Drawing.Point(55, 233);
+            this.txtCustomerProfileRole.Location = new System.Drawing.Point(82, 358);
+            this.txtCustomerProfileRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomerProfileRole.Name = "txtCustomerProfileRole";
             this.txtCustomerProfileRole.ReadOnly = true;
-            this.txtCustomerProfileRole.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileRole.Size = new System.Drawing.Size(601, 20);
             this.txtCustomerProfileRole.TabIndex = 36;
             // 
             // txtCustomerProfileEmail
             // 
             this.txtCustomerProfileEmail.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCustomerProfileEmail.Location = new System.Drawing.Point(54, 158);
+            this.txtCustomerProfileEmail.Location = new System.Drawing.Point(81, 243);
+            this.txtCustomerProfileEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCustomerProfileEmail.Name = "txtCustomerProfileEmail";
             this.txtCustomerProfileEmail.ReadOnly = true;
-            this.txtCustomerProfileEmail.Size = new System.Drawing.Size(402, 20);
+            this.txtCustomerProfileEmail.Size = new System.Drawing.Size(601, 20);
             this.txtCustomerProfileEmail.TabIndex = 35;
             // 
             // btnCustomerUpdateProfile
             // 
-            this.btnCustomerUpdateProfile.Location = new System.Drawing.Point(158, 375);
+            this.btnCustomerUpdateProfile.Location = new System.Drawing.Point(237, 577);
+            this.btnCustomerUpdateProfile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCustomerUpdateProfile.Name = "btnCustomerUpdateProfile";
-            this.btnCustomerUpdateProfile.Size = new System.Drawing.Size(75, 23);
+            this.btnCustomerUpdateProfile.Size = new System.Drawing.Size(112, 35);
             this.btnCustomerUpdateProfile.TabIndex = 19;
             this.btnCustomerUpdateProfile.Text = "Update";
             this.btnCustomerUpdateProfile.UseVisualStyleBackColor = true;
@@ -1518,7 +1637,8 @@
             // 
             this.lblProfileRole.AutoSize = true;
             this.lblProfileRole.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfileRole.Location = new System.Drawing.Point(51, 210);
+            this.lblProfileRole.Location = new System.Drawing.Point(76, 323);
+            this.lblProfileRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfileRole.Name = "lblProfileRole";
             this.lblProfileRole.Size = new System.Drawing.Size(37, 18);
             this.lblProfileRole.TabIndex = 10;
@@ -1529,7 +1649,8 @@
             this.lblCustomerTitle.AutoSize = true;
             this.lblCustomerTitle.Font = new System.Drawing.Font("Baskerville Old Face", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCustomerTitle.ForeColor = System.Drawing.Color.Peru;
-            this.lblCustomerTitle.Location = new System.Drawing.Point(49, 16);
+            this.lblCustomerTitle.Location = new System.Drawing.Point(74, 25);
+            this.lblCustomerTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerTitle.Name = "lblCustomerTitle";
             this.lblCustomerTitle.Size = new System.Drawing.Size(268, 27);
             this.lblCustomerTitle.TabIndex = 9;
@@ -1539,7 +1660,8 @@
             // 
             this.lblProfileName.AutoSize = true;
             this.lblProfileName.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfileName.Location = new System.Drawing.Point(51, 70);
+            this.lblProfileName.Location = new System.Drawing.Point(76, 108);
+            this.lblProfileName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfileName.Name = "lblProfileName";
             this.lblProfileName.Size = new System.Drawing.Size(76, 18);
             this.lblProfileName.TabIndex = 5;
@@ -1549,32 +1671,25 @@
             // 
             this.lblProfileEmail.AutoSize = true;
             this.lblProfileEmail.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfileEmail.Location = new System.Drawing.Point(50, 135);
+            this.lblProfileEmail.Location = new System.Drawing.Point(75, 208);
+            this.lblProfileEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProfileEmail.Name = "lblProfileEmail";
             this.lblProfileEmail.Size = new System.Drawing.Size(46, 18);
             this.lblProfileEmail.TabIndex = 7;
             this.lblProfileEmail.Text = "Email";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(316, 110);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(412, 485);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            // 
             // FrmCustomerDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.ClientSize = new System.Drawing.Size(2076, 1171);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmCustomerDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCustomerDashboard";

@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminDashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,9 +64,9 @@
             this.tsbExport = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnServiceManagement = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdminProfile = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdminHome = new System.Windows.Forms.Button();
             this.btnGroomingManagement = new System.Windows.Forms.Button();
             this.btnFeedback = new System.Windows.Forms.Button();
             this.btnPayments = new System.Windows.Forms.Button();
@@ -167,11 +167,7 @@
             this.lblPetName = new System.Windows.Forms.Label();
             this.tabPayments = new System.Windows.Forms.TabPage();
             this.grpPaymentInfo = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.lblAdminTotalRevenues = new System.Windows.Forms.Label();
             this.lblAdminTotalRevenue = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblAdminTotalPaymentss = new System.Windows.Forms.Label();
             this.lblAdminTotalPayments = new System.Windows.Forms.Label();
             this.txtAdminPaymentID = new System.Windows.Forms.TextBox();
             this.cmbAdminPaymentStatus = new System.Windows.Forms.ComboBox();
@@ -186,11 +182,7 @@
             this.lblAdminAmount = new System.Windows.Forms.Label();
             this.tabFeedback = new System.Windows.Forms.TabPage();
             this.grpFeedbackManagement = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblAdminAverageRatings = new System.Windows.Forms.Label();
             this.lblAdminAverageRating = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblAdminTotalFeedbacks = new System.Windows.Forms.Label();
             this.lblAdminTotalFeedback = new System.Windows.Forms.Label();
             this.txtAdminRating = new System.Windows.Forms.TextBox();
             this.txtAdminFeedbackID = new System.Windows.Forms.TextBox();
@@ -532,9 +524,9 @@
             this.splitContainer1.Panel1.AccessibleName = "leftPanel";
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightBlue;
             this.splitContainer1.Panel1.Controls.Add(this.btnServiceManagement);
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAdminProfile);
             this.splitContainer1.Panel1.Controls.Add(this.btnReports);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAdminHome);
             this.splitContainer1.Panel1.Controls.Add(this.btnGroomingManagement);
             this.splitContainer1.Panel1.Controls.Add(this.btnFeedback);
             this.splitContainer1.Panel1.Controls.Add(this.btnPayments);
@@ -564,19 +556,24 @@
             this.btnServiceManagement.Text = "Service Management";
             this.btnServiceManagement.UseVisualStyleBackColor = false;
             this.btnServiceManagement.Click += new System.EventHandler(this.btnServiceManagement_Click);
+            this.btnServiceManagement.MouseEnter += new System.EventHandler(this.btnServiceManagement_MouseEnter);
+            this.btnServiceManagement.MouseLeave += new System.EventHandler(this.btnServiceManagement_MouseLeave);
             // 
-            // button3
+            // btnAdminProfile
             // 
-            this.button3.BackColor = System.Drawing.Color.SteelBlue;
-            this.button3.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(43, 646);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 45);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Profile";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAdminProfile.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAdminProfile.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminProfile.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAdminProfile.Location = new System.Drawing.Point(43, 646);
+            this.btnAdminProfile.Name = "btnAdminProfile";
+            this.btnAdminProfile.Size = new System.Drawing.Size(109, 45);
+            this.btnAdminProfile.TabIndex = 14;
+            this.btnAdminProfile.Text = "Profile";
+            this.btnAdminProfile.UseVisualStyleBackColor = false;
+            this.btnAdminProfile.Click += new System.EventHandler(this.button3_Click);
+            this.btnAdminProfile.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button3_MouseDown);
+            this.btnAdminProfile.MouseEnter += new System.EventHandler(this.btnAdminProfile_MouseEnter);
+            this.btnAdminProfile.MouseLeave += new System.EventHandler(this.btnAdminProfile_MouseLeave);
             // 
             // btnReports
             // 
@@ -590,19 +587,24 @@
             this.btnReports.Text = "Reports And Analytics";
             this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            this.btnReports.MouseEnter += new System.EventHandler(this.btnReports_MouseEnter);
+            this.btnReports.MouseLeave += new System.EventHandler(this.btnReports_MouseLeave);
             // 
-            // button1
+            // btnAdminHome
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(43, 15);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 45);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnAdminHome.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAdminHome.Font = new System.Drawing.Font("Baskerville Old Face", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdminHome.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAdminHome.Location = new System.Drawing.Point(43, 15);
+            this.btnAdminHome.Name = "btnAdminHome";
+            this.btnAdminHome.Size = new System.Drawing.Size(109, 45);
+            this.btnAdminHome.TabIndex = 12;
+            this.btnAdminHome.Text = "Home";
+            this.btnAdminHome.UseVisualStyleBackColor = false;
+            this.btnAdminHome.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnAdminHome.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter);
+            this.btnAdminHome.MouseEnter += new System.EventHandler(this.button1_MouseEnter);
+            this.btnAdminHome.MouseLeave += new System.EventHandler(this.btnAdminHome_MouseLeave);
             // 
             // btnGroomingManagement
             // 
@@ -616,6 +618,8 @@
             this.btnGroomingManagement.Text = "Grooming Management";
             this.btnGroomingManagement.UseVisualStyleBackColor = false;
             this.btnGroomingManagement.Click += new System.EventHandler(this.btnGroomingManagement_Click);
+            this.btnGroomingManagement.MouseEnter += new System.EventHandler(this.btnGroomingManagement_MouseEnter);
+            this.btnGroomingManagement.MouseLeave += new System.EventHandler(this.btnGroomingManagement_MouseLeave);
             // 
             // btnFeedback
             // 
@@ -629,6 +633,8 @@
             this.btnFeedback.Text = "Feedback";
             this.btnFeedback.UseVisualStyleBackColor = false;
             this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            this.btnFeedback.MouseEnter += new System.EventHandler(this.btnFeedback_MouseEnter);
+            this.btnFeedback.MouseLeave += new System.EventHandler(this.btnFeedback_MouseLeave);
             // 
             // btnPayments
             // 
@@ -642,6 +648,8 @@
             this.btnPayments.Text = "Payments";
             this.btnPayments.UseVisualStyleBackColor = false;
             this.btnPayments.Click += new System.EventHandler(this.btnPayments_Click);
+            this.btnPayments.MouseEnter += new System.EventHandler(this.btnPayments_MouseEnter);
+            this.btnPayments.MouseLeave += new System.EventHandler(this.btnPayments_MouseLeave);
             // 
             // btnAppointments
             // 
@@ -655,6 +663,8 @@
             this.btnAppointments.Text = "Appointments";
             this.btnAppointments.UseVisualStyleBackColor = false;
             this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
+            this.btnAppointments.MouseEnter += new System.EventHandler(this.btnAppointments_MouseEnter);
+            this.btnAppointments.MouseLeave += new System.EventHandler(this.btnAppointments_MouseLeave);
             // 
             // btnPets
             // 
@@ -668,6 +678,8 @@
             this.btnPets.Text = "Pets";
             this.btnPets.UseVisualStyleBackColor = false;
             this.btnPets.Click += new System.EventHandler(this.btnPets_Click);
+            this.btnPets.MouseEnter += new System.EventHandler(this.btnPets_MouseEnter);
+            this.btnPets.MouseLeave += new System.EventHandler(this.btnPets_MouseLeave);
             // 
             // btnCustomers
             // 
@@ -681,6 +693,8 @@
             this.btnCustomers.Text = "Customers";
             this.btnCustomers.UseVisualStyleBackColor = false;
             this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
+            this.btnCustomers.MouseEnter += new System.EventHandler(this.btnCustomers_MouseEnter);
+            this.btnCustomers.MouseLeave += new System.EventHandler(this.btnCustomers_MouseLeave);
             // 
             // tabAdmin
             // 
@@ -1701,11 +1715,7 @@
             // 
             // grpPaymentInfo
             // 
-            this.grpPaymentInfo.Controls.Add(this.label18);
-            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalRevenues);
             this.grpPaymentInfo.Controls.Add(this.lblAdminTotalRevenue);
-            this.grpPaymentInfo.Controls.Add(this.label13);
-            this.grpPaymentInfo.Controls.Add(this.lblAdminTotalPaymentss);
             this.grpPaymentInfo.Controls.Add(this.lblAdminTotalPayments);
             this.grpPaymentInfo.Controls.Add(this.txtAdminPaymentID);
             this.grpPaymentInfo.Controls.Add(this.cmbAdminPaymentStatus);
@@ -1725,61 +1735,21 @@
             this.grpPaymentInfo.TabStop = false;
             this.grpPaymentInfo.Text = "Payment Info";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(763, 271);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(13, 20);
-            this.label18.TabIndex = 65;
-            this.label18.Text = ":";
-            // 
-            // lblAdminTotalRevenues
-            // 
-            this.lblAdminTotalRevenues.AutoSize = true;
-            this.lblAdminTotalRevenues.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalRevenues.Location = new System.Drawing.Point(572, 271);
-            this.lblAdminTotalRevenues.Name = "lblAdminTotalRevenues";
-            this.lblAdminTotalRevenues.Size = new System.Drawing.Size(100, 18);
-            this.lblAdminTotalRevenues.TabIndex = 64;
-            this.lblAdminTotalRevenues.Text = "Total Revenue";
-            // 
             // lblAdminTotalRevenue
             // 
             this.lblAdminTotalRevenue.AutoSize = true;
             this.lblAdminTotalRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalRevenue.Location = new System.Drawing.Point(782, 270);
+            this.lblAdminTotalRevenue.Location = new System.Drawing.Point(756, 270);
             this.lblAdminTotalRevenue.Name = "lblAdminTotalRevenue";
             this.lblAdminTotalRevenue.Size = new System.Drawing.Size(14, 20);
             this.lblAdminTotalRevenue.TabIndex = 63;
             this.lblAdminTotalRevenue.Text = "-";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(763, 244);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 20);
-            this.label13.TabIndex = 62;
-            this.label13.Text = ":";
-            // 
-            // lblAdminTotalPaymentss
-            // 
-            this.lblAdminTotalPaymentss.AutoSize = true;
-            this.lblAdminTotalPaymentss.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalPaymentss.Location = new System.Drawing.Point(572, 244);
-            this.lblAdminTotalPaymentss.Name = "lblAdminTotalPaymentss";
-            this.lblAdminTotalPaymentss.Size = new System.Drawing.Size(107, 18);
-            this.lblAdminTotalPaymentss.TabIndex = 61;
-            this.lblAdminTotalPaymentss.Text = "Total Payments";
-            // 
             // lblAdminTotalPayments
             // 
             this.lblAdminTotalPayments.AutoSize = true;
             this.lblAdminTotalPayments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalPayments.Location = new System.Drawing.Point(782, 243);
+            this.lblAdminTotalPayments.Location = new System.Drawing.Point(756, 243);
             this.lblAdminTotalPayments.Name = "lblAdminTotalPayments";
             this.lblAdminTotalPayments.Size = new System.Drawing.Size(14, 20);
             this.lblAdminTotalPayments.TabIndex = 60;
@@ -1903,11 +1873,7 @@
             // 
             // grpFeedbackManagement
             // 
-            this.grpFeedbackManagement.Controls.Add(this.label14);
-            this.grpFeedbackManagement.Controls.Add(this.lblAdminAverageRatings);
             this.grpFeedbackManagement.Controls.Add(this.lblAdminAverageRating);
-            this.grpFeedbackManagement.Controls.Add(this.label22);
-            this.grpFeedbackManagement.Controls.Add(this.lblAdminTotalFeedbacks);
             this.grpFeedbackManagement.Controls.Add(this.lblAdminTotalFeedback);
             this.grpFeedbackManagement.Controls.Add(this.txtAdminRating);
             this.grpFeedbackManagement.Controls.Add(this.txtAdminFeedbackID);
@@ -1926,61 +1892,21 @@
             this.grpFeedbackManagement.TabStop = false;
             this.grpFeedbackManagement.Text = "Feedback Management";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(757, 300);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 20);
-            this.label14.TabIndex = 71;
-            this.label14.Text = ":";
-            // 
-            // lblAdminAverageRatings
-            // 
-            this.lblAdminAverageRatings.AutoSize = true;
-            this.lblAdminAverageRatings.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminAverageRatings.Location = new System.Drawing.Point(566, 300);
-            this.lblAdminAverageRatings.Name = "lblAdminAverageRatings";
-            this.lblAdminAverageRatings.Size = new System.Drawing.Size(104, 18);
-            this.lblAdminAverageRatings.TabIndex = 70;
-            this.lblAdminAverageRatings.Text = "Average Rating";
-            // 
             // lblAdminAverageRating
             // 
             this.lblAdminAverageRating.AutoSize = true;
             this.lblAdminAverageRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminAverageRating.Location = new System.Drawing.Point(776, 299);
+            this.lblAdminAverageRating.Location = new System.Drawing.Point(762, 302);
             this.lblAdminAverageRating.Name = "lblAdminAverageRating";
             this.lblAdminAverageRating.Size = new System.Drawing.Size(14, 20);
             this.lblAdminAverageRating.TabIndex = 69;
             this.lblAdminAverageRating.Text = "-";
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(757, 273);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(13, 20);
-            this.label22.TabIndex = 68;
-            this.label22.Text = ":";
-            // 
-            // lblAdminTotalFeedbacks
-            // 
-            this.lblAdminTotalFeedbacks.AutoSize = true;
-            this.lblAdminTotalFeedbacks.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalFeedbacks.Location = new System.Drawing.Point(566, 273);
-            this.lblAdminTotalFeedbacks.Name = "lblAdminTotalFeedbacks";
-            this.lblAdminTotalFeedbacks.Size = new System.Drawing.Size(107, 18);
-            this.lblAdminTotalFeedbacks.TabIndex = 67;
-            this.lblAdminTotalFeedbacks.Text = "Total Feedback";
-            // 
             // lblAdminTotalFeedback
             // 
             this.lblAdminTotalFeedback.AutoSize = true;
             this.lblAdminTotalFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminTotalFeedback.Location = new System.Drawing.Point(776, 272);
+            this.lblAdminTotalFeedback.Location = new System.Drawing.Point(762, 275);
             this.lblAdminTotalFeedback.Name = "lblAdminTotalFeedback";
             this.lblAdminTotalFeedback.Size = new System.Drawing.Size(14, 20);
             this.lblAdminTotalFeedback.TabIndex = 66;
@@ -2578,22 +2504,23 @@
             // 
             // chartRevenue
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartRevenue.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRevenue.Legends.Add(legend1);
+            chartArea6.Name = "ChartArea1";
+            this.chartRevenue.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartRevenue.Legends.Add(legend6);
             this.chartRevenue.Location = new System.Drawing.Point(319, 26);
             this.chartRevenue.Name = "chartRevenue";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartRevenue.Series.Add(series1);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartRevenue.Series.Add(series6);
             this.chartRevenue.Size = new System.Drawing.Size(320, 210);
             this.chartRevenue.TabIndex = 1;
             this.chartRevenue.Text = "chart2";
             // 
             // tabPopularService
             // 
+            this.tabPopularService.BackColor = System.Drawing.Color.LightBlue;
             this.tabPopularService.Controls.Add(this.chartPopularService);
             this.tabPopularService.Location = new System.Drawing.Point(4, 22);
             this.tabPopularService.Name = "tabPopularService";
@@ -2601,26 +2528,26 @@
             this.tabPopularService.Size = new System.Drawing.Size(1003, 266);
             this.tabPopularService.TabIndex = 1;
             this.tabPopularService.Text = "Popular Service Chart";
-            this.tabPopularService.UseVisualStyleBackColor = true;
             // 
             // chartPopularService
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartPopularService.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartPopularService.Legends.Add(legend2);
+            chartArea7.Name = "ChartArea1";
+            this.chartPopularService.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chartPopularService.Legends.Add(legend7);
             this.chartPopularService.Location = new System.Drawing.Point(319, 26);
             this.chartPopularService.Name = "chartPopularService";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartPopularService.Series.Add(series2);
+            series7.ChartArea = "ChartArea1";
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            this.chartPopularService.Series.Add(series7);
             this.chartPopularService.Size = new System.Drawing.Size(320, 210);
             this.chartPopularService.TabIndex = 2;
             this.chartPopularService.Text = "chart2";
             // 
             // tabCustomerGrowth
             // 
+            this.tabCustomerGrowth.BackColor = System.Drawing.Color.LightBlue;
             this.tabCustomerGrowth.Controls.Add(this.chartCustomerGrowth);
             this.tabCustomerGrowth.Location = new System.Drawing.Point(4, 22);
             this.tabCustomerGrowth.Name = "tabCustomerGrowth";
@@ -2628,53 +2555,54 @@
             this.tabCustomerGrowth.Size = new System.Drawing.Size(1003, 266);
             this.tabCustomerGrowth.TabIndex = 2;
             this.tabCustomerGrowth.Text = "Customer Growth Chart";
-            this.tabCustomerGrowth.UseVisualStyleBackColor = true;
             // 
             // chartCustomerGrowth
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartCustomerGrowth.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartCustomerGrowth.Legends.Add(legend3);
+            chartArea8.Name = "ChartArea1";
+            this.chartCustomerGrowth.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chartCustomerGrowth.Legends.Add(legend8);
             this.chartCustomerGrowth.Location = new System.Drawing.Point(319, 26);
             this.chartCustomerGrowth.Name = "chartCustomerGrowth";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartCustomerGrowth.Series.Add(series3);
+            series8.ChartArea = "ChartArea1";
+            series8.Legend = "Legend1";
+            series8.Name = "Series1";
+            this.chartCustomerGrowth.Series.Add(series8);
             this.chartCustomerGrowth.Size = new System.Drawing.Size(320, 210);
             this.chartCustomerGrowth.TabIndex = 3;
             this.chartCustomerGrowth.Text = "chart2";
             // 
             // tabAppointmentStatus
             // 
+            this.tabAppointmentStatus.BackColor = System.Drawing.Color.LightBlue;
             this.tabAppointmentStatus.Controls.Add(this.chartAppointmentStatus);
+            this.tabAppointmentStatus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabAppointmentStatus.Location = new System.Drawing.Point(4, 22);
             this.tabAppointmentStatus.Name = "tabAppointmentStatus";
             this.tabAppointmentStatus.Padding = new System.Windows.Forms.Padding(3);
             this.tabAppointmentStatus.Size = new System.Drawing.Size(1003, 266);
             this.tabAppointmentStatus.TabIndex = 3;
             this.tabAppointmentStatus.Text = "Appointment Status Chart";
-            this.tabAppointmentStatus.UseVisualStyleBackColor = true;
             // 
             // chartAppointmentStatus
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartAppointmentStatus.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartAppointmentStatus.Legends.Add(legend4);
+            chartArea9.Name = "ChartArea1";
+            this.chartAppointmentStatus.ChartAreas.Add(chartArea9);
+            legend9.Name = "Legend1";
+            this.chartAppointmentStatus.Legends.Add(legend9);
             this.chartAppointmentStatus.Location = new System.Drawing.Point(319, 26);
             this.chartAppointmentStatus.Name = "chartAppointmentStatus";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartAppointmentStatus.Series.Add(series4);
+            series9.ChartArea = "ChartArea1";
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.chartAppointmentStatus.Series.Add(series9);
             this.chartAppointmentStatus.Size = new System.Drawing.Size(320, 210);
             this.chartAppointmentStatus.TabIndex = 4;
             this.chartAppointmentStatus.Text = "chart2";
             // 
             // tabServicePerformance
             // 
+            this.tabServicePerformance.BackColor = System.Drawing.Color.LightBlue;
             this.tabServicePerformance.Controls.Add(this.chartServicePerformance);
             this.tabServicePerformance.Location = new System.Drawing.Point(4, 22);
             this.tabServicePerformance.Name = "tabServicePerformance";
@@ -2682,20 +2610,19 @@
             this.tabServicePerformance.Size = new System.Drawing.Size(1003, 266);
             this.tabServicePerformance.TabIndex = 4;
             this.tabServicePerformance.Text = "Service Performance Chart";
-            this.tabServicePerformance.UseVisualStyleBackColor = true;
             // 
             // chartServicePerformance
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartServicePerformance.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartServicePerformance.Legends.Add(legend5);
+            chartArea10.Name = "ChartArea1";
+            this.chartServicePerformance.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.chartServicePerformance.Legends.Add(legend10);
             this.chartServicePerformance.Location = new System.Drawing.Point(319, 26);
             this.chartServicePerformance.Name = "chartServicePerformance";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartServicePerformance.Series.Add(series5);
+            series10.ChartArea = "ChartArea1";
+            series10.Legend = "Legend1";
+            series10.Name = "Series1";
+            this.chartServicePerformance.Series.Add(series10);
             this.chartServicePerformance.Size = new System.Drawing.Size(320, 210);
             this.chartServicePerformance.TabIndex = 5;
             this.chartServicePerformance.Text = "chart2";
@@ -2787,7 +2714,7 @@
             // 
             this.lblLastAction.AutoSize = true;
             this.lblLastAction.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastAction.Location = new System.Drawing.Point(637, 386);
+            this.lblLastAction.Location = new System.Drawing.Point(637, 412);
             this.lblLastAction.Name = "lblLastAction";
             this.lblLastAction.Size = new System.Drawing.Size(124, 18);
             this.lblLastAction.TabIndex = 41;
@@ -3457,9 +3384,9 @@
         private System.Windows.Forms.ComboBox cmbPaymentMethod;
         private System.Windows.Forms.ComboBox cmbPaymentStatus;
         private System.Windows.Forms.Timer timerClock;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdminProfile;
         private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdminHome;
         private System.Windows.Forms.Button btnGroomingManagement;
         private System.Windows.Forms.Button btnFeedback;
         private System.Windows.Forms.Button btnPayments;
@@ -3559,24 +3486,6 @@
         private System.Windows.Forms.Label lblAdminAppointmentID;
         private System.Windows.Forms.Label lblPetName;
         private System.Windows.Forms.TabPage tabPayments;
-        private System.Windows.Forms.GroupBox grpPaymentInfo;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label lblAdminTotalRevenues;
-        private System.Windows.Forms.Label lblAdminTotalRevenue;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblAdminTotalPaymentss;
-        private System.Windows.Forms.Label lblAdminTotalPayments;
-        private System.Windows.Forms.TextBox txtAdminPaymentID;
-        private System.Windows.Forms.ComboBox cmbAdminPaymentStatus;
-        private System.Windows.Forms.TextBox txtAdminAmount;
-        private System.Windows.Forms.DataGridView dgvAdminPayments;
-        private System.Windows.Forms.Button btnRefreshPayment;
-        private System.Windows.Forms.Button btnAdminDeletePayment;
-        private System.Windows.Forms.Button btnUpdatePayment;
-        private System.Windows.Forms.Label lblAdminPaymentStatus;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lblAdminPaymentID;
-        private System.Windows.Forms.Label lblAdminAmount;
         private System.Windows.Forms.TabPage tabFeedback;
         private System.Windows.Forms.TabPage tabGroomingManagement;
         private System.Windows.Forms.GroupBox grpGroomingManagement;
@@ -3680,12 +3589,22 @@
         private System.Windows.Forms.Label lblAdminRating;
         private System.Windows.Forms.TextBox txtAdminFeedbackID;
         private System.Windows.Forms.TextBox txtAdminRating;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label lblAdminAverageRatings;
         private System.Windows.Forms.Label lblAdminAverageRating;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lblAdminTotalFeedbacks;
         private System.Windows.Forms.Label lblAdminTotalFeedback;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpPaymentInfo;
+        private System.Windows.Forms.Label lblAdminTotalRevenue;
+        private System.Windows.Forms.Label lblAdminTotalPayments;
+        private System.Windows.Forms.TextBox txtAdminPaymentID;
+        private System.Windows.Forms.ComboBox cmbAdminPaymentStatus;
+        private System.Windows.Forms.TextBox txtAdminAmount;
+        private System.Windows.Forms.DataGridView dgvAdminPayments;
+        private System.Windows.Forms.Button btnRefreshPayment;
+        private System.Windows.Forms.Button btnAdminDeletePayment;
+        private System.Windows.Forms.Button btnUpdatePayment;
+        private System.Windows.Forms.Label lblAdminPaymentStatus;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblAdminPaymentID;
+        private System.Windows.Forms.Label lblAdminAmount;
     }
 }
